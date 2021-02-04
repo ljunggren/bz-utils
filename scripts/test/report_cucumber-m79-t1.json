@@ -1,0 +1,85 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "[m79] Authentication",
+    "line": 1,
+    "tags": [
+      {
+        "name": "@Authentication",
+        "type": "tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ],
+    "id": "m79",
+    "uri": "jira-features/2_Authentication.feature",
+    "elements": [
+      {
+        "before": [],
+        "after": [],
+        "line": 2,
+        "name": "[m79.t1] Logout (Mats Ljunggren - 1)",
+        "description": "Logout",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "tags": [
+          {
+            "name": "@Authentication"
+          },
+          {
+            "name": "@Smoke"
+          },
+          {
+            "name": "@Authentication"
+          },
+          {
+            "name": "@Logout"
+          }
+        ],
+        "steps": [
+          {
+            "line": 3,
+            "result": {
+              "duration": 15813000000,
+              "status": "passed"
+            },
+            "name": "i am logged in",
+            "match": {
+              "location": "5e3f275e64f84941a326d4d8/ci50/m79/t1/2/"
+            },
+            "keyword": "Given"
+          },
+          {
+            "line": 4,
+            "result": {
+              "duration": 12667000000,
+              "status": "passed"
+            },
+            "name": "i logout",
+            "match": {
+              "location": "5e3f275e64f84941a326d4d8/ci50/m79/t1/4/"
+            },
+            "keyword": "When"
+          },
+          {
+            "line": 5,
+            "result": {
+              "duration": 3239000000,
+              "status": "passed"
+            },
+            "name": "i should be logged out",
+            "match": {
+              "location": "5e3f275e64f84941a326d4d8/ci50/m79/t1/6/"
+            },
+            "keyword": "Then"
+          }
+        ],
+        "extraData": {
+          "id": "m79.t1"
+        }
+      }
+    ]
+  }
+]

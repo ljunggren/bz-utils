@@ -1,0 +1,105 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "[m89] Product management",
+    "line": 1,
+    "tags": [
+      {
+        "name": "@Product",
+        "type": "tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      },
+      {
+        "name": "@Brewer",
+        "type": "tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ],
+    "id": "m89",
+    "uri": "jira-features/2_Product,Brewer.feature",
+    "elements": [
+      {
+        "before": [],
+        "after": [],
+        "line": 2,
+        "name": "[m89.t1] Delete product (Mats Ljunggren - 1)",
+        "description": "Delete product",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "tags": [
+          {
+            "name": "@Product"
+          },
+          {
+            "name": "@Brewer"
+          },
+          {
+            "name": "@Delete"
+          },
+          {
+            "name": "@Smoke"
+          }
+        ],
+        "steps": [
+          {
+            "line": 3,
+            "result": {
+              "duration": 4150000000,
+              "status": "passed"
+            },
+            "name": "i am a brewer",
+            "match": {
+              "location": "5e3f275e64f84941a326d4d8/ci50/m89/t1/2/"
+            },
+            "keyword": "Given"
+          },
+          {
+            "line": 4,
+            "result": {
+              "duration": 18479000000,
+              "status": "passed"
+            },
+            "name": "i have a product defined",
+            "match": {
+              "location": "5e3f275e64f84941a326d4d8/ci50/m89/t1/3/"
+            },
+            "keyword": "and"
+          },
+          {
+            "line": 5,
+            "result": {
+              "duration": 6540000000,
+              "status": "passed"
+            },
+            "name": "i delete the product",
+            "match": {
+              "location": "5e3f275e64f84941a326d4d8/ci50/m89/t1/5/"
+            },
+            "keyword": "When"
+          },
+          {
+            "line": 6,
+            "result": {
+              "duration": 2415000000,
+              "status": "passed"
+            },
+            "name": "the product list should not include the product",
+            "match": {
+              "location": "5e3f275e64f84941a326d4d8/ci50/m89/t1/7/"
+            },
+            "keyword": "Then"
+          }
+        ],
+        "extraData": {
+          "id": "m89.t1"
+        }
+      }
+    ]
+  }
+]

@@ -1,0 +1,102 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "[m85] Inventory management",
+    "line": 1,
+    "tags": [
+      {
+        "name": "@Inventory",
+        "type": "tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      },
+      {
+        "name": "@Brewer",
+        "type": "tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ],
+    "id": "m85",
+    "uri": "jira-features/2_Inventory,Brewer.feature",
+    "elements": [
+      {
+        "before": [],
+        "after": [],
+        "line": 2,
+        "name": "[m85.t1(1)] Set inventory quantity (Mats Ljunggren - 1)",
+        "description": "Set inventory quantity",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "tags": [
+          {
+            "name": "@Inventory"
+          },
+          {
+            "name": "@Brewer"
+          },
+          {
+            "name": "@Smoke"
+          }
+        ],
+        "steps": [
+          {
+            "line": 3,
+            "result": {
+              "duration": 4101000000,
+              "status": "passed"
+            },
+            "name": "i am a brewer",
+            "match": {
+              "location": "5e3f275e64f84941a326d4d8/ci50/m85/t1/2/"
+            },
+            "keyword": "Given"
+          },
+          {
+            "line": 4,
+            "result": {
+              "duration": 18736000000,
+              "status": "passed"
+            },
+            "name": "i add a product",
+            "match": {
+              "location": "5e3f275e64f84941a326d4d8/ci50/m85/t1/3/"
+            },
+            "keyword": "and"
+          },
+          {
+            "line": 5,
+            "result": {
+              "duration": 19185000000,
+              "status": "passed"
+            },
+            "name": "i set inventory for product to have stock initial stock: 5",
+            "match": {
+              "location": "5e3f275e64f84941a326d4d8/ci50/m85/t1/5/"
+            },
+            "keyword": "When"
+          },
+          {
+            "line": 6,
+            "result": {
+              "duration": 13792000000,
+              "status": "passed"
+            },
+            "name": "the inventory stock should be initial stock: 5",
+            "match": {
+              "location": "5e3f275e64f84941a326d4d8/ci50/m85/t1/7/"
+            },
+            "keyword": "Then"
+          }
+        ],
+        "extraData": {
+          "id": "m85.t1(1)"
+        }
+      }
+    ]
+  }
+]

@@ -1,0 +1,174 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "[m83] Group management",
+    "line": 1,
+    "tags": [
+      {
+        "name": "@Group",
+        "type": "tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      },
+      {
+        "name": "@Brewer",
+        "type": "tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ],
+    "id": "m83",
+    "uri": "jira-features/2_Group,Brewer.feature",
+    "elements": [
+      {
+        "before": [],
+        "after": [],
+        "line": 2,
+        "name": "[m83.t1(1)] Order product with group constraints (Mats Ljunggren - 1)",
+        "description": "Order product with group constraints",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "tags": [
+          {
+            "name": "@Group"
+          },
+          {
+            "name": "@Brewer"
+          },
+          {
+            "name": "@Smoke"
+          }
+        ],
+        "steps": [
+          {
+            "line": 3,
+            "result": {
+              "duration": 4126000000,
+              "status": "passed"
+            },
+            "name": "i am a brewer",
+            "match": {
+              "location": "5e3f275e64f84941a326d4d8/ci50/m83/t1/2/"
+            },
+            "keyword": "Given"
+          },
+          {
+            "line": 4,
+            "result": {
+              "duration": 18700000000,
+              "status": "passed"
+            },
+            "name": "i add a product with format: bottle 330mL x 12",
+            "match": {
+              "location": "5e3f275e64f84941a326d4d8/ci50/m83/t1/3/"
+            },
+            "keyword": "and"
+          },
+          {
+            "line": 5,
+            "result": {
+              "duration": 11324000000,
+              "status": "passed"
+            },
+            "name": "i add a group with taxes: Apply taxes and deposits: Bill deposits",
+            "match": {
+              "location": "5e3f275e64f84941a326d4d8/ci50/m83/t1/4/"
+            },
+            "keyword": "and"
+          },
+          {
+            "line": 6,
+            "result": {
+              "duration": 39205000000,
+              "status": "passed"
+            },
+            "name": "i add a retailer belonging to a certain group",
+            "match": {
+              "location": "5e3f275e64f84941a326d4d8/ci50/m83/t1/5/"
+            },
+            "keyword": "and"
+          },
+          {
+            "line": 7,
+            "result": {
+              "duration": 19578000000,
+              "status": "passed"
+            },
+            "name": "i set the inventory",
+            "match": {
+              "location": "5e3f275e64f84941a326d4d8/ci50/m83/t1/6/"
+            },
+            "keyword": "and"
+          },
+          {
+            "line": 8,
+            "result": {
+              "duration": 19067000000,
+              "status": "passed"
+            },
+            "name": "i set the price to price: 19.50 for a certain group",
+            "match": {
+              "location": "5e3f275e64f84941a326d4d8/ci50/m83/t1/7/"
+            },
+            "keyword": "and"
+          },
+          {
+            "line": 9,
+            "result": {
+              "duration": 20127000000,
+              "status": "passed"
+            },
+            "name": "i order order quantity: 20 products as a retailer belonging to the group",
+            "match": {
+              "location": "5e3f275e64f84941a326d4d8/ci50/m83/t1/9/"
+            },
+            "keyword": "When"
+          },
+          {
+            "line": 10,
+            "result": {
+              "duration": 8121000000,
+              "status": "passed"
+            },
+            "name": "the order details should have subtotal: 390.00, gst: 19.50, qst: 38.90, total deposit: 24.00, and total price total: 472.40",
+            "match": {
+              "location": "5e3f275e64f84941a326d4d8/ci50/m83/t1/11/"
+            },
+            "keyword": "Then"
+          },
+          {
+            "line": 11,
+            "result": {
+              "duration": 9267000000,
+              "status": "passed"
+            },
+            "name": "i delete the group",
+            "match": {
+              "location": "5e3f275e64f84941a326d4d8/ci50/m83/t1/13/"
+            },
+            "keyword": "When"
+          },
+          {
+            "line": 12,
+            "result": {
+              "duration": 3556000000,
+              "status": "passed"
+            },
+            "name": "the group list should not show it",
+            "match": {
+              "location": "5e3f275e64f84941a326d4d8/ci50/m83/t1/15/"
+            },
+            "keyword": "Then"
+          }
+        ],
+        "extraData": {
+          "id": "m83.t1(1)"
+        }
+      }
+    ]
+  }
+]

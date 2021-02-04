@@ -1,0 +1,114 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "[m97] Marketplace checkout",
+    "line": 1,
+    "tags": [
+      {
+        "name": "@Checkout",
+        "type": "tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      },
+      {
+        "name": "@Retailer",
+        "type": "tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ],
+    "id": "m97",
+    "uri": "jira-features/2_Checkout,Retailer.feature",
+    "elements": [
+      {
+        "before": [],
+        "after": [],
+        "line": 2,
+        "name": "[m97.t2] Order on hold (Mats Ljunggren - 1)",
+        "description": "Order on hold",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "tags": [
+          {
+            "name": "@Checkout"
+          },
+          {
+            "name": "@Retailer"
+          },
+          {
+            "name": "@Smoke"
+          }
+        ],
+        "steps": [
+          {
+            "line": 3,
+            "result": {
+              "duration": 14473000000,
+              "status": "passed"
+            },
+            "name": "i am a retailer",
+            "match": {
+              "location": "5e3f275e64f84941a326d4d8/ci50/m97/t2/2/"
+            },
+            "keyword": "Given"
+          },
+          {
+            "line": 4,
+            "result": {
+              "duration": 7825000000,
+              "status": "passed"
+            },
+            "name": "i add a product to cart",
+            "match": {
+              "location": "5e3f275e64f84941a326d4d8/ci50/m97/t2/3/"
+            },
+            "keyword": "and"
+          },
+          {
+            "line": 5,
+            "result": {
+              "duration": 14343000000,
+              "status": "passed"
+            },
+            "name": "i place the order",
+            "match": {
+              "location": "5e3f275e64f84941a326d4d8/ci50/m97/t2/4/"
+            },
+            "keyword": "and"
+          },
+          {
+            "line": 6,
+            "result": {
+              "duration": 14299000000,
+              "status": "passed"
+            },
+            "name": "the brewer puts order on hold",
+            "match": {
+              "location": "5e3f275e64f84941a326d4d8/ci50/m97/t2/6/"
+            },
+            "keyword": "When"
+          },
+          {
+            "line": 7,
+            "result": {
+              "duration": 10786000000,
+              "status": "passed"
+            },
+            "name": "the retailer should see the order as on hold",
+            "match": {
+              "location": "5e3f275e64f84941a326d4d8/ci50/m97/t2/8/"
+            },
+            "keyword": "Then"
+          }
+        ],
+        "extraData": {
+          "id": "m97.t2"
+        }
+      }
+    ]
+  }
+]

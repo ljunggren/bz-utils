@@ -1,0 +1,126 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "[m83] Group management",
+    "line": 1,
+    "tags": [
+      {
+        "name": "@Group",
+        "type": "tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      },
+      {
+        "name": "@Brewer",
+        "type": "tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ],
+    "id": "m83",
+    "uri": "jira-features/2_Group,Brewer.feature",
+    "elements": [
+      {
+        "before": [],
+        "after": [],
+        "line": 2,
+        "name": "[m83.t2] Add and delete group (Mats Ljunggren - 1)",
+        "description": "Add and delete group",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "tags": [
+          {
+            "name": "@Group"
+          },
+          {
+            "name": "@Brewer"
+          },
+          {
+            "name": "@Smoke"
+          }
+        ],
+        "steps": [
+          {
+            "line": 3,
+            "result": {
+              "duration": 4098000000,
+              "status": "passed"
+            },
+            "name": "i am a brewer",
+            "match": {
+              "location": "5e3f275e64f84941a326d4d8/ci50/m83/t2/2/"
+            },
+            "keyword": "Given"
+          },
+          {
+            "line": 4,
+            "result": {
+              "duration": 11951000000,
+              "status": "passed"
+            },
+            "name": "i add a group with details",
+            "match": {
+              "location": "5e3f275e64f84941a326d4d8/ci50/m83/t2/4/"
+            },
+            "keyword": "When"
+          },
+          {
+            "line": 5,
+            "result": {
+              "duration": 3296000000,
+              "status": "passed"
+            },
+            "name": "it should show in the group list",
+            "match": {
+              "location": "5e3f275e64f84941a326d4d8/ci50/m83/t2/6/"
+            },
+            "keyword": "Then"
+          },
+          {
+            "line": 6,
+            "result": {
+              "duration": 6887000000,
+              "status": "passed"
+            },
+            "name": "group details should be correct",
+            "match": {
+              "location": "5e3f275e64f84941a326d4d8/ci50/m83/t2/7/"
+            },
+            "keyword": "and"
+          },
+          {
+            "line": 7,
+            "result": {
+              "duration": 8725000000,
+              "status": "passed"
+            },
+            "name": "i delete the group",
+            "match": {
+              "location": "5e3f275e64f84941a326d4d8/ci50/m83/t2/9/"
+            },
+            "keyword": "When"
+          },
+          {
+            "line": 8,
+            "result": {
+              "duration": 3331000000,
+              "status": "passed"
+            },
+            "name": "the group list should not show it",
+            "match": {
+              "location": "5e3f275e64f84941a326d4d8/ci50/m83/t2/11/"
+            },
+            "keyword": "Then"
+          }
+        ],
+        "extraData": {
+          "id": "m83.t2"
+        }
+      }
+    ]
+  }
+]

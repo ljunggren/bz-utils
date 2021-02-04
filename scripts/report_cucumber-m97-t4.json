@@ -1,0 +1,126 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "[m97] Marketplace checkout",
+    "line": 1,
+    "tags": [
+      {
+        "name": "@Checkout",
+        "type": "tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      },
+      {
+        "name": "@Retailer",
+        "type": "tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ],
+    "id": "m97",
+    "uri": "jira-features/2_Checkout,Retailer.feature",
+    "elements": [
+      {
+        "before": [],
+        "after": [],
+        "line": 2,
+        "name": "[m97.t4] Order accepted (Mats Ljunggren - 1)",
+        "description": "Order accepted",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "tags": [
+          {
+            "name": "@Checkout"
+          },
+          {
+            "name": "@Retailer"
+          },
+          {
+            "name": "@Smoke"
+          }
+        ],
+        "steps": [
+          {
+            "line": 3,
+            "result": {
+              "duration": 16314000000,
+              "status": "passed"
+            },
+            "name": "i am a retailer",
+            "match": {
+              "location": "5e3f275e64f84941a326d4d8/ci50/m97/t4/2/"
+            },
+            "keyword": "Given"
+          },
+          {
+            "line": 4,
+            "result": {
+              "duration": 7388000000,
+              "status": "passed"
+            },
+            "name": "i add a product to cart",
+            "match": {
+              "location": "5e3f275e64f84941a326d4d8/ci50/m97/t4/3/"
+            },
+            "keyword": "and"
+          },
+          {
+            "line": 5,
+            "result": {
+              "duration": 14993000000,
+              "status": "passed"
+            },
+            "name": "i place the order",
+            "match": {
+              "location": "5e3f275e64f84941a326d4d8/ci50/m97/t4/5/"
+            },
+            "keyword": "When"
+          },
+          {
+            "line": 6,
+            "result": {
+              "duration": 13391000000,
+              "status": "passed"
+            },
+            "name": "the brewer should see the order as pending",
+            "match": {
+              "location": "5e3f275e64f84941a326d4d8/ci50/m97/t4/7/"
+            },
+            "keyword": "Then"
+          },
+          {
+            "line": 7,
+            "result": {
+              "duration": 9081000000,
+              "status": "passed"
+            },
+            "name": "the brewer accepts the order",
+            "match": {
+              "location": "5e3f275e64f84941a326d4d8/ci50/m97/t4/9/"
+            },
+            "keyword": "When"
+          },
+          {
+            "line": 8,
+            "result": {
+              "duration": 11289000000,
+              "status": "passed"
+            },
+            "name": "the retailer should see the order as approved",
+            "match": {
+              "location": "5e3f275e64f84941a326d4d8/ci50/m97/t4/11/"
+            },
+            "keyword": "Then"
+          }
+        ],
+        "extraData": {
+          "id": "m97.t4"
+        }
+      }
+    ]
+  }
+]

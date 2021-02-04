@@ -1,0 +1,126 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "[m95] Tax calculation",
+    "line": 1,
+    "tags": [
+      {
+        "name": "@Tax",
+        "type": "tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      },
+      {
+        "name": "@Brewer",
+        "type": "tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ],
+    "id": "m95",
+    "uri": "jira-features/2_Tax,Brewer.feature",
+    "elements": [
+      {
+        "before": [],
+        "after": [],
+        "line": 2,
+        "name": "[m95.t1(1)] Order product and verify taxes (Mats Ljunggren - 2)",
+        "description": "Order product and verify taxes",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "tags": [
+          {
+            "name": "@Tax"
+          },
+          {
+            "name": "@Brewer"
+          },
+          {
+            "name": "@Smoke"
+          }
+        ],
+        "steps": [
+          {
+            "line": 3,
+            "result": {
+              "duration": 4007000000,
+              "status": "passed"
+            },
+            "name": "i am a brewer",
+            "match": {
+              "location": "5e3f275e64f84941a326d4d8/ci50/m95/t1/2/"
+            },
+            "keyword": "Given"
+          },
+          {
+            "line": 4,
+            "result": {
+              "duration": 16172000000,
+              "status": "passed"
+            },
+            "name": "i add a product",
+            "match": {
+              "location": "5e3f275e64f84941a326d4d8/ci50/m95/t1/3/"
+            },
+            "keyword": "and"
+          },
+          {
+            "line": 5,
+            "result": {
+              "duration": 21205000000,
+              "status": "passed"
+            },
+            "name": "i set the inventory",
+            "match": {
+              "location": "5e3f275e64f84941a326d4d8/ci50/m95/t1/4/"
+            },
+            "keyword": "and"
+          },
+          {
+            "line": 6,
+            "result": {
+              "duration": 19192000000,
+              "status": "passed"
+            },
+            "name": "i set the price: 5.50",
+            "match": {
+              "location": "5e3f275e64f84941a326d4d8/ci50/m95/t1/5/"
+            },
+            "keyword": "and"
+          },
+          {
+            "line": 7,
+            "result": {
+              "duration": 20681000000,
+              "status": "passed"
+            },
+            "name": "i order order quantity: 20 products",
+            "match": {
+              "location": "5e3f275e64f84941a326d4d8/ci50/m95/t1/7/"
+            },
+            "keyword": "When"
+          },
+          {
+            "line": 8,
+            "result": {
+              "duration": 11229000000,
+              "status": "passed"
+            },
+            "name": "the order details should have subtotal: 110.00, gst: 5.50, and qst: 10.97",
+            "match": {
+              "location": "5e3f275e64f84941a326d4d8/ci50/m95/t1/9/"
+            },
+            "keyword": "Then"
+          }
+        ],
+        "extraData": {
+          "id": "m95.t1(1)"
+        }
+      }
+    ]
+  }
+]

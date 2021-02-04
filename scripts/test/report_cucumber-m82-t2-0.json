@@ -1,0 +1,118 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "[m82] Discount Management",
+    "line": 1,
+    "tags": [
+      {
+        "name": "@Discount",
+        "type": "tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ],
+    "id": "m82",
+    "uri": "jira-features/2_Discount.feature",
+    "elements": [
+      {
+        "before": [],
+        "after": [],
+        "line": 2,
+        "name": "[m82.t2(1)] Order product with different discounts (Mats Ljunggren - 2)",
+        "description": "Order product with different discounts",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "tags": [
+          {
+            "name": "@Discount"
+          },
+          {
+            "name": "@Smoke"
+          },
+          {
+            "name": "@Debug"
+          }
+        ],
+        "steps": [
+          {
+            "line": 3,
+            "result": {
+              "duration": 4037000000,
+              "status": "passed"
+            },
+            "name": "i am a brewer",
+            "match": {
+              "location": "5e3f275e64f84941a326d4d8/ci50/m82/t2/2/"
+            },
+            "keyword": "Given"
+          },
+          {
+            "line": 4,
+            "result": {
+              "duration": 17298000000,
+              "status": "passed"
+            },
+            "name": "i add a product",
+            "match": {
+              "location": "5e3f275e64f84941a326d4d8/ci50/m82/t2/3/"
+            },
+            "keyword": "and"
+          },
+          {
+            "line": 5,
+            "result": {
+              "duration": 17487000000,
+              "status": "passed"
+            },
+            "name": "i set the inventory",
+            "match": {
+              "location": "5e3f275e64f84941a326d4d8/ci50/m82/t2/4/"
+            },
+            "keyword": "and"
+          },
+          {
+            "line": 6,
+            "result": {
+              "duration": 30249000000,
+              "status": "passed"
+            },
+            "name": "i set the price to price: 20.00, discount dollars: 5.99, percentage discount percentage: bz-skip, and special price: bz-skip",
+            "match": {
+              "location": "5e3f275e64f84941a326d4d8/ci50/m82/t2/5/"
+            },
+            "keyword": "and"
+          },
+          {
+            "line": 7,
+            "result": {
+              "duration": 18395000000,
+              "status": "passed"
+            },
+            "name": "i order order quantity: 1 products",
+            "match": {
+              "location": "5e3f275e64f84941a326d4d8/ci50/m82/t2/7/"
+            },
+            "keyword": "When"
+          },
+          {
+            "line": 8,
+            "result": {
+              "duration": 12183000000,
+              "status": "passed"
+            },
+            "name": "the order details should have subtotal: 14.01",
+            "match": {
+              "location": "5e3f275e64f84941a326d4d8/ci50/m82/t2/9/"
+            },
+            "keyword": "Then"
+          }
+        ],
+        "extraData": {
+          "id": "m82.t2(1)"
+        }
+      }
+    ]
+  }
+]

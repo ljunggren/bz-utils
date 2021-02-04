@@ -1,0 +1,138 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "[m88] Order Management",
+    "line": 1,
+    "tags": [
+      {
+        "name": "@Order",
+        "type": "tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      },
+      {
+        "name": "@Brewer",
+        "type": "tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ],
+    "id": "m88",
+    "uri": "jira-features/2_Order,Brewer.feature",
+    "elements": [
+      {
+        "before": [],
+        "after": [],
+        "line": 2,
+        "name": "[m88.t3(3)] Order product mixed (Mats Ljunggren - 2)",
+        "description": "Order product mixed",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "tags": [
+          {
+            "name": "@Order"
+          },
+          {
+            "name": "@Brewer"
+          },
+          {
+            "name": "@Smoke"
+          }
+        ],
+        "steps": [
+          {
+            "line": 3,
+            "result": {
+              "duration": 4107000000,
+              "status": "passed"
+            },
+            "name": "i am a brewer",
+            "match": {
+              "location": "5e3f275e64f84941a326d4d8/ci50/m88/t3/2/"
+            },
+            "keyword": "Given"
+          },
+          {
+            "line": 4,
+            "result": {
+              "duration": 25465000000,
+              "status": "passed"
+            },
+            "name": "i add a product: cider with format: Cider 375mL x 12",
+            "match": {
+              "location": "5e3f275e64f84941a326d4d8/ci50/m88/t3/3/"
+            },
+            "keyword": "and"
+          },
+          {
+            "line": 5,
+            "result": {
+              "duration": 20446000000,
+              "status": "passed"
+            },
+            "name": "i set the inventory",
+            "match": {
+              "location": "5e3f275e64f84941a326d4d8/ci50/m88/t3/4/"
+            },
+            "keyword": "and"
+          },
+          {
+            "line": 6,
+            "result": {
+              "duration": 19856000000,
+              "status": "passed"
+            },
+            "name": "i set the price: 74.99",
+            "match": {
+              "location": "5e3f275e64f84941a326d4d8/ci50/m88/t3/5/"
+            },
+            "keyword": "and"
+          },
+          {
+            "line": 7,
+            "result": {
+              "duration": 27349000000,
+              "status": "passed"
+            },
+            "name": "i order product quantity: 14",
+            "match": {
+              "location": "5e3f275e64f84941a326d4d8/ci50/m88/t3/7/"
+            },
+            "keyword": "When"
+          },
+          {
+            "line": 8,
+            "result": {
+              "duration": 8662000000,
+              "status": "passed"
+            },
+            "name": "the order list should include product",
+            "match": {
+              "location": "5e3f275e64f84941a326d4d8/ci50/m88/t3/9/"
+            },
+            "keyword": "Then"
+          },
+          {
+            "line": 9,
+            "result": {
+              "duration": 7764000000,
+              "status": "passed"
+            },
+            "name": "the order details should be subtotal: 1049.86, gst: 52.49, qst: 104.72, <total_deposits>, and total: 1207.07",
+            "match": {
+              "location": "5e3f275e64f84941a326d4d8/ci50/m88/t3/10/"
+            },
+            "keyword": "and"
+          }
+        ],
+        "extraData": {
+          "id": "m88.t3(3)"
+        }
+      }
+    ]
+  }
+]
