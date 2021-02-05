@@ -30,7 +30,7 @@ printf "\n"
 printf "Total: %s\nFailed: %s\nSkipped: %s\nPending: %s\n" $total $failed $skipped $pending
 
 all_issues="$(cat $FILE_PATTERN | jq -c '.[] |.elements'[0].extraData |jq -c 'select(.rootCase != null)' |jq -c '"\(.rootCase.errHash)#\(.rootCase.desc)#\(.rootCase.type)#\(.rootCase.scope)#\(.id) "' | sed 's/^.//;s/.$//')"
-unique_issues="$(cat *.json | jq -c '.[] |.elements'[0].extraData |jq -c 'select(.rootCase != null)' |jq -c '"\(.rootCase.errHash)#\(.rootCase.desc)#\(.rootCase.type)#\(.rootCase.scope)"' | sed 's/^.//;s/.$//'| sort | uniq -c | sort -r)"
+unique_issues="$(cat $FILE_PATTERN | jq -c '.[] |.elements'[0].extraData |jq -c 'select(.rootCase != null)' |jq -c '"\(.rootCase.errHash)#\(.rootCase.desc)#\(.rootCase.type)#\(.rootCase.scope)"' | sed 's/^.//;s/.$//'| sort | uniq -c | sort -r)"
 
 total_issues="$(echo "$unique_issues" | wc -l)"
 tbd_issues="$(echo "$unique_issues" | grep null | wc -l)"
