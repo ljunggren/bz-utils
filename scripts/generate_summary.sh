@@ -15,7 +15,7 @@ then
 fi
 
 total_scenarios="$(grep Scenario $FILE_PATTERN | wc -l)"
-failed_scenarios="$(grep failed $FILE_PATTERN | wc -l)"
+failed_scenarios="$(grep status $FILE_PATTERN | grep failed | wc -l)"
 
 printf "\n"
 printf "#############################\n"
