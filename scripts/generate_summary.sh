@@ -31,9 +31,9 @@ else
 fi
 
 total="$(grep status $FILE_PATTERN | wc -l)"
-failed="$(grep failed $FILE_PATTERN | wc -l)"
-skipped="$(grep skipped $FILE_PATTERN | wc -l)"
-pending="$(grep pending $FILE_PATTERN |wc -l)"
+failed="$(grep status $FILE_PATTERN | grep failed | wc -l)"
+skipped="$(grep status $FILE_PATTERN | grep skipped | wc -l)"
+pending="$(grep status $FILE_PATTERN | grep pending | wc -l)"
 
 printf "\n"
 printf "#########################\n"
@@ -106,6 +106,3 @@ fi
 
 printf "\n"
 printf "### END REPORT ####\n"
-
-
-
