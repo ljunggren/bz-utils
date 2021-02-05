@@ -3,14 +3,18 @@
 FILE_PATTERN="$@"
 
 if [[ -z "$(ls -1 $FILE_PATTERN 2>/dev/null)" ]] ; then
+    printf "\n"
     echo No report files exists. Exiting...
+    printf "\n"
     exit
 fi
 
 if ! command -v jq &> /dev/null
 then
+    printf "\n"
     echo "JSON parser jq could not be found"
     echo "Please install it!"
+    printf "\n"
     exit
 fi
 
