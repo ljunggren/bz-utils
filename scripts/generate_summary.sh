@@ -74,7 +74,7 @@ else
     echo "${unique_issues}"|sed 's/#/ /g' 
 fi
 
-slow_steps="$(cat $FILE_PATTERN | jq -c '.[] |.elements' | jq -c '.[] |.steps'[] | jq '"\(.result.duration)_\(.name)|"' |sort -Vr | head -10 |sed 's/^.//;s/.$//')" 
+slow_steps="$(cat $FILE_PATTERN | jq -c '.[] |.elements' | jq -c '.[] |.steps'[] | jq '"\(.result.duration/1000000)ms_\(.name)|"' |sort -Vr | head -10 |sed 's/^.//;s/.$//')" 
 #times="$(cat $FILE_PATTERN | jq -c '.[] |.elements' | jq -c '.[] |.steps'[]| jq '"\(.result.duration) \(.name)"' |sort -Vr | head -10 | sed 's/^.//;s/.$//' | awk '{system("date -d@"$1/1000000000" -u +%H:%M:%S")}')"
 printf "\n"
 printf "##########################\n"
