@@ -7,6 +7,13 @@ if [[ -z "$(ls -1 $FILE_PATTERN 2>/dev/null)" ]] ; then
     exit
 fi
 
+if ! command -v jq &> /dev/null
+then
+    echo "JSON parser jq could not be found"
+    echo "Please install it!"
+    exit
+fi
+
 total_scenarios="$(grep Scenario $FILE_PATTERN | wc -l)"
 failed_scenarios="$(grep failed $FILE_PATTERN | wc -l)"
 
