@@ -1,0 +1,88 @@
+/* colors */
+/* fonts */
+.top_header {
+  margin: 3rem 0;
+}
+.top_header .heading {
+  font-size: 2rem;
+  color: #404159;
+}
+
+.chart_section {
+  margin-bottom: 6rem;
+}
+.chart_section .table_area {
+  margin-right: 2rem;
+}
+.chart_section .table_area.last_of-type {
+  margin: 0;
+}
+.chart_section .table_area .table_header {
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  padding: 0.75rem 0.5rem;
+}
+.chart_section .table_area .table_header h6 {
+  margin-bottom: 0;
+  font-size: 0.9rem;
+}
+.chart_section .table_area .table_header.test {
+  background: #fdc4b5;
+}
+.chart_section .table_area .table_header.steps {
+  background: #fdbccf;
+}
+.chart_section .table_area .table_header.issues {
+  background: #eabcfd;
+}
+.chart_section .table_area .table_header.workers {
+  background: #cffdbc;
+}
+.chart_section .table_area th {
+  color: rgba(43, 44, 59, 0.9);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+}
+.chart_section .table_area td {
+  font-size: 0.9rem;
+}
+
+.tabs_section {
+  margin-bottom: 6rem;
+}
+.tabs_section .nav-tabs {
+  margin-bottom: 1rem;
+}
+.tabs_section .nav-link {
+  color: initial;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.75rem 0.5rem;
+  padding-right: 3rem;
+}
+.tabs_section .nav-link.steps {
+  background: #fdbccf;
+}
+.tabs_section .nav-link.issues {
+  background: #eabcfd;
+}
+.tabs_section .nav-link.workers {
+  background: #cffdbc;
+}
+.tabs_section .nav-link.active {
+  color: initial;
+}
+.tabs_section th {
+  color: rgba(43, 44, 59, 0.9);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+}
+.tabs_section td {
+  font-size: 0.9rem;
+}
+
+footer {
+  padding: 5rem 0;
+}
+
+/*# sourceMappingURL=style.css.map */

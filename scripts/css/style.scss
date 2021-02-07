@@ -1,0 +1,87 @@
+@import "./variables.scss";
+
+.top_header {
+  margin: 3rem 0;
+  .heading {
+    font-size: 2rem;
+    color: $themecolor;
+  }
+}
+
+.chart_section {
+  margin-bottom: 6rem;
+  .table_area {
+    margin-right: 2rem;
+    &.last_of-type {
+      margin: 0;
+    }
+    .table_header {
+      border-top-right-radius: $themeBorder_radius;
+      border-top-left-radius: $themeBorder_radius;
+      padding: 0.75rem 0.5rem;
+      h6 {
+        margin-bottom: 0;
+        font-size: 0.9rem;
+      }
+      &.test {
+        background: $themecolorCoral;
+      }
+      &.steps {
+        background: $themecolorPink;
+      }
+      &.issues {
+        background: $themecolorPurple;
+      }
+      &.workers {
+        background: $themecolorGreen;
+      }
+    }
+    th {
+      color: $themeHeadingcolor;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+    }
+    td {
+      font-size: 0.9rem;
+    }
+  }
+}
+.tabs_section {
+  margin-bottom: 6rem;
+  .nav-tabs {
+    //border-color: $themecolor;
+    margin-bottom: 1rem;
+  }
+  .nav-link {
+    color: initial;
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 0.75rem 0.5rem;
+    padding-right: 3rem;
+
+    &.steps {
+      background: $themecolorPink;
+    }
+    &.issues {
+      background: $themecolorPurple;
+    }
+    &.workers {
+      background: $themecolorGreen;
+    }
+    &.active {
+      color: initial;
+      // border-color: $themecolor;
+    }
+  }
+  th {
+    color: $themeHeadingcolor;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+  }
+  td {
+    font-size: 0.9rem;
+  }
+}
+footer {
+  padding: 5rem 0;
+}
