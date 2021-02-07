@@ -62,6 +62,8 @@ fi
 all_issues="$(cat $FILE_PATTERN | jq -c '.[] |.elements'[0].extraData |jq -c 'select(.rootCase != null)' |jq -c '"\(.rootCase.errHash)#\(.rootCase.desc)#\(.rootCase.type)#\(.rootCase.scope)#\(.id) "' | sed 's/^.//;s/.$//')"
 unique_issues="$(cat $FILE_PATTERN | jq -c '.[] |.elements'[0].extraData |jq -c 'select(.rootCase != null)' |jq -c '"\(.rootCase.errHash)_\(.rootCase.desc)_\(.rootCase.type)_\(.rootCase.scope)"' | sed 's/^.//;s/.$//'| sort | uniq -c | sort -r)"
 
+echo $unique_issues
+
 total_issues="$(echo "$unique_issues" | grep "_" | wc -l)"
 tbd_issues="$(echo "$unique_issues" | grep null | wc -l)"
 application_issues="$(echo "$unique_issues" | grep app | wc -l)"
@@ -118,13 +120,6 @@ fi
 
 printf "\n"
 printf "### END REPORT ####\n"
-
-if [[ -z "$(ls -1 bz-report-template.html 2>/dev/null)" ]] ; then
-    printf "\n"
-    echo No html template found. Exiting...
-    printf "\n"
-    exit
-fi
 
 printf "\n"
 printf "####################################################\n"
