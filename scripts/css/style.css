@@ -1,11 +1,43 @@
 /* colors */
-/* fonts */
 .top_header {
   margin: 3rem 0;
 }
 .top_header .heading {
   font-size: 2rem;
   color: #404159;
+}
+
+.chart_section,
+.tabs_section {
+  font-size: 0.8rem;
+}
+.chart_section th,
+.tabs_section th {
+  color: rgba(43, 44, 59, 0.7);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+}
+@media all and (min-width: 768px) {
+  .chart_section,
+.tabs_section {
+    font-size: 0.9rem;
+  }
+}
+.chart_section .table_header.test,
+.tabs_section .table_header.test {
+  background: #f99fa0;
+}
+.chart_section .table_header.steps,
+.tabs_section .table_header.steps {
+  background: #fdcedc;
+}
+.chart_section .table_header.issues,
+.tabs_section .table_header.issues {
+  background: #ded0fb;
+}
+.chart_section .table_header.workers,
+.tabs_section .table_header.workers {
+  background: #b9dfd4;
 }
 
 .chart_section {
@@ -26,63 +58,38 @@
   margin-bottom: 0;
   font-size: 0.9rem;
 }
-.chart_section .table_area .table_header.test {
-  background: #fdc4b5;
-}
-.chart_section .table_area .table_header.steps {
-  background: #fdbccf;
-}
-.chart_section .table_area .table_header.issues {
-  background: #eabcfd;
-}
-.chart_section .table_area .table_header.workers {
-  background: #cffdbc;
-}
-.chart_section .table_area th {
-  color: rgba(43, 44, 59, 0.9);
-  font-size: 0.7rem;
-  text-transform: uppercase;
-}
-.chart_section .table_area td {
-  font-size: 0.9rem;
-}
 
 .tabs_section {
   margin-bottom: 6rem;
 }
 .tabs_section .nav-tabs {
+  padding-bottom: 3px;
   margin-bottom: 1rem;
+}
+.tabs_section .nav-tabs .nav-item {
+  margin-right: 2px;
 }
 .tabs_section .nav-link {
   color: initial;
-  font-size: 0.85rem;
   font-weight: 600;
   padding: 0.75rem 0.5rem;
   padding-right: 3rem;
-}
-.tabs_section .nav-link.steps {
-  background: #fdbccf;
-}
-.tabs_section .nav-link.issues {
-  background: #eabcfd;
-}
-.tabs_section .nav-link.workers {
-  background: #cffdbc;
+  border: none;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -3px;
+  transition: all 0.4s ease-in;
+  font-size: 0.85rem;
 }
 .tabs_section .nav-link.active {
   color: initial;
-}
-.tabs_section th {
-  color: rgba(43, 44, 59, 0.9);
-  font-size: 0.7rem;
-  text-transform: uppercase;
-}
-.tabs_section td {
-  font-size: 0.9rem;
+  border-bottom: 3px solid #1183ee;
 }
 
 footer {
-  padding: 5rem 0;
+  padding: 2rem 0;
+}
+footer .copy {
+  font-size: 0.8rem;
 }
 
 /*# sourceMappingURL=style.css.map */

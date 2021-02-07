@@ -1,10 +1,37 @@
 @import "./variables.scss";
 
+//my scss
 .top_header {
   margin: 3rem 0;
   .heading {
     font-size: 2rem;
     color: $themecolor;
+  }
+}
+.chart_section,
+.tabs_section {
+  th {
+    color: $themeHeadingcolor;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+  }
+  font-size: 0.8rem;
+  @media all and (min-width: $md-min) {
+    font-size: 0.9rem;
+  }
+  .table_header {
+    &.test {
+      background: $themecolorCoral;
+    }
+    &.steps {
+      background: $themecolorPink;
+    }
+    &.issues {
+      background: $themecolorPurple;
+    }
+    &.workers {
+      background: $themecolorGreen;
+    }
   }
 }
 
@@ -23,65 +50,39 @@
         margin-bottom: 0;
         font-size: 0.9rem;
       }
-      &.test {
-        background: $themecolorCoral;
-      }
-      &.steps {
-        background: $themecolorPink;
-      }
-      &.issues {
-        background: $themecolorPurple;
-      }
-      &.workers {
-        background: $themecolorGreen;
-      }
-    }
-    th {
-      color: $themeHeadingcolor;
-      font-size: 0.7rem;
-      text-transform: uppercase;
-    }
-    td {
-      font-size: 0.9rem;
     }
   }
 }
 .tabs_section {
   margin-bottom: 6rem;
   .nav-tabs {
-    //border-color: $themecolor;
+    padding-bottom: 3px;
     margin-bottom: 1rem;
+    .nav-item {
+      margin-right: 2px;
+    }
   }
   .nav-link {
     color: initial;
-    font-size: 0.85rem;
     font-weight: 600;
     padding: 0.75rem 0.5rem;
     padding-right: 3rem;
+    border: none;
+    border-bottom: 3px solid transparent;
+    margin-bottom: -3px;
+    transition: all 0.4s ease-in;
+    font-size: 0.85rem;
 
-    &.steps {
-      background: $themecolorPink;
-    }
-    &.issues {
-      background: $themecolorPurple;
-    }
-    &.workers {
-      background: $themecolorGreen;
-    }
     &.active {
       color: initial;
-      // border-color: $themecolor;
+      border-bottom: 3px solid $themecolorBlue;
     }
   }
-  th {
-    color: $themeHeadingcolor;
-    font-size: 0.7rem;
-    text-transform: uppercase;
-  }
-  td {
-    font-size: 0.9rem;
-  }
 }
+
 footer {
-  padding: 5rem 0;
+  padding: 2rem 0;
+  .copy {
+    font-size: 0.8rem;
+  }
 }
