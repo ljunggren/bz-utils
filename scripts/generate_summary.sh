@@ -141,58 +141,246 @@ printf "%s\n" Generating file: $file
 cat > $file <<'EOF'
   <html>
   <head>
-    <title>Boozang report</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="http://cdn.boozang.com/css/style.css">
+    <title>Boozang - Test Execution Summary</title>
   </head>
   <body>
-    <h1>Boozang report</h1>
+      <header class="top_header">
+        <div class="container">
+            <div class="row">
+              <div class="col">
+                <h1 class="heading">Boozang Test Execution Summary</h1>
+              </div>
+            </div>
+          </div>
+      </header>
 EOF
 
- printf "<h3>%s</h3>" "Scenarios" >> $file
- printf "<ul><li>Total: %s</li><li>Failed: %s</li></ul>" $total_scenarios $failed_scenarios >> $file
+cat >> $file <<'EOF'
+      <section class="chart_section">
+        <div class="container">
+            <div class="row">
+              <div class="col-sm">
+                  <article class="table_area">
+                    <header class="table_header test">
+                        <h6>Test Scenarios</h6>
+                      </header>
+                    <table class="table">
+                        <tbody>
+                          <tr>
+                            <th scope="row">Total</th>
+EOF
+printf "<td>%s</td>" $total_scenarios >> $file
+cat >> $file <<'EOF'
+                          </tr>
+                          <tr>
+                            <th scope="row">Failed</th>
+EOF
+printf "<td>%s</td>" $failed_scenarios >> $file
+cat >> $file <<'EOF'
+                          </tr>
+                        </tbody>
+                      </table>
+                  </article>
+              </div>
+              <div class="col-sm">
+                <article class="table_area">
+                <header class="table_header steps">
+                    <h6>Test Steps</h6>
+                </header>
+              <table class="table">
+                  <tbody>
+                    <tr>
+                      <th scope="row">Total</th>
+EOF
+printf "<td>%s</td>" $total >> $file
+cat >> $file <<'EOF'
+                    </tr>
+                    <tr>
+                      <th scope="row">Failed</th>
+EOF
+printf "<td>%s</td>" $failed >> $file
+cat >> $file <<'EOF'
+                   </tr>
+                    <tr>
+                        <th scope="row">Skipped</th>
+EOF
+printf "<td>%s</td>" $skipped >> $file
+cat >> $file <<'EOF'
+                      </tr>
+                      <tr>
+                        <th scope="row">Pending</th>
+EOF
+printf "<td>%s</td>" $pending >> $file
+cat >> $file <<'EOF'
 
- printf "<h3>%s</h3>" "Test Steps" >> $file
- printf "<ul><li>Total: %s</li><li>Failed: %s</li><li>Skipped: %s</li><li>Pending: %s</li></ul>" $total $failed $skipped $pending  >> $file
+                      </tr>
+                  </tbody>
+                </table>
+            </article>
+            </div>
+            <div class="col-sm">
+                <article class="table_area">
+                <header class="table_header issues">
+                  <h6>Issues</h6>
+                </header>
+              <table class="table">
+                  <tbody>
+                    <tr>
+                      <th scope="row">Total</th>
+EOF
+printf "<td>%s</td>" $total_issues >> $file
+cat >> $file <<'EOF'
 
-printf "<h3>%s</h3>" "Issues" >> $file
+                    </tr>
+                    <tr>
+                      <th scope="row">To be defined</th>
+EOF
+printf "<td>%s</td>" $tbd_issues >> $file
+cat >> $file <<'EOF'
+
+                    </tr>
+                    <tr>
+                      <th scope="row">Application</th>
+EOF
+printf "<td>%s</td>" $application_issues >> $file
+cat >> $file <<'EOF'
+
+                    </tr>
+                    <tr>
+                        <th scope="row">Automation</th>
+EOF
+printf "<td>%s</td>" $automation_issues >> $file
+cat >> $file <<'EOF'
+
+                      </tr>
+                      <tr>
+                        <th scope="row">Unknown</th>
+EOF
+printf "<td>%s</td>" $unknown_issues >> $file
+cat >> $file <<'EOF'
+
+                      </tr>
+                  </tbody>
+                </table>
+                </article>
+            </div>
+            <div class="col-sm">
+                <article class="table_area">
+                <header class="table_header workers">
+                    <h6>Workers</h6>
+                </header>
+              <table class="table">
+                  <tbody>
+                    <tr>
+                      <th scope="row">Total</th>
+                      <td>7</td>
+                    </tr>
+                  </tbody>
+                </table>
+                </article>
+            </div>
+            </div>
+          </div>
+      </section>
+EOF
+
+cat >> $file <<'EOF'
+
+   <section class="tabs_section">
+            <div class="container">
+                <div class="row">
+                    <!-- nav tabs -->
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                          <a class="nav-link active issues" id="home-tab" data-bs-toggle="tab" href="#issues" role="tab" aria-controls="issues" aria-selected="true">Issue Overview</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <a class="nav-link steps" id="profile-tab" data-bs-toggle="tab" href="#steps" role="tab" aria-controls="steps" aria-selected="false">Slowest Test Steps</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <a class="nav-link workers" id="contact-tab" data-bs-toggle="tab" href="#workers" role="tab" aria-controls="workers" aria-selected="false">Workers Job Log</a>
+                        </li>
+                      </ul>
+                           <!-- nav content -->
+                      <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="issues" role="tabpanel" aria-labelledby="issues-tab">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                      <th scope="col">Hash</th>
+                                      <th scope="col">#</th>
+                                      <th scope="col">Description</th>
+                                      <th scope="col">Type</th>
+                                      <th scope="col">Url</th>
+                                    </tr>
+                                  </thead>
+                            <tbody>
+                               
+EOF
+
 if [ -z "$unique_issues" ]
 then
-    printf "No issues found\n"  >> $file
+    printf "<tr><td>No test steps found</td></tr>" >> $file
 else
-    printf "<ul><li>Total issues: %s</li><li>To be defined: %s</li><li>Application: %s</li><li>Automation: %s</li><li>Unknown: %s</li></ul>" $total_issues $tbd_issues $application_issues $automation_issues $unknown_issues  >> $file
-    printf "\n"  >> $file
-    printf "<h3>Most impactful issues</h3>"  >> $file
-    printf "\n"  >> $file
-    printf "<table>" >>  $file;
     while IFS= read -r line ; do 
       echo "<tr><td>" >> $file;
-      echo $line | sed 's~_~</td><td>~g' |sed 's/|/\n/g'|sed 's/null/-/g'   >> $file;
+      echo $line | sed 's~_~</td><td>~g' |sed 's/|/\n/g'  >> $file;
       echo "</td></tr>"  >> $file;
     done <<< "$unique_issues"
     printf "</table>" >>  $file;
 fi
 
-printf "<h3>%s</h3>" "Issues" >> $file
+cat >> $file <<'EOF'                                
+                            </tbody>
+                        </table>
+                        </div>
+                        <div class="tab-pane fade" id="steps" role="tabpanel" aria-labelledby="steps-tab">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                      <th scope="col">Time</th>
+                                      <th scope="col">Test Step</th>
+                                    </tr>
+                                  </thead>
+                            <tbody>
+EOF
+
 if [ -z "$slow_steps" ]
 then
-    printf "No test steps found\n" >> $file
+    printf "<tr><td>No test steps found</td></tr>" >> $file
 else
-    printf "\n" >> $file;
-    printf "<table>" >>  $file;
     while IFS= read -r line ; do 
       echo "<tr><td>" >> $file;
-      echo $line | sed 's~_~:</td><td>~g' |sed 's/|/\n/g'  >> $file;
+      echo $line | sed 's~_~</td><td>~g' |sed 's/|/\n/g'  >> $file;
       echo "</td></tr>"  >> $file;
     done <<< "$slow_steps"
     printf "</table>" >>  $file;
 fi
 
-printf "<h3>%s</h3>" "Workers" >> $file
+cat >> $file <<'EOF'   
+                            </tbody>
+                        </table>
+                        </div>
+                        <div class="tab-pane fade" id="workers" role="tabpanel" aria-labelledby="workers-tab">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                      <th scope="col">Completion Time</th>
+                                      <th scope="col">Worker</th>
+                                      <th scope="col">Job</th>
+                                    </tr>
+                                  </thead>
+                            <tbody>
+EOF
+
 if [ -z "$worker_list" ]
 then
-    printf "No workers found\n" >> $file
+    printf "<tr><td>No workers found</td></tr>" >> $file
 else
-    printf "\n" >> $file;
-    printf "<table>" >>  $file;
     while IFS= read -r line ; do 
       echo "<tr><td>" >> $file;
       echo $line | sed 's~_~:</td><td>~g' |sed 's/|/\n/g'  >> $file;
@@ -201,8 +389,27 @@ else
     printf "</table>" >>  $file;
 fi
 
+cat >> $file <<'EOF'   
+                            </tbody>
+                        </table>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </section>
 
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        Something here in the footer too?...
+                    </div>
+                </div>
+            </div>
+        </footer>
 
-cat >> $file <<'EOF'
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
   </body>
+</html>
+
 EOF
