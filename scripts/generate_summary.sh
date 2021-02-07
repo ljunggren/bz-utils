@@ -60,7 +60,7 @@ else
 fi
 
 all_issues="$(cat $FILE_PATTERN | jq -c '.[] |.elements'[0].extraData |jq -c 'select(.rootCase != null)' |jq -c '"\(.rootCase.errHash)#\(.rootCase.desc)#\(.rootCase.type)#\(.rootCase.scope)#\(.id) "' | sed 's/^.//;s/.$//')"
-unique_issues="$(cat $FILE_PATTERN | jq -c '.[] |.elements'[0].extraData |jq -c 'select(.rootCase != null)' |jq -c '"\(.rootCase.errHash)_\(.rootCase.desc)_\(.rootCase.type)_\(.rootCase.scope)_\(.rootCase.url)"' | sed 's/^.//;s/.$//'| sort | uniq -c | sort -r)"
+unique_issues="$(cat $FILE_PATTERN | jq -c '.[] |.elements'[0].extraData |jq -c 'select(.rootCase != null)' |jq -c '"\(.rootCase.errHash)_\(.rootCase.desc)_\(.rootCase.type)_\(.rootCase.scope)_#@\(.rootCase.url)@#"' | sed 's/^.//;s/.$//'| sort | uniq -c | sort -r)"
 
 echo $unique_issues
 
@@ -103,7 +103,7 @@ else
     printf "\n"
 fi
 
-worker_list="$(ls -rt $FILE_PATTERN | xargs grep -ho "\[m.*t.*\].*" |  sed 's/..$//')"
+worker_list="$(cat $FILE_PATTERN | jq -c '.[] |.elements'[0].extraData | jq -c '"\(.start)_\(.end)_\(.worker)_\(.id)_\(.name)"' | sed 's/^.//;s/.$//')"
 
 printf "\n"
 printf "####################################################\n"
@@ -137,9 +137,15 @@ cat > $file <<'EOF'
   <html>
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    <link rel="stylesheet" href="http://cdn.boozang.com/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">  
+    <style>
+EOF
+
+cat css/bootstrap.min.css >> $file
+cat css/style.css >> $file
+
+cat >> $file <<'EOF'
+    </style>     
     <title>Boozang - Test Execution Summary</title>
   </head>
   <body>
@@ -323,7 +329,7 @@ then
 else
     while IFS= read -r line ; do 
       echo "<tr><td>" >> $file;
-      echo $line | sed 's~_~</td><td>~g' |sed 's/|/\n/g'  >> $file;
+      echo $line | sed 's~_~</td><td>~g' |sed 's/|/\n/g' |sed 's/null/-/g' |sed 's/#@/\<a href="/g' |sed 's/@#/">Go\<\/a>/g'   >> $file;
       echo "</td></tr>"  >> $file;
     done <<< "$unique_issues"
     printf "</table>" >>  $file;
@@ -364,9 +370,11 @@ cat >> $file <<'EOF'
                             <table class="table table-striped">
                                 <thead>
                                     <tr>
-                                      <th scope="col">Completion Time</th>
+                                      <th scope="col">Start</th>
+                                      <th scope="col">End</th>
                                       <th scope="col">Worker</th>
-                                      <th scope="col">Job</th>
+                                      <th scope="col">Test id</th>
+                                      <th scope="col">Test name</th>
                                     </tr>
                                   </thead>
                             <tbody>
@@ -378,7 +386,7 @@ then
 else
     while IFS= read -r line ; do 
       echo "<tr><td>" >> $file;
-      echo $line | sed 's~_~:</td><td>~g' |sed 's/|/\n/g'  >> $file;
+      echo $line | sed 's~_~</td><td>~g' |sed 's/|/\n/g'  >> $file;
       echo "</td></tr>"  >> $file;
     done <<< "$worker_list"
     printf "</table>" >>  $file;
