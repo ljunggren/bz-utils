@@ -137,15 +137,9 @@ cat > $file <<'EOF'
   <html>
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">  
-    <style>
-EOF
-
-cat css/bootstrap.min.css >> $file
-cat css/style.css >> $file
-
-cat >> $file <<'EOF'
-    </style>     
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="http://cdn.boozang.com/css/style.css">
     <title>Boozang - Test Execution Summary</title>
   </head>
   <body>
