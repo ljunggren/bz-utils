@@ -1,10 +1,5 @@
 @import "./variables.scss";
 
-body {
-  font-family: Helvetica, Arial, sans-serif;
-}
-
-//my scss
 .top_header {
   margin: 7rem 0;
   .heading {
@@ -14,22 +9,31 @@ body {
 }
 .chart_section,
 .tabs_section {
-  tr {
-    padding: 0.5rem 0.5rem;
-  }
-  th {
-    color: $themeHeadingcolor;
-    font-size: 1.2rem;
-    text-transform: uppercase;
-  }
-  td {
-    font-size: 1.2rem;
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    tr {
+      padding: 0.5rem 0.5rem;
+    }
+    th {
+      color: $themeHeadingcolor;
+      font-size: 1.2rem;
+      text-transform: uppercase;
+    }
+    td {
+      font-size: 1.2rem;
+    }
   }
 }
 
 .chart_section {
   margin-bottom: 6rem;
   .table_area {
+    margin-bottom: 2rem;
+    @media all and (min-width: $md-min) {
+      margin-bottom: 0;
+    }
     &.last_of-type {
       margin: 0;
     }
@@ -57,20 +61,16 @@ body {
     }
     th {
       padding: 0 1rem !important;
+      width: 70%;
     }
   }
 }
-//tabs
 .tabs_section {
   margin-bottom: 6rem;
-
   tr {
     &:nth-of-type(even) {
       background-color: rgba(0, 0, 0, 0.05);
     }
-  }
-  td {
-    font-size: 1.2rem;
   }
 }
 
@@ -82,9 +82,6 @@ footer {
 }
 
 //tabs
-/*
- CSS for the main interaction
-*/
 .tabset > input[type="radio"] {
   position: absolute;
   left: -200vw;
@@ -96,6 +93,8 @@ footer {
 }
 .tabset .tab-panel {
   display: none;
+  overflow-x: auto;
+  white-space: nowrap;
 }
 
 .tabset > input:first-child:checked ~ .tab-panels > .tab-panel:first-child,
@@ -112,46 +111,28 @@ footer {
   display: inline-block;
   padding: 1.1rem 1rem;
   padding-right: 3rem;
-  //border: 1px solid transparent;
-  // border-bottom: 0;
   cursor: pointer;
   font-weight: 600;
   border-top-left-radius: $themeBorder_radius;
   border-top-right-radius: $themeBorder_radius;
-
   border-bottom: 3px solid transparent;
-  margin-bottom: -3px;
+  margin-bottom: -1px;
   transition: all 0.4s ease-in;
+  width: 80%;
+  font-size: 1.3rem;
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+  @media all and (min-width: $md-min) {
+    width: auto;
+  }
 }
-
-// .tabset > label::after {
-//   content: "";
-//   position: absolute;
-//   left: 15px;
-//   bottom: 10px;
-//   width: 22px;
-//   height: 4px;
-//   background: #8d8d8d;
-// }
-
-// .tabset > label:hover,
-// .tabset > input:focus + label {
-//   color: #06c;
-// }
-
-// .tabset > label:hover::after,
-// .tabset > input:focus + label::after,
-// .tabset > input:checked + label::after {
-//   background: #06c;
-// }
-
 .tabset > input:checked + label {
-  border-color: #ccc;
+  border-color: $themeBorderColor;
   border-bottom: 1px solid #fff;
   border-bottom: 3px solid $themecolorBlue;
 }
 
 .tab-panel {
-  // padding: 30px 0;
-  border-top: 1px solid #ccc;
+  border-top: 1px solid $themeBorderColor;
 }

@@ -1,8 +1,4 @@
 /* colors */
-body {
-  font-family: Helvetica, Arial, sans-serif;
-}
-
 .top_header {
   margin: 7rem 0;
 }
@@ -11,23 +7,37 @@ body {
   color: #404159;
 }
 
-.chart_section tr,
-.tabs_section tr {
+.chart_section table,
+.tabs_section table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.chart_section table tr,
+.tabs_section table tr {
   padding: 0.5rem 0.5rem;
 }
-.chart_section th,
-.tabs_section th {
+.chart_section table th,
+.tabs_section table th {
   color: rgba(43, 44, 59, 0.8);
   font-size: 1.2rem;
   text-transform: uppercase;
 }
-.chart_section td,
-.tabs_section td {
+.chart_section table td,
+.tabs_section table td {
   font-size: 1.2rem;
 }
 
 .chart_section {
   margin-bottom: 6rem;
+}
+.chart_section .table_area {
+  margin-bottom: 2rem;
+}
+@media all and (min-width: 768px) {
+  .chart_section .table_area {
+    margin-bottom: 0;
+  }
 }
 .chart_section .table_area.last_of-type {
   margin: 0;
@@ -56,6 +66,7 @@ body {
 }
 .chart_section .table_area th {
   padding: 0 1rem !important;
+  width: 70%;
 }
 
 .tabs_section {
@@ -63,9 +74,6 @@ body {
 }
 .tabs_section tr:nth-of-type(even) {
   background-color: rgba(0, 0, 0, 0.05);
-}
-.tabs_section td {
-  font-size: 1.2rem;
 }
 
 footer {
@@ -75,9 +83,6 @@ footer .copy {
   font-size: 1rem;
 }
 
-/*
- CSS for the main interaction
-*/
 .tabset > input[type=radio] {
   position: absolute;
   left: -200vw;
@@ -89,6 +94,8 @@ footer .copy {
 
 .tabset .tab-panel {
   display: none;
+  overflow-x: auto;
+  white-space: nowrap;
 }
 
 .tabset > input:first-child:checked ~ .tab-panels > .tab-panel:first-child,
@@ -110,18 +117,28 @@ footer .copy {
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   border-bottom: 3px solid transparent;
-  margin-bottom: -3px;
+  margin-bottom: -1px;
   transition: all 0.4s ease-in;
+  width: 80%;
+  font-size: 1.3rem;
+}
+.tabset > label:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+@media all and (min-width: 768px) {
+  .tabset > label {
+    width: auto;
+  }
 }
 
 .tabset > input:checked + label {
-  border-color: #ccc;
+  border-color: #e1e1e1;
   border-bottom: 1px solid #fff;
   border-bottom: 3px solid #1183ee;
 }
 
 .tab-panel {
-  border-top: 1px solid #ccc;
+  border-top: 1px solid #e1e1e1;
 }
 
 /*# sourceMappingURL=style.css.map */
