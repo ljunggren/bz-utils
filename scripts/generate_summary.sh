@@ -104,6 +104,9 @@ else
 fi
 
 worker_list="$(cat $FILE_PATTERN | jq -c '.[] |.elements'[0].extraData | jq -c '"\(.start)_\(.end)_\(.worker)_\(.id)_\(.name)"' | sed 's/^.//;s/.$//')"
+number_of_workers="$(cat $FILE_PATTERN | jq -c '.[] |.elements'[0].extraData | jq -c '"\(.worker)"' | sed 's/^.//;s/.$//'| sort | uniq | wc -l )"
+
+printf "Number of workers: %s\n" $number_of_workers
 
 printf "\n"
 printf "####################################################\n"
@@ -274,7 +277,9 @@ cat >> $file <<'EOF'
                             <tbody>
                                 <tr>
                                     <th>Total</th>
-                                    <td>7</td>
+EOF
+printf "<td>%s</td>" $number_of_workers >> $file
+cat >> $file <<'EOF'
                                 </tr>
                             </tbody>
                         </table>
