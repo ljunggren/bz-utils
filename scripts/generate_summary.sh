@@ -189,6 +189,7 @@ cat >> $file <<'EOF'
                             <thead></thead>
                             <tbody>
                                 <tr>
+                                  <th scope="row">Total</th>
 EOF
 printf "<td>%s</td>" $total >> $file
 cat >> $file <<'EOF'
@@ -219,12 +220,13 @@ cat >> $file <<'EOF'
                 <div class="three columns">
                     <article class="table_area">
                         <header class="table_header steps">
-                            <h6>Test Steps</h6>
+                            <h6>Issues</h6>
                         </header>
                         <table>
                             <thead></thead>
                             <tbody>
                                 <tr>
+                                  <th scope="row">Total issues:</th>
 EOF
 printf "<td>%s</td>" $total_issues >> $file
 cat >> $file <<'EOF'
@@ -301,10 +303,10 @@ cat >> $file <<'EOF'
                         <table>
                             <thead>
                                 <tr>
-                                   <th scope="col">Hash</th>
-                                    <th scope="col">#</th>
+                                   <th scope="col"># Error Hash (#=impacted tests)</th>
                                     <th scope="col">Description</th>
                                     <th scope="col">Type</th>
+                                    <th scope="col">Scope</th>
                                     <th scope="col">Url</th>
                                 </tr>
                             </thead>
