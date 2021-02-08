@@ -1,88 +1,157 @@
 @import "./variables.scss";
 
+body {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
 //my scss
 .top_header {
-  margin: 3rem 0;
+  margin: 7rem 0;
   .heading {
-    font-size: 2rem;
+    font-size: 3rem;
     color: $themecolor;
   }
 }
 .chart_section,
 .tabs_section {
+  tr {
+    padding: 0.5rem 0.5rem;
+  }
   th {
     color: $themeHeadingcolor;
-    font-size: 0.7rem;
+    font-size: 1.2rem;
     text-transform: uppercase;
   }
-  font-size: 0.8rem;
-  @media all and (min-width: $md-min) {
-    font-size: 0.9rem;
-  }
-  .table_header {
-    &.test {
-      background: $themecolorCoral;
-    }
-    &.steps {
-      background: $themecolorPink;
-    }
-    &.issues {
-      background: $themecolorPurple;
-    }
-    &.workers {
-      background: $themecolorGreen;
-    }
+  td {
+    font-size: 1.2rem;
   }
 }
 
 .chart_section {
   margin-bottom: 6rem;
   .table_area {
-    margin-right: 2rem;
     &.last_of-type {
       margin: 0;
     }
     .table_header {
       border-top-right-radius: $themeBorder_radius;
       border-top-left-radius: $themeBorder_radius;
-      padding: 0.75rem 0.5rem;
+      padding: 1.1rem 1rem;
       h6 {
         margin-bottom: 0;
-        font-size: 0.9rem;
+        font-weight: 600;
+        font-size: 1.3rem;
       }
+      &.test {
+        background: $themecolorCoral;
+      }
+      &.steps {
+        background: $themecolorPink;
+      }
+      &.issues {
+        background: $themecolorPurple;
+      }
+      &.workers {
+        background: $themecolorGreen;
+      }
+    }
+    th {
+      padding: 0 1rem !important;
     }
   }
 }
+//tabs
 .tabs_section {
   margin-bottom: 6rem;
-  .nav-tabs {
-    padding-bottom: 3px;
-    margin-bottom: 1rem;
-    .nav-item {
-      margin-right: 2px;
+
+  tr {
+    &:nth-of-type(even) {
+      background-color: rgba(0, 0, 0, 0.05);
     }
   }
-  .nav-link {
-    color: initial;
-    font-weight: 600;
-    padding: 0.75rem 0.5rem;
-    padding-right: 3rem;
-    border: none;
-    border-bottom: 3px solid transparent;
-    margin-bottom: -3px;
-    transition: all 0.4s ease-in;
-    font-size: 0.85rem;
-
-    &.active {
-      color: initial;
-      border-bottom: 3px solid $themecolorBlue;
-    }
+  td {
+    font-size: 1.2rem;
   }
 }
 
 footer {
   padding: 2rem 0;
   .copy {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
+}
+
+//tabs
+/*
+ CSS for the main interaction
+*/
+.tabset > input[type="radio"] {
+  position: absolute;
+  left: -200vw;
+}
+.tab-panels {
+  > section {
+    padding: 1rem;
+  }
+}
+.tabset .tab-panel {
+  display: none;
+}
+
+.tabset > input:first-child:checked ~ .tab-panels > .tab-panel:first-child,
+.tabset > input:nth-child(3):checked ~ .tab-panels > .tab-panel:nth-child(2),
+.tabset > input:nth-child(5):checked ~ .tab-panels > .tab-panel:nth-child(3),
+.tabset > input:nth-child(7):checked ~ .tab-panels > .tab-panel:nth-child(4),
+.tabset > input:nth-child(9):checked ~ .tab-panels > .tab-panel:nth-child(5),
+.tabset > input:nth-child(11):checked ~ .tab-panels > .tab-panel:nth-child(6) {
+  display: block;
+}
+
+.tabset > label {
+  position: relative;
+  display: inline-block;
+  padding: 1.1rem 1rem;
+  padding-right: 3rem;
+  //border: 1px solid transparent;
+  // border-bottom: 0;
+  cursor: pointer;
+  font-weight: 600;
+  border-top-left-radius: $themeBorder_radius;
+  border-top-right-radius: $themeBorder_radius;
+
+  border-bottom: 3px solid transparent;
+  margin-bottom: -3px;
+  transition: all 0.4s ease-in;
+}
+
+// .tabset > label::after {
+//   content: "";
+//   position: absolute;
+//   left: 15px;
+//   bottom: 10px;
+//   width: 22px;
+//   height: 4px;
+//   background: #8d8d8d;
+// }
+
+// .tabset > label:hover,
+// .tabset > input:focus + label {
+//   color: #06c;
+// }
+
+// .tabset > label:hover::after,
+// .tabset > input:focus + label::after,
+// .tabset > input:checked + label::after {
+//   background: #06c;
+// }
+
+.tabset > input:checked + label {
+  border-color: #ccc;
+  border-bottom: 1px solid #fff;
+  border-bottom: 3px solid $themecolorBlue;
+}
+
+.tab-panel {
+  // padding: 30px 0;
+  border-top: 1px solid #ccc;
 }

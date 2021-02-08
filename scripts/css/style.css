@@ -1,50 +1,33 @@
 /* colors */
+body {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
 .top_header {
-  margin: 3rem 0;
+  margin: 7rem 0;
 }
 .top_header .heading {
-  font-size: 2rem;
+  font-size: 3rem;
   color: #404159;
 }
 
-.chart_section,
-.tabs_section {
-  font-size: 0.8rem;
+.chart_section tr,
+.tabs_section tr {
+  padding: 0.5rem 0.5rem;
 }
 .chart_section th,
 .tabs_section th {
-  color: rgba(43, 44, 59, 0.7);
-  font-size: 0.7rem;
+  color: rgba(43, 44, 59, 0.8);
+  font-size: 1.2rem;
   text-transform: uppercase;
 }
-@media all and (min-width: 768px) {
-  .chart_section,
-.tabs_section {
-    font-size: 0.9rem;
-  }
-}
-.chart_section .table_header.test,
-.tabs_section .table_header.test {
-  background: #f99fa0;
-}
-.chart_section .table_header.steps,
-.tabs_section .table_header.steps {
-  background: #fdcedc;
-}
-.chart_section .table_header.issues,
-.tabs_section .table_header.issues {
-  background: #ded0fb;
-}
-.chart_section .table_header.workers,
-.tabs_section .table_header.workers {
-  background: #b9dfd4;
+.chart_section td,
+.tabs_section td {
+  font-size: 1.2rem;
 }
 
 .chart_section {
   margin-bottom: 6rem;
-}
-.chart_section .table_area {
-  margin-right: 2rem;
 }
 .chart_section .table_area.last_of-type {
   margin: 0;
@@ -52,44 +35,93 @@
 .chart_section .table_area .table_header {
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
-  padding: 0.75rem 0.5rem;
+  padding: 1.1rem 1rem;
 }
 .chart_section .table_area .table_header h6 {
   margin-bottom: 0;
-  font-size: 0.9rem;
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+.chart_section .table_area .table_header.test {
+  background: #f99fa0;
+}
+.chart_section .table_area .table_header.steps {
+  background: #fdcedc;
+}
+.chart_section .table_area .table_header.issues {
+  background: #ded0fb;
+}
+.chart_section .table_area .table_header.workers {
+  background: #b9dfd4;
+}
+.chart_section .table_area th {
+  padding: 0 1rem !important;
 }
 
 .tabs_section {
   margin-bottom: 6rem;
 }
-.tabs_section .nav-tabs {
-  padding-bottom: 3px;
-  margin-bottom: 1rem;
+.tabs_section tr:nth-of-type(even) {
+  background-color: rgba(0, 0, 0, 0.05);
 }
-.tabs_section .nav-tabs .nav-item {
-  margin-right: 2px;
-}
-.tabs_section .nav-link {
-  color: initial;
-  font-weight: 600;
-  padding: 0.75rem 0.5rem;
-  padding-right: 3rem;
-  border: none;
-  border-bottom: 3px solid transparent;
-  margin-bottom: -3px;
-  transition: all 0.4s ease-in;
-  font-size: 0.85rem;
-}
-.tabs_section .nav-link.active {
-  color: initial;
-  border-bottom: 3px solid #1183ee;
+.tabs_section td {
+  font-size: 1.2rem;
 }
 
 footer {
   padding: 2rem 0;
 }
 footer .copy {
-  font-size: 0.8rem;
+  font-size: 1rem;
+}
+
+/*
+ CSS for the main interaction
+*/
+.tabset > input[type=radio] {
+  position: absolute;
+  left: -200vw;
+}
+
+.tab-panels > section {
+  padding: 1rem;
+}
+
+.tabset .tab-panel {
+  display: none;
+}
+
+.tabset > input:first-child:checked ~ .tab-panels > .tab-panel:first-child,
+.tabset > input:nth-child(3):checked ~ .tab-panels > .tab-panel:nth-child(2),
+.tabset > input:nth-child(5):checked ~ .tab-panels > .tab-panel:nth-child(3),
+.tabset > input:nth-child(7):checked ~ .tab-panels > .tab-panel:nth-child(4),
+.tabset > input:nth-child(9):checked ~ .tab-panels > .tab-panel:nth-child(5),
+.tabset > input:nth-child(11):checked ~ .tab-panels > .tab-panel:nth-child(6) {
+  display: block;
+}
+
+.tabset > label {
+  position: relative;
+  display: inline-block;
+  padding: 1.1rem 1rem;
+  padding-right: 3rem;
+  cursor: pointer;
+  font-weight: 600;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -3px;
+  transition: all 0.4s ease-in;
+}
+
+.tabset > input:checked + label {
+  border-color: #ccc;
+  border-bottom: 1px solid #fff;
+  border-bottom: 3px solid #1183ee;
+}
+
+.tab-panel {
+  border-top: 1px solid #ccc;
 }
 
 /*# sourceMappingURL=style.css.map */
