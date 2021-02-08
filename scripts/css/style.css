@@ -20,12 +20,8 @@
 .chart_section table th,
 .tabs_section table th {
   color: rgba(43, 44, 59, 0.8);
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   text-transform: uppercase;
-}
-.chart_section table td,
-.tabs_section table td {
-  font-size: 1.2rem;
 }
 
 .chart_section {
@@ -65,8 +61,11 @@
   background: #b9dfd4;
 }
 .chart_section .table_area th {
-  padding: 0 1rem !important;
+  padding: 0 0.9rem !important;
   width: 70%;
+}
+.chart_section .table_area td {
+  font-size: 1.4rem;
 }
 
 .tabs_section {
@@ -74,6 +73,9 @@
 }
 .tabs_section tr:nth-of-type(even) {
   background-color: rgba(0, 0, 0, 0.05);
+}
+.tabs_section tr td {
+  font-size: 1.3rem;
 }
 
 footer {

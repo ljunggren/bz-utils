@@ -18,11 +18,8 @@
     }
     th {
       color: $themeHeadingcolor;
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       text-transform: uppercase;
-    }
-    td {
-      font-size: 1.2rem;
     }
   }
 }
@@ -60,8 +57,11 @@
       }
     }
     th {
-      padding: 0 1rem !important;
+      padding: 0 0.9rem !important;
       width: 70%;
+    }
+    td {
+      font-size: 1.4rem;
     }
   }
 }
@@ -70,6 +70,9 @@
   tr {
     &:nth-of-type(even) {
       background-color: rgba(0, 0, 0, 0.05);
+    }
+    td {
+      font-size: 1.3rem;
     }
   }
 }
