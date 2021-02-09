@@ -315,7 +315,7 @@ EOF
 
 if [ -z "$unique_issues" ]
 then
-    printf "<tr><td>No test steps found</td></tr>" >> $file
+    printf "<tr><td>No issues found</td></tr>" >> $file
 else
     while IFS= read -r line ; do 
       echo "<tr><td>" >> $file;

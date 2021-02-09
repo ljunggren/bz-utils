@@ -1,489 +1,276 @@
   <html>
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    <link rel="stylesheet" href="http://cdn.boozang.com/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">  
+    <style>
+
+html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}a{background-color:transparent}a:active,a:hover{outline:0}input{color:inherit;font:inherit;margin:0;line-height:normal}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0}.container{position:relative;width:100%;max-width:1200px;margin:0 auto;padding:0 20px;box-sizing:border-box}.column,.columns{width:100%;float:left;box-sizing:border-box}@media (min-width:400px){.container{width:85%;padding:0}}@media (min-width:550px){.container{width:80%}.column,.columns{margin-left:4%}.column:first-child,.columns:first-child{margin-left:0}.one.column,.one.columns{width:4.66666666667%}.two.columns{width:13.3333333333%}.three.columns{width:22%}.four.columns{width:30.6666666667%}}html{font-size:62.5%}body{font-size:1.5em;line-height:1.6;font-weight:400;font-family:HelveticaNeue,"Helvetica Neue",Raleway,Helvetica,Arial,sans-serif;color:#222;margin:0}h1,h2,h3,h4,h5,h6{margin-top:0;margin-bottom:2rem;font-weight:300}h1{font-size:4rem;line-height:1.2;letter-spacing:-.1rem}h2{font-size:3.6rem;line-height:1.25;letter-spacing:-.1rem}h3{font-size:3rem;line-height:1.3;letter-spacing:-.1rem}h4{font-size:2.4rem;line-height:1.35;letter-spacing:-.08rem}h5{font-size:1.8rem;line-height:1.5;letter-spacing:-.05rem}h6{font-size:1.5rem;line-height:1.6;letter-spacing:0}@media (min-width:550px){h1{font-size:5rem}h2{font-size:4.2rem}h3{font-size:3.6rem}h4{font-size:3rem}h5{font-size:2.4rem}h6{font-size:1.5rem}}p{margin-top:0}td,th{padding:9px 15px;text-align:left;border-bottom:1px solid #e1e1e1}td:first-child,th:first-child{padding-left:5px}td:last-child,th:last-child{padding-right:5px}.button,button{margin-bottom:1rem}fieldset,input,select,textarea{margin-bottom:1.5rem}blockquote,dl,figure,form,ol,p,pre,table,ul{margin-bottom:2.5rem}.container:after,.row:after,.u-cf{content:"";display:table;clear:both}    
+
+.top_header{margin:7rem 0}.top_header .heading{font-size:3rem;color:#404159}.chart_section table,.tabs_section table{width:100%;border-collapse:collapse;border-spacing:0}.chart_section table tr,.tabs_section table tr{padding:.5rem .5rem}.chart_section table th,.tabs_section table th{color:rgba(43,44,59,.8);font-size:1.1rem;text-transform:uppercase}.chart_section{margin-bottom:6rem}.chart_section .table_area{margin-bottom:2rem}@media all and (min-width:768px){.chart_section .table_area{margin-bottom:0}}.chart_section .table_area.last_of-type{margin:0}.chart_section .table_area .table_header{border-top-right-radius:5px;border-top-left-radius:5px;padding:1.1rem 1rem}.chart_section .table_area .table_header h6{margin-bottom:0;font-weight:600;font-size:1.3rem}.chart_section .table_area .table_header.test{background:#f99fa0}.chart_section .table_area .table_header.steps{background:#fdcedc}.chart_section .table_area .table_header.issues{background:#ded0fb}.chart_section .table_area .table_header.workers{background:#b9dfd4}.chart_section .table_area th{padding:0 .9rem!important;width:70%}.chart_section .table_area td{font-size:1.4rem}.tabs_section{margin-bottom:6rem}.tabs_section tr:nth-of-type(even){background-color:rgba(0,0,0,.05)}.tabs_section tr td{font-size:1.3rem}footer{padding:2rem 0}footer .copy{font-size:1rem}.tabset>input[type=radio]{position:absolute;left:-200vw}.tab-panels>section{padding:1rem}.tabset .tab-panel{display:none;overflow-x:auto;white-space:nowrap}.tabset>input:first-child:checked~.tab-panels>.tab-panel:first-child,.tabset>input:nth-child(11):checked~.tab-panels>.tab-panel:nth-child(6),.tabset>input:nth-child(3):checked~.tab-panels>.tab-panel:nth-child(2),.tabset>input:nth-child(5):checked~.tab-panels>.tab-panel:nth-child(3),.tabset>input:nth-child(7):checked~.tab-panels>.tab-panel:nth-child(4),.tabset>input:nth-child(9):checked~.tab-panels>.tab-panel:nth-child(5){display:block}.tabset>label{position:relative;display:inline-block;padding:1.1rem 1rem;padding-right:3rem;cursor:pointer;font-weight:600;border-top-left-radius:5px;border-top-right-radius:5px;border-bottom:3px solid transparent;margin-bottom:-1px;transition:all .4s ease-in;width:80%;font-size:1.3rem}.tabset>label:hover{background-color:rgba(0,0,0,.05)}@media all and (min-width:768px){.tabset>label{width:auto}}.tabset>input:checked+label{border-color:#e1e1e1;border-bottom:1px solid #fff;border-bottom:3px solid #1183ee}.tab-panel{border-top:1px solid #e1e1e1}
+
+    </style>     
     <title>Boozang - Test Execution Summary</title>
   </head>
   <body>
-      <header class="top_header">
-        <div class="container">
+    <div class="container">
+        <header class="top_header">
+            <h1 class="heading">Test Execution Summary</h1>
+        </header>
+        <section class="chart_section">
             <div class="row">
-              <div class="col">
-                <h1 class="heading">Boozang Test Execution Summary</h1>
-              </div>
-            </div>
-          </div>
-      </header>
-      <section class="chart_section">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm">
-              <article class="table_area">
-                <header class="table_header test">
-                  <h6>Test Scenarios</h6>
-                </header>
-                <table class="table">
-                  <tbody>
-                    <tr>
-                      <th scope="row">Total</th>
-                      <td>41</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">Failed</th>
-                      <td>3</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </article>
-            </div>
-            <div class="col-sm">
-              <article class="table_area">
-                <header class="table_header steps">
-                  <h6>Test Steps</h6>
-                </header>
-                <table class="table">
-                  <tbody>
-                    <tr>
-                      <th scope="row">Total</th>
-                      <td>242</td>
-                    </tr>
+                <div class="three columns">
+                    <article class="table_area">
+                        <header class="table_header test">
+                            <h6>Test Scenarios</h6>
+                        </header>
+                        <table>
+                            <thead></thead>
+                            <tbody>
+                                <tr>
+                                <th>Total</th>
+
+
+<td>14</td>                          </tr>
+                          <tr>
+                            <th scope="row">Failed</th>
+<td>7</td>                         </tr>
+                            </tbody>
+                        </table>
+                    </article>
+                </div>
+                <div class="three columns">
+                    <article class="table_area">
+                        <header class="table_header steps">
+                            <h6>Test Steps</h6>
+                        </header>
+                        <table>
+                            <thead></thead>
+                            <tbody>
+                                <tr>
+                                  <th scope="row">Total</th>
+<td>63</td>                    </tr>
                     <tr>
                       <th scope="row">Failed</th>
-                      <td>3</td>
-                    </tr>
+<td>7</td>                   </tr>
                     <tr>
-                      <th scope="row">Skipped</th>
-                      <td>4</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">Pending</th>
-                      <td>0</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </article>
-            </div>
-            <div class="col-sm">
-              <article class="table_area">
-                <header class="table_header issues">
-                  <h6>Issues</h6>
-                </header>
-                <table class="table">
-                  <tbody>
-                    <tr>
-                      <th scope="row">Total</th>
-                      <td>2</td>
-                    </tr>
-                    <tr>
+                        <th scope="row">Skipped</th>
+<td>16</td>                      </tr>
+                      <tr>
+                        <th scope="row">Pending</th>
+<td>0</td>
+                      </tr>
+                            </tbody>
+                        </table>
+                    </article>
+                </div>
+                <div class="three columns">
+                    <article class="table_area">
+                        <header class="table_header steps">
+                            <h6>Issues</h6>
+                        </header>
+                        <table>
+                            <thead></thead>
+                            <tbody>
+                                <tr>
                       <th scope="row">To be defined</th>
-                      <td>1</td>
+<td>4</td>
                     </tr>
                     <tr>
                       <th scope="row">Application</th>
-                      <td>0</td>
+<td>1</td>
                     </tr>
                     <tr>
-                      <th scope="row">Automation</th>
-                      <td>1</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">Unknown</th>
-                      <td>0</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </article>
-            </div>
-            <div class="col-sm">
-              <article class="table_area">
-                <header class="table_header workers">
-                  <h6>Workers</h6>
-                </header>
-                <table class="table">
-                  <tbody>
-                    <tr>
-                      <th scope="row">Total</th>
-                      <td>7</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </article>
-            </div>
-          </div>
-        </div>
-      </section>
-      
-      <section class="tabs_section">
-        <div class="container">
-          <div class="row">
-            <!-- nav tabs -->
-            <ul class="nav nav-tabs" id="myTab" role="tablist">
-              <li class="nav-item" role="presentation">
-                <a class="nav-link active issues" id="home-tab" data-bs-toggle="tab" href="#issues" role="tab"
-                  aria-controls="issues" aria-selected="true">Issue Overview</a>
-              </li>
-              <li class="nav-item" role="presentation">
-                <a class="nav-link steps" id="profile-tab" data-bs-toggle="tab" href="#steps" role="tab" aria-controls="steps"
-                  aria-selected="false">Slowest Test Steps</a>
-              </li>
-              <li class="nav-item" role="presentation">
-                <a class="nav-link workers" id="contact-tab" data-bs-toggle="tab" href="#workers" role="tab"
-                  aria-controls="workers" aria-selected="false">Workers Job Log</a>
-              </li>
-            </ul>
-            <!-- nav content -->
-            <div class="tab-content" id="myTabContent">
-              <div class="tab-pane fade show active" id="issues" role="tabpanel" aria-labelledby="issues-tab">
-                <table class="table table-striped">
-                  <thead>
-                    <tr>
-                      <th scope="col">Hash</th>
-                      <th scope="col">#</th>
-                      <th scope="col">Description</th>
-                      <th scope="col">Type</th>
-                      <th scope="col">Url</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-      
-                    <tr>
-                      <td>
-                        2 364B321151AD3FAA2F70AC6CAD1EB2D1</td>
-                      <td>Order timeouts due to too many workers for extract order id</td>
-                      <td>auto</td>
-                      <td>m8.t3.13
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        1 0FDAF6F9744DCB2219EEE23240698453</td>
-                      <td>null</td>
-                      <td>null</td>
-                      <td>null
-                      </td>
-                    </tr>
-                </tbody>
-                </table>
-              </div>
-              <div class="tab-pane fade" id="steps" role="tabpanel" aria-labelledby="steps-tab">
-                <table class="table table-striped">
-                  <thead>
-                    <tr>
-                      <th scope="col">Time</th>
-                      <th scope="col">Test Step</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>
-                        158702ms</td>
-                      <td>i order product quantity: 14
-      
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        75256ms</td>
-                      <td>i order product quantity: 14
-      
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        52073ms</td>
-                      <td>no warning should be shown when placing the order
-      
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        51533ms</td>
-                      <td>i order product quantity: 14
-      
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        45708ms</td>
-                      <td>i order product quantity: 14
-      
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        39644ms</td>
-                      <td>i add a retailer belonging to a certain group
-      
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        39205ms</td>
-                      <td>i add a retailer belonging to a certain group
-      
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        38650ms</td>
-                      <td>i add a retailer belonging to this group
-      
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        38392ms</td>
-                      <td>i order as a retailer belonging to the group
-      
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        38249ms</td>
-                      <td>i add a product: coffee with format: 500 g x 1
-      
-                      </td>
-                    </tr>
-                </tbody>
-                </table>
-              </div>
-              <div class="tab-pane fade" id="workers" role="tabpanel" aria-labelledby="workers-tab">
-                <table class="table table-striped">
-                  <thead>
-                    <tr>
-                      <th scope="col">Completion Time</th>
-                      <th scope="col">Worker</th>
-                      <th scope="col">Job</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>
-                        [m79.t1] Logout (Mats Ljunggren - 1)
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        [m79.t2] Login (Mats Ljunggren - 2)
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        [m88.t1] Order product (Mats Ljunggren - 1)
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        [m83.t2] Add and delete group (Mats Ljunggren - 1)
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        [m82.t1] Order product with group discount (Mats Ljunggren - 2)
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        [m85.t2] Set inventory (Mats Ljunggren - 1)
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        [m86.t1] Cart changes (Mats Ljunggren - 2)
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        [m86.t2] Remove from cart (Mats Ljunggren - 1)
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        [m86.t3] Add to cart (Mats Ljunggren - 2)
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        [m89.t1] Delete product (Mats Ljunggren - 1)
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        [m89.t5] Create product (Mats Ljunggren - 2)
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        [m90.t2] Add and delete retailer (Mats Ljunggren - 2)
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        [m90.t1] Retailer discount (Mats Ljunggren - 1)
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        [m97.t1] Modify order quantity (Mats Ljunggren - 2)
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        [m97.t2] Order on hold (Mats Ljunggren - 1)
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        [m97.t3] Order rejected (Mats Ljunggren - 2)
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        [m97.t4] Order accepted (Mats Ljunggren - 1)
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        [m81.t1(1)] Check deposits in ordering flow (Mats Ljunggren - 2)
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        [m81.t1(2)] Check deposits in ordering flow (Mats Ljunggren - 1)
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        [m82.t2(1)] Order product with different discounts (Mats Ljunggren - 2)
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        [m82.t2(2)] Order product with different discounts (Mats Ljunggren - 1)
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        [m82.t2(3)] Order product with different discounts (Mats Ljunggren - 2)
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        [m82.t2(4)] Order product with different discounts (Mats Ljunggren - 1)
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        [m82.t2(5)] Order product with different discounts (Mats Ljunggren - 2)
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        [m83.t1(1)] Order product with group constraints (Mats Ljunggren - 1)
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        [m85.t1(1)] Set inventory quantity (Mats Ljunggren - 1)
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        [m83.t1(2)] Order product with group constraints (Mats Ljunggren - 2)
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        [m89.t2(1)] Edit product (Mats Ljunggren - 1)
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        [m89.t3(1)] Create product with formats (Mats Ljunggren - 2)
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        [m89.t4(1)] Create product with attributes (Mats Ljunggren - 1)
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        [m95.t1(1)] Order product and verify taxes (Mats Ljunggren - 2)
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        [m88.t3(1)] Order product mixed (Mats Ljunggren - 1)
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        [m88.t3(2)] Order product mixed (Mats Ljunggren - 2)
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        [m88.t3(4)] Order product mixed (Mats Ljunggren - 1)
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        [m88.t3(3)] Order product mixed (Mats Ljunggren - 2)
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        [m88.t3(5)] Order product mixed (Mats Ljunggren - 1)
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        [m88.t3(6)] Order product mixed (Mats Ljunggren - 2)
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        [m88.t3(7)] Order product mixed (Mats Ljunggren - 1)
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        [m88.t3(8)] Order product mixed (Mats Ljunggren - 2)
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        [m119.t1(1)] Minimum items (Mats Ljunggren - 1)
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        [m119.t1(2)] Minimum items (Mats Ljunggren - 2)
-                      </td>
-                    </tr>
-                </table>
-                </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-        <footer>
-            <div class="container">
-                <div class="row">
-                    <div class="col">
-                        Something here in the footer too?...
-                    </div>
+                        <th scope="row">Automation</th>
+<td>1</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Unknown</th>
+<td>0</td>
+                        </tr>
+                            </tbody>
+                        </table>
+                    </article>
+                </div>
+                <div class="three columns">
+                    <article class="table_area">
+                        <header class="table_header workers">
+                            <h6>Workers</h6>
+                        </header>
+                        <table>
+                            <thead></thead>
+                            <tbody>
+                                <tr>
+                                    <th>Total</th>
+<td>4</td>                                </tr>
+                            </tbody>
+                        </table>
+                    </article>
                 </div>
             </div>
-        </footer>
+        </section>
+        <!-- tabs -->
+        <section class="tabs_section">
+            <div class="tabset">
+                <!-- Tab 1 -->
+                <input type="radio" name="tabset" id="tab1" aria-controls="issues" checked>
+                <label for="tab1">Issue Overview</label>
+                <!-- Tab 2 -->
+                <input type="radio" name="tabset" id="tab2" aria-controls="steps">
+                <label for="tab2">Slowest Test Steps</label>
+                <!-- Tab 3 -->
+                <input type="radio" name="tabset" id="tab3" aria-controls="workers">
+                <label for="tab3">Workers Job Log</label>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
-  </body>
+                <div class="tab-panels">
+                    <section id="issues" class="tab-panel">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Impact</th>
+                                    <th scope="col">Error Hash</th>
+                                    <th scope="col">Description</th>
+                                    <th scope="col">Type</th>
+                                    <th scope="col">Scope</th>
+                                    <th scope="col">Url</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+<tr><td>
+2</td><td>DFEC5298B112F57FCE66FBBF0C7E1E21</td><td>-</td><td>-</td><td>-</td><td>-
+</td></tr>
+<tr><td>
+2</td><td>7FC4148D94B3469E8B62B6DDD13A8EC1</td><td>-</td><td>-</td><td>-</td><td>-
+</td></tr>
+<tr><td>
+1</td><td>C6478553E53294359FBA6F146C816AA7</td><td>-</td><td>-</td><td>-</td><td>-
+</td></tr>
+<tr><td>
+1</td><td>983C2E26FC00D930255F1449E9E2765B</td><td>-</td><td>-</td><td>-</td><td>-
+</td></tr>
+<tr><td>
+1</td><td>364B321151AD3FAA2F70AC6CAD1EB2D1</td><td>Order timeouts due to too many workers for extract order id</td><td>auto</td><td>m8.t3.13</td><td><a href="https://gitlab.com/pivohub/webapp/-/issues?scope=all&utf8=%E2%9C%93&state=opened&author</td><td>username=mljunggren">Go</a>
+</td></tr>
+</table>                           </tbody>
+                        </table>
+                    </section>
+                    <section id="steps" class="tab-panel">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Time</th>
+                                    <th>Test Step</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+<tr><td>
+83754 ms</td><td>i place the order
+
+</td></tr>
+<tr><td>
+77155 ms</td><td>i order product
+
+</td></tr>
+<tr><td>
+74627 ms</td><td>i am a retailer
+
+</td></tr>
+<tr><td>
+68648 ms</td><td>i place the order
+
+</td></tr>
+<tr><td>
+65309 ms</td><td>i add a product
+
+</td></tr>
+<tr><td>
+59832 ms</td><td>i have a product defined
+
+</td></tr>
+<tr><td>
+59747 ms</td><td>i am a retailer with an empty cart
+
+</td></tr>
+<tr><td>
+58485 ms</td><td>i am a retailer
+
+</td></tr>
+<tr><td>
+56845 ms</td><td>the product details should be correct
+
+</td></tr>
+<tr><td>
+47961 ms</td><td>i am a retailer
+
+</td></tr>
+</table>                            </tbody>
+                        </table>
+                    </section>
+                    <section id="workers" class="tab-panel">
+                        <table>
+                            <thead>
+                                <tr>
+                                     <th scope="col">Start</th>
+                                      <th scope="col">End</th>
+                                      <th scope="col">Worker</th>
+                                      <th scope="col">Test id</th>
+                                      <th scope="col">Test name</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+<tr><td>
+19:31:45</td><td>19:33:09</td><td>Mats Ljunggren - 1</td><td>m79.t2</td><td>Login
+</td></tr>
+<tr><td>
+19:31:49</td><td>19:33:08</td><td>Mats Ljunggren - 5</td><td>m79.t1</td><td>Logout
+</td></tr>
+<tr><td>
+19:31:52</td><td>19:35:29</td><td>Mats Ljunggren - 4</td><td>m88.t1</td><td>Order product
+</td></tr>
+<tr><td>
+19:32:00</td><td>19:33:56</td><td>Mats Ljunggren - 2</td><td>m83.t2</td><td>Add and delete group
+</td></tr>
+<tr><td>
+19:33:20</td><td>19:35:09</td><td>Mats Ljunggren - 1</td><td>m85.t2</td><td>Set inventory
+</td></tr>
+<tr><td>
+19:33:23</td><td>19:35:10</td><td>Mats Ljunggren - 5</td><td>m86.t1</td><td>Cart changes
+</td></tr>
+<tr><td>
+19:34:08</td><td>19:36:07</td><td>Mats Ljunggren - 2</td><td>m86.t2</td><td>Remove from cart
+</td></tr>
+<tr><td>
+19:35:30</td><td>19:36:35</td><td>Mats Ljunggren - 5</td><td>m86.t3</td><td>Add to cart
+</td></tr>
+<tr><td>
+19:35:32</td><td>19:37:26</td><td>Mats Ljunggren - 1</td><td>m89.t1</td><td>Delete product
+</td></tr>
+<tr><td>
+19:36:03</td><td>19:38:52</td><td>Mats Ljunggren - 4</td><td>m89.t5</td><td>Create product
+</td></tr>
+<tr><td>
+19:36:54</td><td>19:37:31</td><td>Mats Ljunggren - 5</td><td>m90.t2</td><td>Add and delete retailer
+</td></tr>
+<tr><td>
+19:37:43</td><td>19:40:21</td><td>Mats Ljunggren - 1</td><td>m97.t1</td><td>Modify order quantity
+</td></tr>
+<tr><td>
+19:37:58</td><td>19:40:40</td><td>Mats Ljunggren - 5</td><td>m97.t2</td><td>Order on hold
+</td></tr>
+<tr><td>
+19:39:13</td><td>19:40:30</td><td>Mats Ljunggren - 4</td><td>m97.t3</td><td>Order rejected
+</td></tr>
+</table>                            </tbody>
+                         </table>
+                    </section>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <p class="copy"> &copy; 2021 - Boozang INC. ALL RIGHTS RESERVED. </p>
+        </footer>
+    </div>
+</body>
+
 </html>
 
