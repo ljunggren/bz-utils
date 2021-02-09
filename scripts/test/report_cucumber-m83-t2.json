@@ -28,7 +28,7 @@
         "before": [],
         "after": [],
         "line": 2,
-        "name": "[m83.t2] Add and delete group (Mats Ljunggren - 1)",
+        "name": "[m83.t2] Add and delete group (Mats Ljunggren - 2)",
         "description": "Add and delete group",
         "type": "scenario",
         "keyword": "Scenario Outline",
@@ -47,7 +47,7 @@
           {
             "line": 3,
             "result": {
-              "duration": 4098000000,
+              "duration": 45013000000,
               "status": "passed"
             },
             "name": "i am a brewer",
@@ -59,7 +59,7 @@
           {
             "line": 4,
             "result": {
-              "duration": 11951000000,
+              "duration": 26879000000,
               "status": "passed"
             },
             "name": "i add a group with details",
@@ -71,7 +71,7 @@
           {
             "line": 5,
             "result": {
-              "duration": 3296000000,
+              "duration": 4097000000,
               "status": "passed"
             },
             "name": "it should show in the group list",
@@ -83,7 +83,7 @@
           {
             "line": 6,
             "result": {
-              "duration": 6887000000,
+              "duration": 9117000000,
               "status": "passed"
             },
             "name": "group details should be correct",
@@ -95,7 +95,7 @@
           {
             "line": 7,
             "result": {
-              "duration": 8725000000,
+              "duration": 13522000000,
               "status": "passed"
             },
             "name": "i delete the group",
@@ -107,7 +107,7 @@
           {
             "line": 8,
             "result": {
-              "duration": 3331000000,
+              "duration": 4399000000,
               "status": "passed"
             },
             "name": "the group list should not show it",
@@ -118,7 +118,11 @@
           }
         ],
         "extraData": {
-          "id": "m83.t2"
+          "id": "m83.t2",
+          "name": "Add and delete group",
+          "worker": "Mats Ljunggren - 2",
+          "start": "19:32:00",
+          "end": "19:33:56"
         }
       }
     ]

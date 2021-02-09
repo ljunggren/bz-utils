@@ -20,7 +20,7 @@
         "before": [],
         "after": [],
         "line": 2,
-        "name": "[m79.t1] Logout (Mats Ljunggren - 1)",
+        "name": "[m79.t1] Logout (Mats Ljunggren - 5)",
         "description": "Logout",
         "type": "scenario",
         "keyword": "Scenario Outline",
@@ -42,7 +42,7 @@
           {
             "line": 3,
             "result": {
-              "duration": 15813000000,
+              "duration": 37593000000,
               "status": "passed"
             },
             "name": "i am logged in",
@@ -54,7 +54,7 @@
           {
             "line": 4,
             "result": {
-              "duration": 12667000000,
+              "duration": 24270000000,
               "status": "passed"
             },
             "name": "i logout",
@@ -66,7 +66,7 @@
           {
             "line": 5,
             "result": {
-              "duration": 3239000000,
+              "duration": 5136000000,
               "status": "passed"
             },
             "name": "i should be logged out",
@@ -77,7 +77,11 @@
           }
         ],
         "extraData": {
-          "id": "m79.t1"
+          "id": "m79.t1",
+          "name": "Logout",
+          "worker": "Mats Ljunggren - 5",
+          "start": "19:31:49",
+          "end": "19:33:08"
         }
       }
     ]

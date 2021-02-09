@@ -28,7 +28,7 @@
         "before": [],
         "after": [],
         "line": 2,
-        "name": "[m86.t1] Cart changes (Mats Ljunggren - 2)",
+        "name": "[m86.t1] Cart changes (Mats Ljunggren - 5)",
         "description": "Cart changes",
         "type": "scenario",
         "keyword": "Scenario Outline",
@@ -47,7 +47,7 @@
           {
             "line": 3,
             "result": {
-              "duration": 15967000000,
+              "duration": 46375000000,
               "status": "passed"
             },
             "name": "i am a retailer with an empty cart",
@@ -59,7 +59,7 @@
           {
             "line": 4,
             "result": {
-              "duration": 7350000000,
+              "duration": 17770000000,
               "status": "passed"
             },
             "name": "i add a product to cart",
@@ -71,7 +71,7 @@
           {
             "line": 5,
             "result": {
-              "duration": 7409000000,
+              "duration": 19787000000,
               "status": "passed"
             },
             "name": "change the number of items in the cart",
@@ -83,7 +83,7 @@
           {
             "line": 6,
             "result": {
-              "duration": 5485000000,
+              "duration": 15129000000,
               "status": "passed"
             },
             "name": "the total should be correct",
@@ -94,7 +94,11 @@
           }
         ],
         "extraData": {
-          "id": "m86.t1"
+          "id": "m86.t1",
+          "name": "Cart changes",
+          "worker": "Mats Ljunggren - 5",
+          "start": "19:33:23",
+          "end": "19:35:10"
         }
       }
     ]

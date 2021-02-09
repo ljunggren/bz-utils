@@ -28,7 +28,7 @@
         "before": [],
         "after": [],
         "line": 2,
-        "name": "[m89.t5] Create product (Mats Ljunggren - 2)",
+        "name": "[m89.t5] Create product (Mats Ljunggren - 4)",
         "description": "Create product",
         "type": "scenario",
         "keyword": "Scenario Outline",
@@ -47,7 +47,7 @@
           {
             "line": 3,
             "result": {
-              "duration": 4177000000,
+              "duration": 9489000000,
               "status": "passed"
             },
             "name": "i am a brewer",
@@ -59,7 +59,7 @@
           {
             "line": 4,
             "result": {
-              "duration": 18087000000,
+              "duration": 65309000000,
               "status": "passed"
             },
             "name": "i add a product",
@@ -71,7 +71,7 @@
           {
             "line": 5,
             "result": {
-              "duration": 2399000000,
+              "duration": 28964000000,
               "status": "passed"
             },
             "name": "the product list should include it",
@@ -83,7 +83,7 @@
           {
             "line": 6,
             "result": {
-              "duration": 4989000000,
+              "duration": 56845000000,
               "status": "passed"
             },
             "name": "the product details should be correct",
@@ -94,7 +94,11 @@
           }
         ],
         "extraData": {
-          "id": "m89.t5"
+          "id": "m89.t5",
+          "name": "Create product",
+          "worker": "Mats Ljunggren - 4",
+          "start": "19:36:03",
+          "end": "19:38:52"
         }
       }
     ]

@@ -28,7 +28,7 @@
         "before": [],
         "after": [],
         "line": 2,
-        "name": "[m97.t1] Modify order quantity (Mats Ljunggren - 2)",
+        "name": "[m97.t1] Modify order quantity (Mats Ljunggren - 1)",
         "description": "Modify order quantity",
         "type": "scenario",
         "keyword": "Scenario Outline",
@@ -47,7 +47,7 @@
           {
             "line": 3,
             "result": {
-              "duration": 13929000000,
+              "duration": 58485000000,
               "status": "passed"
             },
             "name": "i am a retailer",
@@ -59,7 +59,7 @@
           {
             "line": 4,
             "result": {
-              "duration": 7117000000,
+              "duration": 22867000000,
               "status": "passed"
             },
             "name": "i add a product to cart",
@@ -71,42 +71,57 @@
           {
             "line": 5,
             "result": {
-              "duration": 15241000000,
-              "status": "passed"
+              "duration": 68648000000,
+              "status": "failed",
+              "error_message": "Element is not found or syntax error exists in the code\n[\n  \"BZ.TW.document\",\n  \"DIV:Contains(Orders)\",\n  \"SPAN:endContains(placed)\",\n  0\n]\n\nFailed on Action: m10.t11.6, Validate [exist]: \"placed\"\n[Error Hash: DFEC5298B112F57FCE66FBBF0C7E1E21]"
             },
             "name": "i place the order",
             "match": {
               "location": "5e3f275e64f84941a326d4d8/ci50/m97/t1/4/"
             },
+            "embeddings": [
+              {
+                "data": "PGI+RmFpbGVkIGFjdGlvbjo8L2I+IDxpbnB1dCBvbmZvY3VzPSJ0aGlzLnNlbGVjdCgpIiBzdHlsZT0id2lkdGg6Y2FsYygxMDAlIC0gMjAwcHgpIiB2YWx1ZT0iaHR0cDovL3N0YWdpbmctYmUuYm9vemFuZy5jb20vZXh0ZW5zaW9uP2lkPTVlM2YyNzVlNjRmODQ5NDFhMzI2ZDRkOCZncm91cD0xNDIwJmVudj00JnNlbGY9MCM1ZTNmMjc1ZTY0Zjg0OTQxYTMyNmQ0ZDgvY2k1MC9tMTAvdDExLzYvIi8+PGJyLz48YnIvPjxiPlRpbWU6PC9iPiAyMDIxLTAyLTA3IDE5OjQwOjIxIDxidXR0b24gc3R5bGU9J21hcmdpbi1sZWZ0OjIwcHg7Y29sb3I6I0ZGRjtiYWNrZ3JvdW5kLWNvbG9yOmJsdWU7Ym9yZGVyOjFweCBzb2xpZDtwYWRkaW5nOjVweDsnIG9uY2xpY2s9J3RoaXMuc3R5bGUuY29sb3I9IiNGRkYiO3RoaXMuc3R5bGUuYmFja2dyb3VuZENvbG9yPSJibHVlIjt0aGlzLm5leHRFbGVtZW50U2libGluZy5zdHlsZS5jb2xvcj0iIzAwMCI7dGhpcy5uZXh0RWxlbWVudFNpYmxpbmcuc3R5bGUuYmFja2dyb3VuZENvbG9yPSIjRkZGIjtkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgic2NyZWVuc2hvdDE2MTI3MjY4MjE1MDciKS5zdHlsZS5kaXNwbGF5PSJub25lIjtkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgibG9nMTYxMjcyNjgyMTUwNyIpLnN0eWxlLmRpc3BsYXk9ImJsb2NrIic+TG9nIERldGFpbHM8L2J1dHRvbj48YnIvPjxwcmUgc3R5bGU9J2JhY2tncm91bmQtY29sb3I6I0NDQztwYWRkaW5nOjEwcHg7Jz48Yj5EYXRhOjwvYj4gPGJyLz48YnIvPnsKICAiJHByb2plY3Qub3JkZXIub3JkZXJfaWQiOiAiMjkyMiIKfTwvcHJlPjxwcmUgc3R5bGU9J3BhZGRpbmc6MTBweDtiYWNrZ3JvdW5kLWNvbG9yOiNDQ0MnPjxiPlN0YWNrIHRyYWNlOjwvYj48YnIvPjxici8+PGRpdiBzdHlsZT0ndGV4dC1pbmRlbnQ6MHB4Jz5bbTk3LnQxLjNdIE1vZGlmeSBvcmRlciBxdWFudGl0eSDigKIgQW5kIGkgcGxhY2UgdGhlIG9yZGVyPC9kaXY+PGRpdiBzdHlsZT0ndGV4dC1pbmRlbnQ6MjBweCc+W20xMC50MTEuNV0gQ2hlY2tvdXQgQ2FydCDigKIgVmFsaWRhdGUgW2V4aXN0XTogInBsYWNlZCI8L2Rpdj48L3ByZT48cHJlIGlkPSdsb2cxNjEyNzI2ODIxNTA3JyBzdHlsZT0nYmFja2dyb3VuZC1jb2xvcjojQ0NDO3BhZGRpbmc6MTBweDsnPjxiPkxvZyBEZXRhaWxzOjwvYj48YnIvPjxici8+QlotTE9HOiBTdGFydCB0aW1lOiAyMDIxLTAyLTA3IDE5OjM5OjEyCiAgICBEaXR0byAuLi4KQlotTE9HOjI3NDAKQlotTE9HOiAxOTozOToxNApCWi1MT0c6ICZndDsmZ3Q7Jmd0OyZndDsmZ3Q7Jmd0OyZndDsmZ3Q7Jmd0OyZndDsmZ3Q7Jmd0OyZndDsmZ3Q7Jmd0OyZndDsmZ3Q7Jmd0OyZndDsmZ3Q7Jmd0OyZndDsmZ3Q7Jmd0OyZndDsmZ3Q7Jmd0OyZndDsmZ3Q7Jmd0OyZndDsmZ3Q7Jmd0OyZndDsmZ3Q7Jmd0OyZndDsmZ3Q7Jmd0OyZndDsmZ3Q7Jmd0OyZndDsmZ3Q7Jmd0OyZndDsmZ3Q7Jmd0OyZndDsmZ3Q7Jmd0OyZndDsmZ3Q7Jmd0OyZndDsKQlotTE9HOiAgICAgJmd0OyZndDsmZ3Q7Jmd0OyBMb2FkaW5nIHVuaXQgW20xMCx0MTFdIC0gQ2hlY2tvdXQgQ2FydCAoMzc1OSkgJmd0OyZndDsmZ3Q7Jmd0OwpCWi1MT0c6ICZndDsmZ3Q7Jmd0OyZndDsmZ3Q7Jmd0OyZndDsmZ3Q7Jmd0OyZndDsmZ3Q7Jmd0OyZndDsmZ3Q7Jmd0OyZndDsmZ3Q7Jmd0OyZndDsmZ3Q7Jmd0OyZndDsmZ3Q7Jmd0OyZndDsmZ3Q7Jmd0OyZndDsmZ3Q7Jmd0OyZndDsmZ3Q7Jmd0OyZndDsmZ3Q7Jmd0OyZndDsmZ3Q7Jmd0OyZndDsmZ3Q7Jmd0OyZndDsmZ3Q7Jmd0OyZndDsmZ3Q7Jmd0OyZndDsmZ3Q7Jmd0OyZndDsmZ3Q7Jmd0OyZndDsKQlotTE9HOiB0aW1lb3V0IGluIG1zOjAKQlotTE9HOjI3NjMKQlotTE9HOiB3YWl0aW5nIG9uIHJlcXVlc3RzCkJaLUxPRzogbmV4dEFjdGlvbjogeyJfMmoiOjAsInNjcmlwdCI6IiRwcm9qZWN0Lm5hdlBhZ2UoXCJNYXJrZXRwbGFjZVwiLFwiL2FwcC9ib296YW5nLXJldGFpbGVyL21hcmtldFwiKTsiLCJ0eXBlIjozLCJkZXNjcmlwdGlvbiI6IlNjcmlwdDogICB7ey4uLn19In0KQlotTE9HOiBBY3Rpb25bMSwgU2NyaXB0OiAgIHt7Li4ufX1dCkJaLUxPRzogdGltZW91dCBpbiBtczowCkJaLUxPRzoyNzYzCkJaLUxPRzogQWN0aW9uWzIsIENsaWNrICIwIiAiYm9vemFuZyByZXRhaWxlciIge1t0eXBlPWJ1dHRvbl19IGJ1dHRvbl0KQlotTE9HOiB0aW1lb3V0IGluIG1zOjAKQlotTE9HOjI3NjMKQlotTE9HOiBBY3Rpb25bMywgQ2xpY2sgIkNoZWNrb3V0Il0KQlotTE9HOiB0aW1lb3V0IGluIG1zOjE2NDU1CkJaLUxPRzoyNzYzCkJaLUxPRzogQWN0aW9uWzQsIENsaWNrICJPcmRlciJdCkJaLUxPRzogdGltZW91dCBpbiBtczozMDAwMApCWi1MT0c6Mjc2MwpCWi1MT0c6IHdhaXRpbmcgb24gcmVxdWVzdHMKQlotTE9HOiBuZXh0QWN0aW9uOiB7Il8yaiI6NCwic2NyaXB0IjoiJHByb2plY3Qub3JkZXIub3JkZXJfaWQ9JHV0aWwuZ2V0RWxlbWVudFRleHQoJGVsZW1lbnQpLnJlcGxhY2UoXCJPcmRlciBcIixcIlwiKS5yZXBsYWNlKFwiIHBsYWNlZFwiLFwiXCIpICIsImVsZW1lbnQiOlsiQlouVFcuZG9jdW1lbnQiLCJESVY6Q29udGFpbnMoT3JkZXJzKSIsIlNQQU46Y29udGFpbnMocGxhY2VkKSIsMF0sInR5cGUiOjIsImRlc2NyaXB0aW9uIjoiRXh0cmFjdDogXCJwbGFjZWRcIiB7ey4uLn19In0KQlotTE9HOmh0dHBzOi8vYXBpLnRlc3QucGl2b2h1Yi5jb20vdXNlci9vcmRlcnMKQlotTE9HOiBBY3Rpb25bNSwgRXh0cmFjdDogInBsYWNlZCIge3suLi59fV0KQlotTE9HOiB0aW1lb3V0IGluIG1zOjAKQlotTE9HOjI3NjMKQlotTE9HOiB2dnZ2diBOZXcgRGF0YSB2dnZ2dgpCWi1MT0c6ICRwcm9qZWN0Lm9yZGVyLm9yZGVyX2lkID0gMjkyMgpCWi1MT0c6IF5eXl5eIE5ldyBEYXRhIF5eXl5eCkJaLUxPRzogQWN0aW9uWzYsIFZhbGlkYXRlIFtleGlzdF06ICJwbGFjZWQiXQpCWi1MT0c6IHRpbWVvdXQgaW4gbXM6MjAwMCAtLSByZS10cnlpbmcKQlotTE9HOjIzOTIKQlotTE9HOiAxOTo0MDoxMApCWi1MT0c6IFNjcmVlbnNob3Q6bTEwLXQxMS02CkJaLUxPRzogdGltZW91dCBpbiBtczowCkJaLUxPRzoyNzYzCkJaLUxPRzogRW5kIHRpbWU6IDIwMjEtMDItMDcgMTk6NDA6MjAKQlotTE9HOiBmYWlsZWQgdGVzdDogLm0xMC90MTEuNQpCWi1MT0c6IDE5OjQwOjIxCkJaLUxPRzogICAgICZsdDsmbHQ7Jmx0OyZsdDsmbHQ7Jmx0OyZsdDsmbHQ7Jmx0OyZsdDsmbHQ7Jmx0OyZsdDsmbHQ7Jmx0OyZsdDsmbHQ7Jmx0OyZsdDsmbHQ7Jmx0OyZsdDsmbHQ7Jmx0OyZsdDsmbHQ7Jmx0OyZsdDsmbHQ7Jmx0OyZsdDsmbHQ7Jmx0OyZsdDsmbHQ7Jmx0OyZsdDsmbHQ7Jmx0OyZsdDsmbHQ7Jmx0OyZsdDsmbHQ7Jmx0OyZsdDsmbHQ7Jmx0OyZsdDsmbHQ7Jmx0OyZsdDsmbHQ7Jmx0OyZsdDsmbHQ7Jmx0OyZsdDsmbHQ7Jmx0OyZsdDsmbHQ7Jmx0OyZsdDsmbHQ7Jmx0OyZsdDsmbHQ7Jmx0OyZsdDsmbHQ7Jmx0OyZsdDsmbHQ7Jmx0OyZsdDsKQlotTE9HOiAmbHQ7Jmx0OyZsdDsmbHQ7IEZhaWxlZCBvbiBBY3Rpb246IE1vZHVsZSAtIEZ1bmN0aW9uYWwgVGVzdCBbbTEwLnQxMV0gQ2hlY2tvdXQgQ2FydCAmbHQ7Jmx0OyZsdDsmbHQ7CkJaLUxPRzogICAgICZsdDsmbHQ7Jmx0OyZsdDsmbHQ7Jmx0OyZsdDsmbHQ7Jmx0OyZsdDsmbHQ7Jmx0OyZsdDsmbHQ7Jmx0OyZsdDsmbHQ7Jmx0OyZsdDsmbHQ7Jmx0OyZsdDsmbHQ7Jmx0OyZsdDsmbHQ7Jmx0OyZsdDsmbHQ7Jmx0OyZsdDsmbHQ7Jmx0OyZsdDsmbHQ7Jmx0OyZsdDsmbHQ7Jmx0OyZsdDsmbHQ7Jmx0OyZsdDsmbHQ7Jmx0OyZsdDsmbHQ7Jmx0OyZsdDsmbHQ7Jmx0OyZsdDsmbHQ7Jmx0OyZsdDsmbHQ7Jmx0OyZsdDsmbHQ7Jmx0OyZsdDsmbHQ7Jmx0OyZsdDsmbHQ7Jmx0OyZsdDsmbHQ7Jmx0OyZsdDsmbHQ7Jmx0OyZsdDsmbHQ7Jmx0OyZsdDsKQlotTE9HOiAqKioqKioqKioqKioqKioqKioqKioqKioKQlotTE9HOiAqKioqIFRhc2tzOiAxMSAvIDQyICoqKioKQlotTE9HOiAqKioqKioqKioqKioqKioqKioqKioqKioKQlotTE9HOiBFbmQgdGltZTogMjAyMS0wMi0wNyAxOTo0MDoyMQpCWi1MT0c6IGZhaWxlZCB0ZXN0OiAubTk3L3QxLjUKQlotTE9HOiAxOTo0MDoyMQpCWi1MT0c6ICAgICAmbHQ7Jmx0OyZsdDsmbHQ7Jmx0OyZsdDsmbHQ7Jmx0OyZsdDsmbHQ7Jmx0OyZsdDsmbHQ7Jmx0OyZsdDsmbHQ7Jmx0OyZsdDsmbHQ7Jmx0OyZsdDsmbHQ7Jmx0OyZsdDsmbHQ7Jmx0OyZsdDsmbHQ7Jmx0OyZsdDsmbHQ7Jmx0OyZsdDsmbHQ7Jmx0OyZsdDsmbHQ7Jmx0OyZsdDsmbHQ7Jmx0OyZsdDsmbHQ7Jmx0OyZsdDsmbHQ7Jmx0OyZsdDsmbHQ7Jmx0OyZsdDsmbHQ7Jmx0OyZsdDsmbHQ7Jmx0OyZsdDsmbHQ7Jmx0OyZsdDsmbHQ7Jmx0OyZsdDsmbHQ7Jmx0OyZsdDsmbHQ7Jmx0OyZsdDsmbHQ7Jmx0OyZsdDsmbHQ7Jmx0OyZsdDsmbHQ7Jmx0OwpCWi1MT0c6ICZsdDsmbHQ7Jmx0OyZsdDsgRmFpbGVkIG9uIEFjdGlvbjogRmVhdHVyZSAtIFNjZW5hcmlvIFttOTcudDFdIE1vZGlmeSBvcmRlciBxdWFudGl0eSAmbHQ7Jmx0OyZsdDsmbHQ7CkJaLUxPRzogICAgICZsdDsmbHQ7Jmx0OyZsdDsmbHQ7Jmx0OyZsdDsmbHQ7Jmx0OyZsdDsmbHQ7Jmx0OyZsdDsmbHQ7Jmx0OyZsdDsmbHQ7Jmx0OyZsdDsmbHQ7Jmx0OyZsdDsmbHQ7Jmx0OyZsdDsmbHQ7Jmx0OyZsdDsmbHQ7Jmx0OyZsdDsmbHQ7Jmx0OyZsdDsmbHQ7Jmx0OyZsdDsmbHQ7Jmx0OyZsdDsmbHQ7Jmx0OyZsdDsmbHQ7Jmx0OyZsdDsmbHQ7Jmx0OyZsdDsmbHQ7Jmx0OyZsdDsmbHQ7Jmx0OyZsdDsmbHQ7Jmx0OyZsdDsmbHQ7Jmx0OyZsdDsmbHQ7Jmx0OyZsdDsmbHQ7Jmx0OyZsdDsmbHQ7Jmx0OyZsdDsmbHQ7Jmx0OyZsdDsmbHQ7Jmx0OyZsdDsmbHQ7CkJaLUxPRzogKioqKioqKioqKioqKioqKioqKioqKioqCkJaLUxPRzogKioqKiBUYXNrczogMTEgLyA0MiAqKioqCkJaLUxPRzogKioqKioqKioqKioqKioqKioqKioqKioqCkJaLUxPRzoxNDA5CkJaLUxPRzogTm8gbW9yZSBhY3Rpb24sIHRhc2sgY29tcGxldGUhCkJaLUxPRzpTdG9wIHRhc2shPC9wcmU+",
+                "mime_type": "text/html"
+              }
+            ],
             "keyword": "and"
           },
           {
             "line": 6,
             "result": {
-              "duration": 16492000000,
-              "status": "passed"
+              "duration": 0,
+              "status": "skipped"
             },
-            "name": "the brewer modifies order quantity and accepts",
+            "name": "When the brewer modifies order quantity and accepts",
             "match": {
-              "location": "5e3f275e64f84941a326d4d8/ci50/m97/t1/6/"
+              "location": "5e3f275e64f84941a326d4d8/ci50/m97/t1/6"
             },
-            "keyword": "When"
+            "keyword": "when"
           },
           {
             "line": 7,
             "result": {
-              "duration": 12235000000,
-              "status": "passed"
+              "duration": 0,
+              "status": "skipped"
             },
-            "name": "the retailer should see the order accpeted with new quantity",
+            "name": "Then the retailer should see the order accpeted with new quantity",
             "match": {
-              "location": "5e3f275e64f84941a326d4d8/ci50/m97/t1/8/"
+              "location": "5e3f275e64f84941a326d4d8/ci50/m97/t1/8"
             },
-            "keyword": "Then"
+            "keyword": "then"
           }
         ],
         "extraData": {
-          "id": "m97.t1"
+          "id": "m97.t1",
+          "name": "Modify order quantity",
+          "worker": "Mats Ljunggren - 1",
+          "start": "19:37:43",
+          "end": "19:40:21",
+          "failed": "5e3f275e64f84941a326d4d8/ci50/m10/t11/6/",
+          "rootCase": {
+            "errHash": "DFEC5298B112F57FCE66FBBF0C7E1E21"
+          }
         }
       }
     ]

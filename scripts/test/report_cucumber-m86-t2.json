@@ -28,7 +28,7 @@
         "before": [],
         "after": [],
         "line": 2,
-        "name": "[m86.t2] Remove from cart (Mats Ljunggren - 1)",
+        "name": "[m86.t2] Remove from cart (Mats Ljunggren - 2)",
         "description": "Remove from cart",
         "type": "scenario",
         "keyword": "Scenario Outline",
@@ -47,7 +47,7 @@
           {
             "line": 3,
             "result": {
-              "duration": 15568000000,
+              "duration": 35357000000,
               "status": "passed"
             },
             "name": "i am a retailer with an empty cart",
@@ -59,7 +59,7 @@
           {
             "line": 4,
             "result": {
-              "duration": 7372000000,
+              "duration": 23394000000,
               "status": "passed"
             },
             "name": "i add a product to cart",
@@ -71,7 +71,7 @@
           {
             "line": 5,
             "result": {
-              "duration": 9200000000,
+              "duration": 42866000000,
               "status": "passed"
             },
             "name": "i clear the cart",
@@ -83,7 +83,7 @@
           {
             "line": 6,
             "result": {
-              "duration": 4934000000,
+              "duration": 7704000000,
               "status": "passed"
             },
             "name": "the cart should be empty",
@@ -94,7 +94,11 @@
           }
         ],
         "extraData": {
-          "id": "m86.t2"
+          "id": "m86.t2",
+          "name": "Remove from cart",
+          "worker": "Mats Ljunggren - 2",
+          "start": "19:34:08",
+          "end": "19:36:07"
         }
       }
     ]

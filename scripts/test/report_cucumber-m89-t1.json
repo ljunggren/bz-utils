@@ -50,7 +50,7 @@
           {
             "line": 3,
             "result": {
-              "duration": 4150000000,
+              "duration": 5947000000,
               "status": "passed"
             },
             "name": "i am a brewer",
@@ -62,7 +62,7 @@
           {
             "line": 4,
             "result": {
-              "duration": 18479000000,
+              "duration": 59832000000,
               "status": "passed"
             },
             "name": "i have a product defined",
@@ -74,7 +74,7 @@
           {
             "line": 5,
             "result": {
-              "duration": 6540000000,
+              "duration": 14251000000,
               "status": "passed"
             },
             "name": "i delete the product",
@@ -86,7 +86,7 @@
           {
             "line": 6,
             "result": {
-              "duration": 2415000000,
+              "duration": 22892000000,
               "status": "passed"
             },
             "name": "the product list should not include the product",
@@ -97,7 +97,11 @@
           }
         ],
         "extraData": {
-          "id": "m89.t1"
+          "id": "m89.t1",
+          "name": "Delete product",
+          "worker": "Mats Ljunggren - 1",
+          "start": "19:35:32",
+          "end": "19:37:26"
         }
       }
     ]
