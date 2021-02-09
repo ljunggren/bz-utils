@@ -229,13 +229,6 @@ cat >> $file <<'EOF'
                             <thead></thead>
                             <tbody>
                                 <tr>
-                                  <th scope="row">Total issues:</th>
-EOF
-printf "<td>%s</td>" $total_issues >> $file
-cat >> $file <<'EOF'
-
-                    </tr>
-                    <tr>
                       <th scope="row">To be defined</th>
 EOF
 printf "<td>%s</td>" $tbd_issues >> $file
