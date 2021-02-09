@@ -103,7 +103,7 @@ else
     printf "\n"
 fi
 
-worker_list="$(cat $FILE_PATTERN | jq -c '.[] |.elements'[0].extraData | jq -c '"\(.start)_\(.end)_\(.worker)_\(.id)_\(.name)"' | sed 's/^.//;s/.$//')"
+worker_list="$(cat $FILE_PATTERN | jq -c '.[] |.elements'[0].extraData | jq -c '"\(.start)_\(.end)_\(.worker)_\(.id)_\(.name)"' | sed 's/^.//;s/.$//' | sort -k1)"
 number_of_workers="$(cat $FILE_PATTERN | jq -c '.[] |.elements'[0].extraData | jq -c '"\(.worker)"' | sed 's/^.//;s/.$//'| sort | uniq | wc -l )"
 
 printf "Number of workers: %s\n" $number_of_workers
