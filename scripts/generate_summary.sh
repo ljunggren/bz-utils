@@ -60,7 +60,7 @@ else
 fi
 
 all_issues="$(cat $FILE_PATTERN | jq -c '.[] |.elements'[0].extraData |jq -c 'select(.rootCase != null)' |jq -c '"\(.rootCase.errHash)#\(.rootCase.desc)#\(.rootCase.type)#\(.rootCase.scope)#\(.id) "' | sed 's/^.//;s/.$//')"
-unique_issues="$(cat $FILE_PATTERN | jq -c '.[] |.elements'[0].extraData |jq -c 'select(.rootCase != null)' |jq -c '"\(.rootCase.errHash)_\(.rootCase.desc)_\(.rootCase.type)_\(.rootCase.scope)_#@\(.rootCase.url)@#"' | sed 's/^.//;s/.$//'| sort | uniq -c | sort -r)"
+unique_issues="$(cat $FILE_PATTERN | jq -c '.[] |.elements'[0].extraData |jq -c 'select(.rootCase != null)' |jq -c '"\(.rootCase.errHash)_\(.rootCase.desc)_\(.rootCase.type)_\(.rootCase.scope)_#@\(.rootCase.url)@#"' | sed 's/^.//;s/.$//'| sort | uniq -c | sort -r | sed 's/^...//' | sed 's/[[:space:]]/\_/')"
 
 echo $unique_issues
 
@@ -87,7 +87,7 @@ else
     echo "${unique_issues}"|sed 's/_/ /g' 
 fi
 
-slow_steps="$(cat $FILE_PATTERN | jq -c '.[] |.elements' | jq -c '.[] |.steps'[] | jq '"\(.result.duration/1000000)ms_\(.name)|"' |sort -Vr | head -10 |sed 's/^.//;s/.$//')" 
+slow_steps="$(cat $FILE_PATTERN | jq -c '.[] |.elements' | jq -c '.[] |.steps'[] | jq '"\(.result.duration/1000000) ms_\(.name)|"' |sort -Vr | head -10 |sed 's/^.//;s/.$//')" 
 #times="$(cat $FILE_PATTERN | jq -c '.[] |.elements' | jq -c '.[] |.steps'[]| jq '"\(.result.duration) \(.name)"' |sort -Vr | head -10 | sed 's/^.//;s/.$//' | awk '{system("date -d@"$1/1000000000" -u +%H:%M:%S")}')"
 printf "\n"
 printf "##########################\n"
@@ -308,7 +308,8 @@ cat >> $file <<'EOF'
                         <table>
                             <thead>
                                 <tr>
-                                   <th scope="col"># Error Hash (#=impacted tests)</th>
+                                    <th scope="col">Impact</th>
+                                    <th scope="col">Error Hash</th>
                                     <th scope="col">Description</th>
                                     <th scope="col">Type</th>
                                     <th scope="col">Scope</th>
@@ -325,7 +326,7 @@ then
 else
     while IFS= read -r line ; do 
       echo "<tr><td>" >> $file;
-      echo $line | sed 's~_~</td><td>~g' |sed 's/|/\n/g' |sed 's/null/-/g' |sed 's/#@/\<a href="/g' |sed 's/@#/">Go\<\/a>/g'   >> $file;
+      echo $line | sed 's~_~</td><td>~g' | sed 's/\s+/,/' |sed 's/|/\n/g' |sed 's/#@null@#/-/g' | sed 's/null/-/g' |sed 's/#@/\<a href="/g' |sed 's/@#/">Go\<\/a>/g'   >> $file;
       echo "</td></tr>"  >> $file;
     done <<< "$unique_issues"
     printf "</table>" >>  $file;
