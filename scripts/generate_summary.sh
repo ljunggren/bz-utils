@@ -398,3 +398,13 @@ cat >> $file <<'EOF'
 </html>
 
 EOF
+
+# Return error code if any non-automation issues exists
+if [ -z "$unique_issues" ] || [ "$total_issues" == "$automation_issues" ]
+then
+  echo "No non-automation issues found. Exiting with status code 0"
+  exit 0
+else
+  echo "Issues found. Exiting with status code 1"
+  exit 1
+fi
