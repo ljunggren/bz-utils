@@ -25,8 +25,8 @@ then
     exit
 fi
 
-total_scenarios="$(grep Scenario $FILE_PATTERN | wc -l)"
-failed_scenarios="$(grep status $FILE_PATTERN | grep failed | wc -l)"
+total_scenarios="$(jq . $FILE_PATTERN | grep Scenario | wc -l)"
+failed_scenarios="$(jq . $FILE_PATTERN | grep status | grep failed | wc -l)"
 
 printf "\n"
 printf "#############################\n"
@@ -41,10 +41,10 @@ else
    printf "Total: %s\nFailed: %s\n" $total_scenarios $failed_scenarios
 fi
 
-total="$(grep status $FILE_PATTERN | wc -l)"
-failed="$(grep status $FILE_PATTERN | grep failed | wc -l)"
-skipped="$(grep status $FILE_PATTERN | grep skipped | wc -l)"
-pending="$(grep status $FILE_PATTERN | grep pending | wc -l)"
+total="$(jq . $FILE_PATTERN | grep status | wc -l)"
+failed="$(jq . $FILE_PATTERN | grep status | grep failed | wc -l)"
+skipped="$(jq . $FILE_PATTERN | grep status | grep skipped | wc -l)"
+pending="$(jq . $FILE_PATTERN | grep status | grep pending | wc -l)"
 
 printf "\n"
 printf "#########################\n"
@@ -62,13 +62,15 @@ fi
 all_issues="$(cat $FILE_PATTERN | jq -c '.[] |.elements'[0].extraData |jq -c 'select(.rootCase != null)' |jq -c '"\(.rootCase.errHash)#\(.rootCase.desc)#\(.rootCase.type)#\(.rootCase.scope)#\(.id) "' | sed 's/^.//;s/.$//')"
 unique_issues="$(cat $FILE_PATTERN | jq -c '.[] |.elements'[0].extraData |jq -c 'select(.rootCase != null)' |jq -c '"\(.rootCase.errHash)_\(.rootCase.desc)_\(.rootCase.type)_\(.rootCase.scope)_#@\(.rootCase.url)@#"' | sed 's/^.//;s/.$//'| sort | uniq -c | sort -r | sed 's/^ *//g' | sed 's/[[:space:]]/\_/')"
 
+printf "\n"
 echo $unique_issues
+printf "\n"
 
 total_issues="$(echo "$unique_issues" | grep "_" | wc -l)"
-tbd_issues="$(echo "$unique_issues" | grep null | wc -l)"
-application_issues="$(echo "$unique_issues" | grep app | wc -l)"
-automation_issues="$(echo "$unique_issues" | grep auto | wc -l)"
-unknown_issues="$(echo "$unique_issues" | grep unknow | wc -l)"
+tbd_issues="$(echo "$unique_issues" | grep "_null_" | wc -l)"
+application_issues="$(echo "$unique_issues" | grep "_app_" | wc -l)"
+automation_issues="$(echo "$unique_issues" | grep "_auto_" | wc -l)"
+unknown_issues="$(echo "$unique_issues" | grep "_unknow_" | wc -l)"
 
 printf "\n"
 printf "###########################\n"
