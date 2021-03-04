@@ -25,7 +25,7 @@ then
     exit
 fi
 
-total_scenarios="$(jq . $FILE_PATTERN | grep Scenario | wc -l)"
+total_scenarios="$(jq . $FILE_PATTERN | grep keyword |grep Scenario | wc -l)"
 failed_scenarios="$(jq . $FILE_PATTERN | grep status | grep failed | wc -l)"
 
 printf "\n"
