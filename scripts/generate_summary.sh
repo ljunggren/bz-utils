@@ -224,7 +224,7 @@ cat >> $file <<'EOF'
                 </div>
                 <div class="three columns">
                     <article class="table_area">
-                        <header class="table_header steps">
+                        <header class="table_header issues">
                             <h6>Issues</h6>
                         </header>
                         <table>
@@ -321,7 +321,7 @@ then
 else
     while IFS= read -r line ; do 
       echo "<tr><td>" >> $file;
-      echo $line | sed 's~_~</td><td>~g' | sed 's/\s+/,/' |sed 's/|/\n/g' |sed 's/#@null@#/-/g' | sed 's/null/-/g' |sed 's/#@/\<a href="/g' |sed 's/@#/">Go\<\/a>/g'   >> $file;
+      echo $line | sed 's~_~</td><td>~g' | sed 's/\s+/,/' |sed 's/|/\n/g' |sed 's/#@null@#/-/g' | sed 's/null/-/g' |sed 's/#@/\<a href="/g' |sed 's/@#/" target="_blank">Go\<\/a>/g'   >> $file;
       echo "</td></tr>"  >> $file;
     done <<< "$unique_issues"
     printf "</table>" >>  $file;
@@ -400,6 +400,22 @@ cat >> $file <<'EOF'
 </html>
 
 EOF
+
+now=$(date +"%Y-%m-%d")
+
+csvfile=$(echo bz-issues-$now.csv)
+printf "%s\n" Generating CSV issue file: $csvfile
+
+
+if [ -z "$unique_issues" ]
+then
+    printf "<tr><td>No issues found. No CSV file exported.</td></tr>" >> $csvfile
+else
+    while IFS= read -r line ; do 
+      echo $line | sed 's~_~,~g' | sed 's/\s+/,/' |sed 's/|/\n/g' |sed 's/#@null@#/-/g' | sed 's/null/-/g' |sed 's/#@/\,/g' |sed 's/@#//g'   >> $csvfile;    
+    done <<< "$unique_issues"
+   
+fi
 
 # Return error code if any non-automation issues exists
 if [ -z "$unique_issues" ] || [ "$total_issues" == "$automation_issues" ]
