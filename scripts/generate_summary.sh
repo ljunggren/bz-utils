@@ -60,7 +60,7 @@ else
 fi
 
 all_issues="$(cat $FILE_PATTERN | jq -c '.[] |.elements'[0].extraData |jq -c 'select(.rootCase != null)' |jq -c '"\(.rootCase.errHash)#\(.rootCase.desc)#\(.rootCase.type)#\(.rootCase.scope)#\(.id) "' | sed 's/^.//;s/.$//')"
-unique_issues="$(cat $FILE_PATTERN | jq -c '.[] |.elements'[0].extraData |jq -c 'select(.rootCase != null)' |jq -c '"\(.rootCase.errHash)_\(.rootCase.desc)_\(.rootCase.type)_\(.rootCase.scope)_#@\(.rootCase.url)@#"' | sed 's/^.//;s/.$//'| sort | uniq -c | sort -r | sed 's/^ *//g' | sed 's/[[:space:]]/\_/')"
+unique_issues="$(cat $FILE_PATTERN | jq -c '.[] |.elements'[0].extraData |jq -c 'select(.rootCase != null)' |jq -c '"\(.rootCase.errHash)_#\(.rootCase.desc)_#\(.rootCase.type)_#\(.rootCase.scope)_##@\(.rootCase.url)@#"' | sed 's/^.//;s/.$//'| sort | uniq -c | sort -r | sed 's/^ *//g' | sed 's/[[:space:]]/\_#/')"
 
 printf "\n"
 echo $unique_issues
@@ -86,10 +86,10 @@ else
     printf "\n"
     printf "Most impactful issues\n"
     printf "\n"
-    echo "${unique_issues}"|sed 's/_/ /g' 
+    echo "${unique_issues}"|sed 's/_#/ /g' 
 fi
 
-slow_steps="$(cat $FILE_PATTERN | jq -c '.[] |.elements' | jq -c '.[] |.steps'[] | jq '"\(.result.duration/1000000) ms_\(.name)|"' |sort -Vr | head -10 |sed 's/^.//;s/.$//')" 
+slow_steps="$(cat $FILE_PATTERN | jq -c '.[] |.elements' | jq -c '.[] |.steps'[] | jq '"\(.result.duration/1000000) ms_#\(.name)|"' |sort -Vr | head -10 |sed 's/^.//;s/.$//')" 
 #times="$(cat $FILE_PATTERN | jq -c '.[] |.elements' | jq -c '.[] |.steps'[]| jq '"\(.result.duration) \(.name)"' |sort -Vr | head -10 | sed 's/^.//;s/.$//' | awk '{system("date -d@"$1/1000000000" -u +%H:%M:%S")}')"
 printf "\n"
 printf "##########################\n"
@@ -101,11 +101,11 @@ if [ -z "$slow_steps" ]
 then
     printf "No test steps found\n"
 else
-    echo $slow_steps|sed 's/_/ /g' |sed 's/|/\n/g'|sed -e 's/^[ \t]*//'
+    echo $slow_steps|sed 's/_#/ /g' |sed 's/|/\n/g'|sed -e 's/^[ \t]*//'
     printf "\n"
 fi
 
-worker_list="$(cat $FILE_PATTERN | jq -c '.[] |.elements'[0].extraData | jq -c '"\(.start)_\(.end)_\(.worker)_\(.id)_\(.name)"' | sed 's/^.//;s/.$//' | sort -k1)"
+worker_list="$(cat $FILE_PATTERN | jq -c '.[] |.elements'[0].extraData | jq -c '"\(.start)_#\(.end)_#\(.worker)_#\(.id)_#\(.name)"' | sed 's/^.//;s/.$//' | sort -k1)"
 number_of_workers="$(cat $FILE_PATTERN | jq -c '.[] |.elements'[0].extraData | jq -c '"\(.worker)"' | sed 's/^.//;s/.$//'| sort | uniq | wc -l )"
 
 printf "Number of workers: %s\n" $number_of_workers
@@ -321,7 +321,7 @@ then
 else
     while IFS= read -r line ; do 
       echo "<tr><td>" >> $file;
-      echo $line | sed 's~_~</td><td>~g' | sed 's/\s+/,/' |sed 's/|/\n/g' |sed 's/#@null@#/-/g' | sed 's/null/-/g' |sed 's/#@/\<a href="/g' |sed 's/@#/" target="_blank">Go\<\/a>/g'   >> $file;
+      echo $line | sed 's~_#~</td><td>~g' | sed 's/\s+/,/' |sed 's/|/\n/g' |sed 's/#@null@#/-/g' | sed 's/null/-/g' |sed 's/#@/\<a href="/g' |sed 's/@#/" target="_blank">Go\<\/a>/g'   >> $file;
       echo "</td></tr>"  >> $file;
     done <<< "$unique_issues"
     printf "</table>" >>  $file;
@@ -348,7 +348,7 @@ then
 else
     while IFS= read -r line ; do 
       echo "<tr><td>" >> $file;
-      echo $line | sed 's~_~</td><td>~g' |sed 's/|/\n/g'  >> $file;
+      echo $line | sed 's~_#~</td><td>~g' |sed 's/|/\n/g'  >> $file;
       echo "</td></tr>"  >> $file;
     done <<< "$slow_steps"
     printf "</table>" >>  $file;
@@ -378,7 +378,7 @@ then
 else
     while IFS= read -r line ; do 
       echo "<tr><td>" >> $file;
-      echo $line | sed 's~_~</td><td>~g' |sed 's/|/\n/g'  >> $file;
+      echo $line | sed 's~_#~</td><td>~g' |sed 's/|/\n/g'  >> $file;
       echo "</td></tr>"  >> $file;
     done <<< "$worker_list"
     printf "</table>" >>  $file;
@@ -412,7 +412,7 @@ then
     printf "<tr><td>No issues found. No CSV file exported.</td></tr>" >> $csvfile
 else
     while IFS= read -r line ; do 
-      echo $line | sed 's~_~,~g' | sed 's/\s+/,/' |sed 's/|/\n/g' |sed 's/#@null@#/-/g' | sed 's/null/-/g' |sed 's/#@/\,/g' |sed 's/@#//g'   >> $csvfile;    
+      echo $line | sed 's~_#~,~g' | sed 's/\s+/,/' |sed 's/|/\n/g' |sed 's/#@null@#/-/g' | sed 's/null/-/g' |sed 's/#@/\,/g' |sed 's/@#//g'   >> $csvfile;    
     done <<< "$unique_issues"
    
 fi
