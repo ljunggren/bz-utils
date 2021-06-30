@@ -66,11 +66,11 @@ printf "\n"
 echo $unique_issues
 printf "\n"
 
-total_issues="$(echo "$unique_issues" | grep "_" | wc -l)"
-tbd_issues="$(echo "$unique_issues" | grep "_null_" | wc -l)"
-application_issues="$(echo "$unique_issues" | grep "_app_" | wc -l)"
-automation_issues="$(echo "$unique_issues" | grep "_auto_" | wc -l)"
-unknown_issues="$(echo "$unique_issues" | grep "_unknow_" | wc -l)"
+total_issues="$(echo "$unique_issues" | grep "_#" | wc -l)"
+tbd_issues="$(echo "$unique_issues" | grep "_#null_#" | wc -l)"
+application_issues="$(echo "$unique_issues" | grep "_#app_#" | wc -l)"
+automation_issues="$(echo "$unique_issues" | grep "_#auto_#" | wc -l)"
+unknown_issues="$(echo "$unique_issues" | grep "_#unknow_#" | wc -l)"
 
 printf "\n"
 printf "###########################\n"
