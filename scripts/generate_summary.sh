@@ -149,6 +149,7 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
 
 .top_header{margin:7rem 0}.top_header .heading{font-size:3rem;color:#404159}.chart_section table,.tabs_section table{width:100%;border-collapse:collapse;border-spacing:0}.chart_section table tr,.tabs_section table tr{padding:.5rem .5rem}.chart_section table th,.tabs_section table th{color:rgba(43,44,59,.8);font-size:1.1rem;text-transform:uppercase}.chart_section{margin-bottom:6rem}.chart_section .table_area{margin-bottom:2rem}@media all and (min-width:768px){.chart_section .table_area{margin-bottom:0}}.chart_section .table_area.last_of-type{margin:0}.chart_section .table_area .table_header{border-top-right-radius:5px;border-top-left-radius:5px;padding:1.1rem 1rem}.chart_section .table_area .table_header h6{margin-bottom:0;font-weight:600;font-size:1.3rem}.chart_section .table_area .table_header.test{background:#f99fa0}.chart_section .table_area .table_header.steps{background:#fdcedc}.chart_section .table_area .table_header.issues{background:#ded0fb}.chart_section .table_area .table_header.workers{background:#b9dfd4}.chart_section .table_area th{padding:0 .9rem!important;width:70%}.chart_section .table_area td{font-size:1.4rem}.tabs_section{margin-bottom:6rem}.tabs_section tr:nth-of-type(even){background-color:rgba(0,0,0,.05)}.tabs_section tr td{font-size:1.3rem}footer{padding:2rem 0}footer .copy{font-size:1rem}.tabset>input[type=radio]{position:absolute;left:-200vw}.tab-panels>section{padding:1rem}.tabset .tab-panel{display:none;overflow-x:auto;white-space:nowrap}.tabset>input:first-child:checked~.tab-panels>.tab-panel:first-child,.tabset>input:nth-child(11):checked~.tab-panels>.tab-panel:nth-child(6),.tabset>input:nth-child(3):checked~.tab-panels>.tab-panel:nth-child(2),.tabset>input:nth-child(5):checked~.tab-panels>.tab-panel:nth-child(3),.tabset>input:nth-child(7):checked~.tab-panels>.tab-panel:nth-child(4),.tabset>input:nth-child(9):checked~.tab-panels>.tab-panel:nth-child(5){display:block}.tabset>label{position:relative;display:inline-block;padding:1.1rem 1rem;padding-right:3rem;cursor:pointer;font-weight:600;border-top-left-radius:5px;border-top-right-radius:5px;border-bottom:3px solid transparent;margin-bottom:-1px;transition:all .4s ease-in;width:80%;font-size:1.3rem}.tabset>label:hover{background-color:rgba(0,0,0,.05)}@media all and (min-width:768px){.tabset>label{width:auto}}.tabset>input:checked+label{border-color:#e1e1e1;border-bottom:1px solid #fff;border-bottom:3px solid #1183ee}.tab-panel{border-top:1px solid #e1e1e1}
 
+#issuetable td:first-child, th:first-child {padding-left: 9px; max-width: 30px;} #issuetable td:nth-of-type(3),th:nth-of-type(3){max-width: 400px;overflow: hidden;}
     </style>     
     <title>Boozang - Test Execution Summary</title>
   </head>
@@ -300,7 +301,7 @@ cat >> $file <<'EOF'
 
                 <div class="tab-panels">
                     <section id="issues" class="tab-panel">
-                        <table>
+                        <table id="issuetable">
                             <thead>
                                 <tr>
                                     <th scope="col">Impact</th>
@@ -321,7 +322,8 @@ then
 else
     while IFS= read -r line ; do 
       echo "<tr><td>" >> $file;
-      echo $line | sed 's~_#~</td><td>~g' | sed 's/\s+/,/' |sed 's/|/\n/g' |sed 's/#@null@#/-/g' | sed 's/null/-/g' |sed 's/#@/\<a href="/g' |sed 's/@#/" target="_blank">Go\<\/a>/g'   >> $file;
+      echo $line | sed 's~_#~</td><td>~g' |sed 's~\n~<br/>~g' | sed 's/\s+/,/' |sed 's/|/\n/g' |sed 's/#@null@#/-/g' | sed 's/null/-/g' |sed 's/#@/\<a href="/g' |sed 's/@#/" target="_blank">Go\<\/a>/g'   >> $file;
+      echo $line | sed ':a;N;$!ba;s/\n/ /g'
       echo "</td></tr>"  >> $file;
     done <<< "$unique_issues"
     printf "</table>" >>  $file;
