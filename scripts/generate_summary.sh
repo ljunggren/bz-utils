@@ -323,7 +323,6 @@ else
     while IFS= read -r line ; do 
       echo "<tr><td>" >> $file;
       echo $line | sed 's~_#~</td><td>~g' |sed 's~\n~<br/>~g' | sed 's/\s+/,/' |sed 's/|/\n/g' |sed 's/#@null@#/-/g' | sed 's/null/-/g' |sed 's/#@/\<a href="/g' |sed 's/@#/" target="_blank">Go\<\/a>/g'   >> $file;
-      echo $line | sed ':a;N;$!ba;s/\n/ /g'
       echo "</td></tr>"  >> $file;
     done <<< "$unique_issues"
     printf "</table>" >>  $file;
