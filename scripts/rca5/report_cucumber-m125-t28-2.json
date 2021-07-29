@@ -1,0 +1,113 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "[m125] Endorsements management",
+    "line": 1,
+    "tags": [
+      {
+        "name": "@NISTA-876",
+        "type": "tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ],
+    "id": "m125",
+    "uri": "jira-features/2_NISTA-876.feature",
+    "elements": [
+      {
+        "before": [],
+        "after": [],
+        "line": 2,
+        "name": "[m125.t28(2)] Endorsement management TCS Carte Entreprise (Jenkins CI - 15)",
+        "description": "Endorsement management TCS Carte Entreprise",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "tags": [
+          {
+            "name": "@NISTA-876"
+          },
+          {
+            "name": "@NISTA-2184"
+          }
+        ],
+        "steps": [
+          {
+            "line": 3,
+            "result": {
+              "duration": 12008000000,
+              "status": "passed"
+            },
+            "name": "A legal entity contact",
+            "match": {
+              "location": "5e60f3e3deb43b53367fb106/master/m125/t28/2/"
+            },
+            "embeddings": [
+              {
+                "data": "PHByZSBzdHlsZT0nYmFja2dyb3VuZC1jb2xvcjojQ0NDO3BhZGRpbmc6MTBweDsnPjxiPkRhdGE6PC9iPiA8YnIvPjxici8+ewogICIkcHJvamVjdC5wZXJzb25hbERhdGEuZXh0ZXJuYWxJRCI6ICI1MjU3OTg1NDgiLAogICIkcHJvamVjdC5wZXJzb25hbERhdGEuaWRlbnRpZmllciI6IDEwMjI5NSwKICAiJHRlc3QuYXBpRGF0YSI6IHsKICAgICJhZGRyZXNzZXMiOiBbCiAgICAgIHsKICAgICAgICAiQHR5cGUiOiAiaW50ZXJmYWNlczpBZGRyZXNzSUJPIiwKICAgICAgICAiemlwQ29kZSI6ICIxMjE3IiwKICAgICAgICAiY291bnRyeSI6IHsKICAgICAgICAgICJleHRDb2RlIjogIkNIIgogICAgICAgIH0sCiAgICAgICAgImFkZHJlc3NUeXBlIjogewogICAgICAgICAgImlkIjogMgogICAgICAgIH0sCiAgICAgICAgInN0cmVldE5hbWUiOiAiQ2hlbWluIGRlIEJsYW5kb25uZXQiLAogICAgICAgICJjaXR5TmFtZSI6ICJWZXJuaWVyIiwKICAgICAgICAiaG91c2VOciI6ICI0IgogICAgICB9LAogICAgICB7CiAgICAgICAgIkB0eXBlIjogImludGVyZmFjZXM6QWRkcmVzc0lCTyIsCiAgICAgICAgInppcENvZGUiOiAiMTIxNyIsCiAgICAgICAgImNvdW50cnkiOiB7CiAgICAgICAgICAiZXh0Q29kZSI6ICJDSCIKICAgICAgICB9LAogICAgICAgICJhZGRyZXNzVHlwZSI6IHsKICAgICAgICAgICJpZCI6IDYKICAgICAgICB9LAogICAgICAgICJzdHJlZXROYW1lIjogIkNoZW1pbiBkZSBCbGFuZG9ubmV0IiwKICAgICAgICAiY2l0eU5hbWUiOiAiVmVybmllciIsCiAgICAgICAgImhvdXNlTnIiOiAiNCIKICAgICAgfQogICAgXSwKICAgICJzdWJzY3JpcHRpb25zIjogW10sCiAgICAiZWFuIjogIjEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MCIsCiAgICAiZ2VuZGVyIjogewogICAgICAiZXh0Q29kZSI6ICIyIgogICAgfSwKICAgICJlbnRpdHlUeXBlIjogewogICAgICAiZXh0Q29kZSI6ICIyIgogICAgfSwKICAgICJpZGVudGlmaWVycyI6IFtdLAogICAgImNvbnRhY3RBZmZpbml0eU1lbWJlcnNoaXBzIjogW10sCiAgICAidGVsZXBob25lcyI6IFtdLAogICAgImxhbmd1YWdlIjogewogICAgICAiaWQiOiAxMDEsCiAgICAgICJkZXNjIjogIkVuZ2xpc2ggLSBVUyIKICAgIH0sCiAgICAiY2hhbm5lbFR5cGUiOiB7CiAgICAgICJpZCI6IDMsCiAgICAgICJkZXNjIjogIkludGVyZmFjZSIKICAgIH0sCiAgICAiZXh0ZXJuYWxDb250YWN0TnVtYmVyIjogIjUyNTc5ODU0OCIsCiAgICAiZW1haWxzIjogWwogICAgICB7CiAgICAgICAgIkB0eXBlIjogImludGVyZmFjZXM6RW1haWxJQk8iLAogICAgICAgICJlbWFpbFR5cGUiOiB7CiAgICAgICAgICAiaWQiOiAxLAogICAgICAgICAgImRlc2MiOiAiUHJpbWFyeSIKICAgICAgICB9LAogICAgICAgICJlbWFpbCI6ICJlbWFpbDErdGVzdHRAZ29vZ2xlLmRlIgogICAgICB9CiAgICBdLAogICAgIm5hdGlvbmFsaXR5IjogewogICAgICAiaWQiOiA3NwogICAgfSwKICAgICJuYW1lIjogIkNvYW1pamYiLAogICAgImNvbnNlbnRzIjogW10sCiAgICAiY29udGFjdFN1YlR5cGVUQ1NWTyI6IHsKICAgICAgImV4dENvZGUiOiAiMTUiCiAgICB9LAogICAgImZpcnN0TmFtZSI6ICJTdXpvb2NrIiwKICAgICJkYXRlT2ZCaXJ0aCI6ICIxOTgxLTA3LTA5VDAwOjAwOjAwIiwKICAgICJjYW1wU2VjdGlvblZPIjogewogICAgICAiZXh0Q29kZSI6ICIyMTIiCiAgICB9LAogICAgInNlY3Rpb25UQ1NWTyI6IHsKICAgICAgImV4dENvZGUiOiAiU0ciCiAgICB9LAogICAgInN1YlNlY3Rpb25UQ1NWTyI6IHsKICAgICAgImV4dENvZGUiOiAiU0cxIgogICAgfQogIH0KfTwvcHJlPg==",
+                "mime_type": "text/html"
+              }
+            ],
+            "keyword": "Given"
+          },
+          {
+            "line": 4,
+            "result": {
+              "duration": 265945000000,
+              "status": "passed"
+            },
+            "name": "The contact acquires a TCS Carte Entreprise policy with startDatePolicy: today-100 interchangeableLicensePlate1: true foreignLicensePlate1: false totalWeightExceedLimit1: true <breakdownAssistance1> legalProtectionDriver1: Protection juridique circulation Suisse & Europe",
+            "match": {
+              "location": "5e60f3e3deb43b53367fb106/master/m125/t28/4/"
+            },
+            "embeddings": [
+              {
+                "data": "PHByZSBzdHlsZT0nYmFja2dyb3VuZC1jb2xvcjojQ0NDO3BhZGRpbmc6MTBweDsnPjxiPkRhdGE6PC9iPiA8YnIvPjxici8+ewogICIkcGFyYW1ldGVyLmFwaUNhbGwiOiB0cnVlLAogICIkcGFyYW1ldGVyLmJyZWFrZG93bkFzc2lzdGFuY2UiOiAiIiwKICAiJHBhcmFtZXRlci5jb250YWN0RW1haWwiOiAiIiwKICAiJHBhcmFtZXRlci5jb250YWN0RXh0ZXJuYWxJRCI6ICI1MjU3OTg1NDgiLAogICIkcGFyYW1ldGVyLmNvdmVyQXJlYSI6ICIiLAogICIkcGFyYW1ldGVyLmNvdmVyVHlwZSI6ICIiLAogICIkcGFyYW1ldGVyLmNyZWF0ZU1lbWJlcnNoaXAiOiB0cnVlLAogICIkcGFyYW1ldGVyLmNyZWF0ZU9mZmVyIjogdHJ1ZSwKICAiJHBhcmFtZXRlci5kZXBhbm5hZ2UiOiAiIiwKICAiJHBhcmFtZXRlci5kb3duZ3JhZGUiOiAiIiwKICAiJHBhcmFtZXRlci5lbmRQb2xpY3lOdW1iZXIiOiAiIiwKICAiJHBhcmFtZXRlci5lbnRpdHlUeXBlIjogIiIsCiAgIiRwYXJhbWV0ZXIuZmluYWxEZWNpc2lvbiI6ICIiLAogICIkcGFyYW1ldGVyLmZvcmNlTG9naW4iOiBmYWxzZSwKICAiJHBhcmFtZXRlci5mb3JlaWduTGljZW5zZVBsYXRlIjogZmFsc2UsCiAgIiRwYXJhbWV0ZXIuaGFzSW5zdXJhbmNlIjogZmFsc2UsCiAgIiRwYXJhbWV0ZXIuaGFzTFBEIjogZmFsc2UsCiAgIiRwYXJhbWV0ZXIuaW5kX2ZhbSI6ICIiLAogICIkcGFyYW1ldGVyLmludGVyY2hhbmdlYWJsZUxpY2Vuc2VQbGF0ZSI6IHRydWUsCiAgIiRwYXJhbWV0ZXIuaXNFbmRvcnNlbWVudCI6ICIiLAogICIkcGFyYW1ldGVyLmlzVGVjaG5pY2FsQ2hhbmdlIjogIiIsCiAgIiRwYXJhbWV0ZXIuaXNWYWxpZGF0aW9uQXR0cmlidXRlcyI6IGZhbHNlLAogICIkcGFyYW1ldGVyLmxlZ2FsUHJvdGVjdGlvbkRyaXZlciI6ICJQcm90ZWN0aW9uIGp1cmlkaXF1ZSBjaXJjdWxhdGlvbiBTdWlzc2UgJiBFdXJvcGUiLAogICIkcGFyYW1ldGVyLmxvZ2luUHJvZmlsZSI6ICJiYWNrb2ZmaWNlIiwKICAiJHBhcmFtZXRlci5tZW1iZXJzaGlwUGF5bWVudE1ldGhvZCI6ICJjYXNoIiwKICAiJHBhcmFtZXRlci5tb3RvcmlzZSI6ICIiLAogICIkcGFyYW1ldGVyLm9mZmVyIjogIlBvbGljeSIsCiAgIiRwYXJhbWV0ZXIucGFydG5lckNhcmQiOiAiIiwKICAiJHBhcmFtZXRlci5wYXltZW50TWV0aG9kIjogImNhc2giLAogICIkcGFyYW1ldGVyLnByb2R1Y3QiOiAiVENTIENhcnRlIEVudHJlcHJpc2UiLAogICIkcGFyYW1ldGVyLnN0YXJ0RGF0ZSI6ICJ0b2RheS0xMDAiLAogICIkcGFyYW1ldGVyLnRvdGFsQ292ZXJhZ2VFdXJvcGUiOiAiIiwKICAiJHBhcmFtZXRlci50b3RhbENvdmVyYWdlU3dpdHplcmxhbmQiOiAiIiwKICAiJHBhcmFtZXRlci50b3RhbFdlaWdodEV4Y2VlZExpbWl0IjogdHJ1ZQp9PC9wcmU+",
+                "mime_type": "text/html"
+              }
+            ],
+            "keyword": "When"
+          },
+          {
+            "line": 5,
+            "result": {
+              "duration": 275632000000,
+              "status": "passed"
+            },
+            "name": "I endorse the policy with startDateEndorsement: today interchangeableLicensePlate2: true foreignLicensePlate2: false totalWeightExceedLimit2: false breakdownAssistance2: Secours routier Suisse legalProtectionDriver2: Protection juridique circulation Suisse",
+            "match": {
+              "location": "5e60f3e3deb43b53367fb106/master/m125/t28/5/"
+            },
+            "embeddings": [
+              {
+                "data": "PHByZSBzdHlsZT0nYmFja2dyb3VuZC1jb2xvcjojQ0NDO3BhZGRpbmc6MTBweDsnPjxiPkRhdGE6PC9iPiA8YnIvPjxici8+ewogICIkcGFyYW1ldGVyLmFwaUNhbGwiOiBmYWxzZSwKICAiJHBhcmFtZXRlci5icmVha2Rvd25Bc3Npc3RhbmNlIjogIlNlY291cnMgcm91dGllciBTdWlzc2UiLAogICIkcGFyYW1ldGVyLmNvbnRhY3RFbWFpbCI6ICIiLAogICIkcGFyYW1ldGVyLmNvbnRhY3RFeHRlcm5hbElEIjogIjUyNTc5ODU0OCIsCiAgIiRwYXJhbWV0ZXIuY292ZXJBcmVhIjogIiIsCiAgIiRwYXJhbWV0ZXIuY292ZXJUeXBlIjogIiIsCiAgIiRwYXJhbWV0ZXIuY3JlYXRlTWVtYmVyc2hpcCI6IHRydWUsCiAgIiRwYXJhbWV0ZXIuY3JlYXRlT2ZmZXIiOiB0cnVlLAogICIkcGFyYW1ldGVyLmRlcGFubmFnZSI6ICIiLAogICIkcGFyYW1ldGVyLmRvd25ncmFkZSI6ICIiLAogICIkcGFyYW1ldGVyLmVuZFBvbGljeU51bWJlciI6ICIiLAogICIkcGFyYW1ldGVyLmVudGl0eVR5cGUiOiAiIiwKICAiJHBhcmFtZXRlci5maW5hbERlY2lzaW9uIjogIiIsCiAgIiRwYXJhbWV0ZXIuZm9yY2VMb2dpbiI6IGZhbHNlLAogICIkcGFyYW1ldGVyLmZvcmVpZ25MaWNlbnNlUGxhdGUiOiBmYWxzZSwKICAiJHBhcmFtZXRlci5oYXNJbnN1cmFuY2UiOiBmYWxzZSwKICAiJHBhcmFtZXRlci5oYXNMUEQiOiBmYWxzZSwKICAiJHBhcmFtZXRlci5pbmRfZmFtIjogIiIsCiAgIiRwYXJhbWV0ZXIuaW50ZXJjaGFuZ2VhYmxlTGljZW5zZVBsYXRlIjogdHJ1ZSwKICAiJHBhcmFtZXRlci5pc0VuZG9yc2VtZW50IjogdHJ1ZSwKICAiJHBhcmFtZXRlci5pc1RlY2huaWNhbENoYW5nZSI6ICIiLAogICIkcGFyYW1ldGVyLmlzVmFsaWRhdGlvbkF0dHJpYnV0ZXMiOiBmYWxzZSwKICAiJHBhcmFtZXRlci5sZWdhbFByb3RlY3Rpb25Ecml2ZXIiOiAiUHJvdGVjdGlvbiBqdXJpZGlxdWUgY2lyY3VsYXRpb24gU3Vpc3NlIiwKICAiJHBhcmFtZXRlci5sb2dpblByb2ZpbGUiOiAiYmFja29mZmljZSIsCiAgIiRwYXJhbWV0ZXIubWVtYmVyc2hpcFBheW1lbnRNZXRob2QiOiAiY2FzaCIsCiAgIiRwYXJhbWV0ZXIubW90b3Jpc2UiOiAiIiwKICAiJHBhcmFtZXRlci5vZmZlciI6ICJQb2xpY3kiLAogICIkcGFyYW1ldGVyLnBhcnRuZXJDYXJkIjogIiIsCiAgIiRwYXJhbWV0ZXIucGF5bWVudE1ldGhvZCI6ICJjYXNoIiwKICAiJHBhcmFtZXRlci5wcm9kdWN0IjogIlRDUyBDYXJ0ZSBFbnRyZXByaXNlIiwKICAiJHBhcmFtZXRlci5zdGFydERhdGUiOiAidG9kYXkiLAogICIkcGFyYW1ldGVyLnRvdGFsQ292ZXJhZ2VFdXJvcGUiOiAiIiwKICAiJHBhcmFtZXRlci50b3RhbENvdmVyYWdlU3dpdHplcmxhbmQiOiAiIiwKICAiJHBhcmFtZXRlci50b3RhbFdlaWdodEV4Y2VlZExpbWl0IjogZmFsc2UKfTwvcHJlPg==",
+                "mime_type": "text/html"
+              }
+            ],
+            "keyword": "and"
+          },
+          {
+            "line": 6,
+            "result": {
+              "duration": 10799000000,
+              "status": "passed"
+            },
+            "name": "The price shall be price: CHF 47,19",
+            "match": {
+              "location": "5e60f3e3deb43b53367fb106/master/m125/t28/7/"
+            },
+            "keyword": "Then"
+          }
+        ],
+        "extraData": {
+          "id": "m125.t28(2)",
+          "name": "Endorsement management TCS Carte Entreprise",
+          "worker": "Jenkins CI - 15",
+          "start": "04:42:22",
+          "end": "04:51:51"
+        }
+      }
+    ]
+  }
+]

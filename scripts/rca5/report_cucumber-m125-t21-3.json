@@ -1,0 +1,131 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "[m125] Endorsements management",
+    "line": 1,
+    "tags": [
+      {
+        "name": "@NISTA-876",
+        "type": "tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ],
+    "id": "m125",
+    "uri": "jira-features/2_NISTA-876.feature",
+    "elements": [
+      {
+        "before": [],
+        "after": [],
+        "line": 2,
+        "name": "[m125.t21(3)] Storno endosement process (Jenkins CI - 14)",
+        "description": "Storno endosement process",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "tags": [
+          {
+            "name": "@NISTA-876"
+          },
+          {
+            "name": "@NISTA-1901"
+          }
+        ],
+        "steps": [
+          {
+            "line": 3,
+            "result": {
+              "duration": 12251000000,
+              "status": "passed"
+            },
+            "name": "Is  created with the contact services API",
+            "match": {
+              "location": "5e60f3e3deb43b53367fb106/master/m125/t21/2/"
+            },
+            "embeddings": [
+              {
+                "data": "PHByZSBzdHlsZT0nYmFja2dyb3VuZC1jb2xvcjojQ0NDO3BhZGRpbmc6MTBweDsnPjxiPkRhdGE6PC9iPiA8YnIvPjxici8+ewogICIkcHJvamVjdC5wZXJzb25hbERhdGEuZXh0ZXJuYWxJRCI6ICI0MjU3OTc1MTUiLAogICIkcHJvamVjdC5wZXJzb25hbERhdGEuaWRlbnRpZmllciI6IDEwMjI2OSwKICAiJHRlc3QuYXBpRGF0YSI6IHsKICAgICJwcm9mZXNzaW9uIjogewogICAgICAiaWQiOiA0LAogICAgICAiZGVzYyI6ICJGYXJtZXIiCiAgICB9LAogICAgImFkZHJlc3NlcyI6IFsKICAgICAgewogICAgICAgICJAdHlwZSI6ICJpbnRlcmZhY2VzOkFkZHJlc3NJQk8iLAogICAgICAgICJ6aXBDb2RlIjogIjEyMTQiLAogICAgICAgICJjb3VudHJ5IjogewogICAgICAgICAgImV4dENvZGUiOiAiQ0giCiAgICAgICAgfSwKICAgICAgICAiYWRkcmVzc1R5cGUiOiB7CiAgICAgICAgICAiaWQiOiAxCiAgICAgICAgfSwKICAgICAgICAic3RyZWV0TmFtZSI6ICJDaGVtaW4gZGUgQmxhbmRvbm5ldCIsCiAgICAgICAgImNpdHlOYW1lIjogIlZlcm5pZXIiLAogICAgICAgICJob3VzZU5yIjogIjQiCiAgICAgIH0KICAgIF0sCiAgICAic3Vic2NyaXB0aW9ucyI6IFtdLAogICAgImdlbmRlciI6IHsKICAgICAgImlkIjogMiwKICAgICAgImRlc2MiOiAiTWFsZSIKICAgIH0sCiAgICAiZW50aXR5VHlwZSI6IHsKICAgICAgImlkIjogMQogICAgfSwKICAgICJpZGVudGlmaWVycyI6IFtdLAogICAgImNhbXBTZWN0aW9uVk8iOiB7CiAgICAgICJleHRDb2RlIjogIjIxMiIKICAgIH0sCiAgICAiY29udGFjdEFmZmluaXR5TWVtYmVyc2hpcHMiOiBbCiAgICAgIHsKICAgICAgICAiYWZmaW5pdHlWTyI6IHsKICAgICAgICAgICJpZCI6IDIsCiAgICAgICAgICAiZGVzYyI6ICJQaHlzaWNhbCBQZXJzb25zIgogICAgICAgIH0sCiAgICAgICAgIm1lbWJlcnNoaXBJZCI6IDI4ODkxCiAgICAgIH0sCiAgICAgIHsKICAgICAgICAiYWZmaW5pdHlWTyI6IHsKICAgICAgICAgICJpZCI6IDEsCiAgICAgICAgICAiZGVzYyI6ICJMZWdhbCBFbnRpdHkiCiAgICAgICAgfSwKICAgICAgICAibWVtYmVyc2hpcElkIjogMjg4OTIKICAgICAgfQogICAgXSwKICAgICJ0ZWxlcGhvbmVzIjogWwogICAgICB7CiAgICAgICAgIkB0eXBlIjogImludGVyZmFjZXM6VGVsZXBob25lSUJPIiwKICAgICAgICAidGVsZXBob25lTnVtYmVyIjogIjEyMzQ1NjY3OSIsCiAgICAgICAgInRlbGVwaG9uZVR5cGUiOiB7CiAgICAgICAgICAiaWQiOiAyLAogICAgICAgICAgImRlc2MiOiAiV29yayB0ZWxlcGhvbmUiCiAgICAgICAgfSwKICAgICAgICAidGVsZXBob25lUHJlZml4IjogIjAxMCIsCiAgICAgICAgImNvdW50cnlEaWFsQ29kZSI6IHsKICAgICAgICAgICJpZCI6IDEsCiAgICAgICAgICAiZGVzYyI6ICIzMiIKICAgICAgICB9CiAgICAgIH0KICAgIF0sCiAgICAiZGF0ZU9mQmlydGgiOiAiMTk4MS0wNy0wOVQwMDowMDowMCIsCiAgICAic2VjdGlvblRDU1ZPIjogewogICAgICAiZXh0Q29kZSI6ICJTRyIKICAgIH0sCiAgICAic3ViU2VjdGlvblRDU1ZPIjogewogICAgICAiZXh0Q29kZSI6ICJTRzEiCiAgICB9LAogICAgImxhbmd1YWdlIjogewogICAgICAiaWQiOiAxMDAwMDAxCiAgICB9LAogICAgInRpdGxlIjogewogICAgICAiaWQiOiAxMDAwMDAyLAogICAgICAiZGVzYyI6ICJEb24iCiAgICB9LAogICAgInByZWZlcnJlZFBheW1lbnRNZXRob2QiOiB7CiAgICAgICJleHRDb2RlIjogIlFSLUJpbGwiCiAgICB9LAogICAgImV4dGVybmFsQ29udGFjdE51bWJlciI6ICI0MjU3OTc1MTUiLAogICAgImNvbnRhY3RTdWJUeXBlVENTVk8iOiB7CiAgICAgICJleHRDb2RlIjogIjE1IgogICAgfSwKICAgICJlbWFpbHMiOiBbCiAgICAgIHsKICAgICAgICAiQHR5cGUiOiAiaW50ZXJmYWNlczpFbWFpbElCTyIsCiAgICAgICAgImVtYWlsVHlwZSI6IHsKICAgICAgICAgICJpZCI6IDEKICAgICAgICB9LAogICAgICAgICJlbWFpbCI6ICJtYWluX21haWwxQHRjc3Rlc3QuY2giCiAgICAgIH0sCiAgICAgIHsKICAgICAgICAiQHR5cGUiOiAiaW50ZXJmYWNlczpFbWFpbElCTyIsCiAgICAgICAgImVtYWlsVHlwZSI6IHsKICAgICAgICAgICJpZCI6IDIKICAgICAgICB9LAogICAgICAgICJlbWFpbCI6ICJtYWluX21haWwyQHRjc3Rlc3QuY2giCiAgICAgIH0KICAgIF0sCiAgICAibmFtZSI6ICJSdWlmb2lrIiwKICAgICJmaXJzdE5hbWUiOiAiTm9xY29yeiIsCiAgICAibmF0aW9uYWxpdHkiOiB7CiAgICAgICJleHRDb2RlIjogIkNIIgogICAgfSwKICAgICJjb25zZW50cyI6IFtdLAogICAgImZhbWlseVN0YXR1cyI6IHsKICAgICAgImlkIjogMiwKICAgICAgImRlc2MiOiAiTWFycmllZCIKICAgIH0KICB9Cn08L3ByZT4=",
+                "mime_type": "text/html"
+              }
+            ],
+            "keyword": "Given"
+          },
+          {
+            "line": 4,
+            "result": {
+              "duration": 128616000000,
+              "status": "passed"
+            },
+            "name": "Having a policy: TCS Sociétariat Camping product with startDatePolicy: today options",
+            "match": {
+              "location": "5e60f3e3deb43b53367fb106/master/m125/t21/3/"
+            },
+            "embeddings": [
+              {
+                "data": "PHByZSBzdHlsZT0nYmFja2dyb3VuZC1jb2xvcjojQ0NDO3BhZGRpbmc6MTBweDsnPjxiPkRhdGE6PC9iPiA8YnIvPjxici8+ewogICIkcGFyYW1ldGVyLmFwaUNhbGwiOiB0cnVlLAogICIkcGFyYW1ldGVyLmJyZWFrZG93bkFzc2lzdGFuY2UiOiAiIiwKICAiJHBhcmFtZXRlci5jb250YWN0RW1haWwiOiAiIiwKICAiJHBhcmFtZXRlci5jb250YWN0RXh0ZXJuYWxJRCI6ICI0MjU3OTc1MTUiLAogICIkcGFyYW1ldGVyLmNvdmVyQXJlYSI6ICJNb25kZSIsCiAgIiRwYXJhbWV0ZXIuY292ZXJUeXBlIjogIlByb3RlY3Rpb24gU3RhbmRhcmQiLAogICIkcGFyYW1ldGVyLmNyZWF0ZU1lbWJlcnNoaXAiOiB0cnVlLAogICIkcGFyYW1ldGVyLmNyZWF0ZU9mZmVyIjogdHJ1ZSwKICAiJHBhcmFtZXRlci5kZXBhbm5hZ2UiOiAiQXZlYyBk6XBhbm5hZ2UiLAogICIkcGFyYW1ldGVyLmRvd25ncmFkZSI6ICIiLAogICIkcGFyYW1ldGVyLmVuZFBvbGljeU51bWJlciI6ICIiLAogICIkcGFyYW1ldGVyLmVudGl0eVR5cGUiOiAiIiwKICAiJHBhcmFtZXRlci5maW5hbERlY2lzaW9uIjogIiIsCiAgIiRwYXJhbWV0ZXIuZm9yY2VMb2dpbiI6IGZhbHNlLAogICIkcGFyYW1ldGVyLmZvcmVpZ25MaWNlbnNlUGxhdGUiOiBmYWxzZSwKICAiJHBhcmFtZXRlci5oYXNJbnN1cmFuY2UiOiBmYWxzZSwKICAiJHBhcmFtZXRlci5oYXNMUEQiOiBmYWxzZSwKICAiJHBhcmFtZXRlci5pbmRfZmFtIjogIkluZGl2aWR1ZWwiLAogICIkcGFyYW1ldGVyLmludGVyY2hhbmdlYWJsZUxpY2Vuc2VQbGF0ZSI6IGZhbHNlLAogICIkcGFyYW1ldGVyLmlzRW5kb3JzZW1lbnQiOiAiIiwKICAiJHBhcmFtZXRlci5pc1RlY2huaWNhbENoYW5nZSI6ICIiLAogICIkcGFyYW1ldGVyLmlzVmFsaWRhdGlvbkF0dHJpYnV0ZXMiOiBmYWxzZSwKICAiJHBhcmFtZXRlci5sZWdhbFByb3RlY3Rpb25Ecml2ZXIiOiAiIiwKICAiJHBhcmFtZXRlci5sb2dpblByb2ZpbGUiOiAiYWRtaW4iLAogICIkcGFyYW1ldGVyLm1lbWJlcnNoaXBQYXltZW50TWV0aG9kIjogImNhc2giLAogICIkcGFyYW1ldGVyLm1vdG9yaXNlIjogIiIsCiAgIiRwYXJhbWV0ZXIub2ZmZXIiOiAiUG9saWN5IiwKICAiJHBhcmFtZXRlci5wYXJ0bmVyQ2FyZCI6ICIiLAogICIkcGFyYW1ldGVyLnBheW1lbnRNZXRob2QiOiAiQ2FzaCIsCiAgIiRwYXJhbWV0ZXIucHJvZHVjdCI6ICJUQ1MgU29jael0YXJpYXQgQ2FtcGluZyIsCiAgIiRwYXJhbWV0ZXIuc3RhcnREYXRlIjogInRvZGF5IiwKICAiJHBhcmFtZXRlci50b3RhbENvdmVyYWdlRXVyb3BlIjogIiIsCiAgIiRwYXJhbWV0ZXIudG90YWxDb3ZlcmFnZVN3aXR6ZXJsYW5kIjogIiIsCiAgIiRwYXJhbWV0ZXIudG90YWxXZWlnaHRFeGNlZWRMaW1pdCI6IGZhbHNlCn08L3ByZT4=",
+                "mime_type": "text/html"
+              }
+            ],
+            "keyword": "and"
+          },
+          {
+            "line": 5,
+            "result": {
+              "duration": 273427000000,
+              "status": "passed"
+            },
+            "name": "I create an endorsement with startDateEndorsement: today+360 options",
+            "match": {
+              "location": "5e60f3e3deb43b53367fb106/master/m125/t21/5/"
+            },
+            "embeddings": [
+              {
+                "data": "PHByZSBzdHlsZT0nYmFja2dyb3VuZC1jb2xvcjojQ0NDO3BhZGRpbmc6MTBweDsnPjxiPkRhdGE6PC9iPiA8YnIvPjxici8+ewogICIkcGFyYW1ldGVyLmJyZWFrZG93bkFzc2lzdGFuY2UiOiAiIiwKICAiJHBhcmFtZXRlci5jaGFuZ2VQb2xpY3lCZW5lZmljaWFyeSI6IHRydWUsCiAgIiRwYXJhbWV0ZXIuY29udGFjdEV4dGVybmFsSUQiOiAiNDI1Nzk3NTE1IiwKICAiJHBhcmFtZXRlci5jb3ZlckFyZWEiOiAiRXVyb3BlIiwKICAiJHBhcmFtZXRlci5jb3ZlclR5cGUiOiAiUHJvdGVjdGlvbiBQbHVzIiwKICAiJHBhcmFtZXRlci5jcmVhdGVNZW1iZXJzaGlwIjogdHJ1ZSwKICAiJHBhcmFtZXRlci5jcmVhdGVPZmZlciI6IHRydWUsCiAgIiRwYXJhbWV0ZXIuZGVwYW5uYWdlIjogIlNhbnMgZOlwYW5uYWdlIiwKICAiJHBhcmFtZXRlci5kb3duZ3JhZGUiOiAiQW5udWxlciIsCiAgIiRwYXJhbWV0ZXIuZW1haWwiOiAiIiwKICAiJHBhcmFtZXRlci5lbmRQb2xpY3lOdW1iZXIiOiAiUE80MjU3OTc1MTUtMTAyMDAvMDAiLAogICIkcGFyYW1ldGVyLmVudGl0eVR5cGUiOiAiIiwKICAiJHBhcmFtZXRlci5maW5hbERlY2lzaW9uIjogIiIsCiAgIiRwYXJhbWV0ZXIuZm9yY2VMb2dpbiI6IGZhbHNlLAogICIkcGFyYW1ldGVyLmZvcmVpZ25MaWNlbnNlUGxhdGUiOiBmYWxzZSwKICAiJHBhcmFtZXRlci5oYXNJbnN1cmFuY2UiOiBmYWxzZSwKICAiJHBhcmFtZXRlci5oYXNMUEQiOiBmYWxzZSwKICAiJHBhcmFtZXRlci5pbmRfZmFtIjogIkZhbWlsbGUiLAogICIkcGFyYW1ldGVyLmludGVyY2hhbmdlYWJsZUxpY2Vuc2VQbGF0ZSI6IGZhbHNlLAogICIkcGFyYW1ldGVyLmlzRW5kb3JzZW1lbnQiOiB0cnVlLAogICIkcGFyYW1ldGVyLmlzVGVjaG5pY2FsQ2hhbmdlIjogIiIsCiAgIiRwYXJhbWV0ZXIuaXNWYWxpZGF0aW9uQXR0cmlidXRlcyI6IGZhbHNlLAogICIkcGFyYW1ldGVyLmxlZ2FsUHJvdGVjdGlvbkRyaXZlciI6ICIiLAogICIkcGFyYW1ldGVyLmxvZ2luUHJvZmlsZSI6ICJhZG1pbiIsCiAgIiRwYXJhbWV0ZXIubW90b3Jpc2UiOiAiIiwKICAiJHBhcmFtZXRlci5vZmZlciI6ICJQb2xpY3kiLAogICIkcGFyYW1ldGVyLnBhcnRuZXJDYXJkIjogIiIsCiAgIiRwYXJhbWV0ZXIucGF5bWVudE1ldGhvZCI6ICJDYXNoIiwKICAiJHBhcmFtZXRlci5wcm9kdWN0IjogIlRDUyBTb2Np6XRhcmlhdCBDYW1waW5nIiwKICAiJHBhcmFtZXRlci5zdGFydERhdGUiOiAiMDQvMDcvMjAyMiIsCiAgIiRwYXJhbWV0ZXIudG90YWxDb3ZlcmFnZUV1cm9wZSI6ICIiLAogICIkcGFyYW1ldGVyLnRvdGFsQ292ZXJhZ2VTd2l0emVybGFuZCI6ICIiLAogICIkcGFyYW1ldGVyLnRvdGFsV2VpZ2h0RXhjZWVkTGltaXQiOiBmYWxzZQp9PC9wcmU+",
+                "mime_type": "text/html"
+              }
+            ],
+            "keyword": "When"
+          },
+          {
+            "line": 6,
+            "result": {
+              "duration": 31330000000,
+              "status": "passed"
+            },
+            "name": "I create a storno endorsement with startDateStorno: today+360 options",
+            "match": {
+              "location": "5e60f3e3deb43b53367fb106/master/m125/t21/6/"
+            },
+            "keyword": "and"
+          },
+          {
+            "line": 7,
+            "result": {
+              "duration": 6970000000,
+              "status": "passed"
+            },
+            "name": "The policy start date is stornoDate: today+360",
+            "match": {
+              "location": "5e60f3e3deb43b53367fb106/master/m125/t21/8/"
+            },
+            "embeddings": [
+              {
+                "data": "PHByZSBzdHlsZT0nYmFja2dyb3VuZC1jb2xvcjojQ0NDO3BhZGRpbmc6MTBweDsnPjxiPkRhdGE6PC9iPiA8YnIvPjxici8+ewogICIkcGFyYW1ldGVyLnN0YXJ0RGF0ZVN0b3JubyI6ICIwNC8wNy8yMDIyIgp9PC9wcmU+",
+                "mime_type": "text/html"
+              }
+            ],
+            "keyword": "Then"
+          }
+        ],
+        "extraData": {
+          "id": "m125.t21(3)",
+          "name": "Storno endosement process",
+          "worker": "Jenkins CI - 14",
+          "start": "04:25:09",
+          "end": "04:32:47"
+        }
+      }
+    ]
+  }
+]

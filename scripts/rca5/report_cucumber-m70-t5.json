@@ -1,0 +1,113 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "[m70] SFDC Account Management",
+    "line": 1,
+    "tags": [
+      {
+        "name": "@NISTA-23",
+        "type": "tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ],
+    "id": "m70",
+    "uri": "jira-features/2_NISTA-23.feature",
+    "elements": [
+      {
+        "before": [],
+        "after": [],
+        "line": 2,
+        "name": "[m70.t5] Check the push contact from SFDC to IDIT (Jenkins CI - 15)",
+        "description": "Check the push contact from SFDC to IDIT",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "tags": [
+          {
+            "name": "@NISTA-23"
+          },
+          {
+            "name": "@NISTA-1697"
+          }
+        ],
+        "steps": [
+          {
+            "line": 3,
+            "result": {
+              "duration": 33038000000,
+              "status": "passed"
+            },
+            "name": "I am logged as a CC user in SFDC",
+            "match": {
+              "location": "5e60f3e3deb43b53367fb106/master/m70/t5/2/"
+            },
+            "keyword": "Given"
+          },
+          {
+            "line": 4,
+            "result": {
+              "duration": 38399000000,
+              "status": "passed"
+            },
+            "name": "I create a new personal account",
+            "match": {
+              "location": "5e60f3e3deb43b53367fb106/master/m70/t5/4/"
+            },
+            "embeddings": [
+              {
+                "data": "PHByZSBzdHlsZT0nYmFja2dyb3VuZC1jb2xvcjojQ0NDO3BhZGRpbmc6MTBweDsnPjxiPkRhdGE6PC9iPiA8YnIvPjxici8+ewogICIkcGFyYW1ldGVyLmVtYWlsIjogIm1haW5fbWFpbEB0Y3N0ZXN0LmNoIiwKICAiJHByb2plY3QucGVyc29uYWxEYXRhLkRhdGVfZGVfbmFpc3NhbmNlIjogIjExLjEyLjE5NzUiLAogICIkcHJvamVjdC5wZXJzb25hbERhdGEuTm9tIjogIkplamh1bm4iLAogICIkcHJvamVjdC5wZXJzb25hbERhdGEuUHJlbm9tIjogIkFvZWZpYXgiCn08L3ByZT4=",
+                "mime_type": "text/html"
+              }
+            ],
+            "keyword": "When"
+          },
+          {
+            "line": 5,
+            "result": {
+              "duration": 25659000000,
+              "status": "passed"
+            },
+            "name": "I add an address",
+            "match": {
+              "location": "5e60f3e3deb43b53367fb106/master/m70/t5/5/"
+            },
+            "embeddings": [
+              {
+                "data": "PHByZSBzdHlsZT0nYmFja2dyb3VuZC1jb2xvcjojQ0NDO3BhZGRpbmc6MTBweDsnPjxiPkRhdGE6PC9iPiA8YnIvPjxici8+ewogICIkbW9kdWxlLmFkZHJlc3MuTlBBIjogIjEyMTQiLAogICIkbW9kdWxlLmFkZHJlc3Mub3JpZ2luZU11dGF0aW9uIjogIkRlbWFuZGUgZHUgY2xpZW50IiwKICAiJG1vZHVsZS5hZGRyZXNzLnN0cmVldCI6ICJDaGVtaW4gZGUgQmxhbmRvbm5ldCIsCiAgIiRtb2R1bGUuYWRkcmVzcy5zdHJlZXROdW1iZXIiOiAiNCIsCiAgIiRwcm9qZWN0LmFkZHJlc3Muc3RyZWV0TmFtZSI6ICJDaGVtaW4gZGUgQmxhbmRvbm5ldCIKfTwvcHJlPg==",
+                "mime_type": "text/html"
+              }
+            ],
+            "keyword": "and"
+          },
+          {
+            "line": 6,
+            "result": {
+              "duration": 65653000000,
+              "status": "passed"
+            },
+            "name": "The contact with its address must exist in IDIT",
+            "match": {
+              "location": "5e60f3e3deb43b53367fb106/master/m70/t5/7/"
+            },
+            "embeddings": [
+              {
+                "data": "PHByZSBzdHlsZT0nYmFja2dyb3VuZC1jb2xvcjojQ0NDO3BhZGRpbmc6MTBweDsnPjxiPkRhdGE6PC9iPiA8YnIvPjxici8+ewogICIkcHJvamVjdC5hZGRyZXNzLnN0cmVldE5hbWUiOiAiQ2hlbWluIGRlIEJsYW5kb25uZXQiLAogICIkcHJvamVjdC5wZXJzb25hbERhdGEuQWRyZXNzZV9lX21haWwiOiAibWFpbl9tYWlsQHRjc3Rlc3QuY2giLAogICIkcHJvamVjdC5wZXJzb25hbERhdGEuTm9tIjogIkplamh1bm4iLAogICIkcHJvamVjdC5wZXJzb25hbERhdGEuUHJlbm9tIjogIkFvZWZpYXgiCn08L3ByZT4=",
+                "mime_type": "text/html"
+              }
+            ],
+            "keyword": "Then"
+          }
+        ],
+        "extraData": {
+          "id": "m70.t5",
+          "name": "Check the push contact from SFDC to IDIT",
+          "worker": "Jenkins CI - 15",
+          "start": "02:34:43",
+          "end": "02:37:30"
+        }
+      }
+    ]
+  }
+]

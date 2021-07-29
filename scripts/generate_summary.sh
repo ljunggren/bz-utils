@@ -72,6 +72,28 @@ application_issues="$(echo "$unique_issues" | grep "_#app_#" | wc -l)"
 automation_issues="$(echo "$unique_issues" | grep "_#auto_#" | wc -l)"
 unknown_issues="$(echo "$unique_issues" | grep "_#unknow_#" | wc -l)"
 
+total_impact="$(echo "$unique_issues" | grep "_#" | sed 's/_#/ /g' | awk '{print $1}' | awk '{s+=$1} END {printf "%.0f", s}')"
+tbd_impact="$(echo "$unique_issues" | grep "_#null_#" | sed 's/_#/ /g' | awk '{print $1}' | awk '{s+=$1} END {printf "%.0f", s}')"
+application_impact="$(echo "$unique_issues" | grep "_#app_#" | sed 's/_#/ /g' | awk '{print $1}' | awk '{s+=$1} END {printf "%.0f", s}')"
+automation_impact="$(echo "$unique_issues" | grep "_#auto_#" | sed 's/_#/ /g' | awk '{print $1}' | awk '{s+=$1} END {printf "%.0f", s}')"
+unknown_impact="$(echo "$unique_issues" | grep "_#unknow_#" | sed 's/_#/ /g' | awk '{print $1}' | awk '{s+=$1} END {printf "%.0f", s}')"
+
+total_impact_percent="$(echo "$total_impact *100 / $total_impact" | bc)"
+tbd_impact_percent="$(echo "scale=0 ; $tbd_impact * 100 / $total_impact " | bc)"
+application_impact_percent="$(echo "scale=0 ; $application_impact * 100 / $total_impact" | bc)"
+automation_impact_percent="$(echo "scale=0 ; $automation_impact * 100 / $total_impact" | bc)"
+unknown_impact_percent="$(echo "scale=0 ; $unknown_impact * 100 / $total_impact" | bc)"
+
+printf "\n"
+printf "###########################\n"
+printf "Scenarios impacted - total:       ^%s (%s%%)^\n" $total_impact $total_impact_percent
+printf "Scenarios impacted - tbd:         ^%s (%s%%)^\n" $tbd_impact $tbd_impact_percent
+printf "Scenarios impacted - application: ^%s (%s%%)^\n" $application_impact $application_impact_percent
+printf "Scenarios impacted - automation:  ^%s (%s%%)^\n" $automation_impact $automation_impact_percent
+printf "Scenarios impacted - unknown:     ^%s (%s%%)^\n" $unknown_impact $unknown_impact_percent
+printf "###########################\n"
+printf "\n"
+
 printf "\n"
 printf "###########################\n"
 printf "### ROOT CAUSE ANALYSIS ###\n"
@@ -153,7 +175,6 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
     </style>
     <script>
       const toggleRow = (element) => {
-              console.log("banan");
 
       let o=element.getElementsByClassName('expanded-row-content')[0]
       o.classList.toggle('hide-row');
@@ -195,6 +216,24 @@ cat >> $file <<'EOF'
                             <th scope="row">Failed</th>
 EOF
 printf "<td>%s</td>" $failed_scenarios >> $file
+cat >> $file <<'EOF'
+                         </tr>
+                         <tr>
+                            <th scope="row">Application fails</th>
+EOF
+printf "<td>%s (%s%%)</td>" $application_impact $application_impact_percent >> $file
+cat >> $file <<'EOF'
+                         </tr>
+                        <tr>
+                            <th scope="row">Automation fails</th>
+EOF
+printf "<td>%s (%s%%)</td>" $automation_impact $automation_impact_percent >> $file
+cat >> $file <<'EOF'
+                         </tr>
+                        <tr>
+                            <th scope="row">Unknown fails</th>
+EOF
+printf "<td>%s (%s%%)</td>" $unknown_impact $unknown_impact_percent >> $file
 cat >> $file <<'EOF'
                          </tr>
                             </tbody>

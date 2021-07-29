@@ -1,0 +1,131 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "[m68] SFDC Family links",
+    "line": 1,
+    "tags": [
+      {
+        "name": "@NISTA-32",
+        "type": "tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ],
+    "id": "m68",
+    "uri": "jira-features/2_NISTA-32.feature",
+    "elements": [
+      {
+        "before": [],
+        "after": [],
+        "line": 2,
+        "name": "[m68.t3] Add and remove spouse (Jenkins CI - 13)",
+        "description": "Add and remove spouse",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "tags": [
+          {
+            "name": "@NISTA-32"
+          },
+          {
+            "name": "@NISTA-35"
+          }
+        ],
+        "steps": [
+          {
+            "line": 3,
+            "result": {
+              "duration": 31711000000,
+              "status": "passed"
+            },
+            "name": "I am logged as a CC user",
+            "match": {
+              "location": "5e60f3e3deb43b53367fb106/master/m68/t3/2/"
+            },
+            "keyword": "Given"
+          },
+          {
+            "line": 4,
+            "result": {
+              "duration": 38418000000,
+              "status": "passed"
+            },
+            "name": "I create a personal account",
+            "match": {
+              "location": "5e60f3e3deb43b53367fb106/master/m68/t3/3/"
+            },
+            "embeddings": [
+              {
+                "data": "PHByZSBzdHlsZT0nYmFja2dyb3VuZC1jb2xvcjojQ0NDO3BhZGRpbmc6MTBweDsnPjxiPkRhdGE6PC9iPiA8YnIvPjxici8+ewogICIkcGFyYW1ldGVyLmVtYWlsIjogIm1haW5fbWFpbEB0Y3N0ZXN0LmNoIiwKICAiJHByb2plY3QucGVyc29uYWxEYXRhLkRhdGVfZGVfbmFpc3NhbmNlIjogIjAxLjEwLjE5NzUiLAogICIkcHJvamVjdC5wZXJzb25hbERhdGEuTm9tIjogIkFlbGhveHEiLAogICIkcHJvamVjdC5wZXJzb25hbERhdGEuUHJlbm9tIjogIlJhbnZhbWwiCn08L3ByZT4=",
+                "mime_type": "text/html"
+              }
+            ],
+            "keyword": "and"
+          },
+          {
+            "line": 5,
+            "result": {
+              "duration": 46551000000,
+              "status": "passed"
+            },
+            "name": "I attach a spouse on the personal account",
+            "match": {
+              "location": "5e60f3e3deb43b53367fb106/master/m68/t3/5/"
+            },
+            "embeddings": [
+              {
+                "data": "PHByZSBzdHlsZT0nYmFja2dyb3VuZC1jb2xvcjojQ0NDO3BhZGRpbmc6MTBweDsnPjxiPkRhdGE6PC9iPiA8YnIvPjxici8+ewogICIkbW9kdWxlLnNwb3VzZURhdGEuRGF0ZV9kZV9uYWlzc2FuY2UiOiAiMDcuMTIuMTk3MiIsCiAgIiRtb2R1bGUuc3BvdXNlRGF0YS5Ob20iOiAiSGlmcnVybCIsCiAgIiRtb2R1bGUuc3BvdXNlRGF0YS5QcmVub20iOiAiR2VsZGVsYyIKfTwvcHJlPg==",
+                "mime_type": "text/html"
+              }
+            ],
+            "keyword": "When"
+          },
+          {
+            "line": 6,
+            "result": {
+              "duration": 30423000000,
+              "status": "passed"
+            },
+            "name": "I detach the spouse from the personal account",
+            "match": {
+              "location": "5e60f3e3deb43b53367fb106/master/m68/t3/6/"
+            },
+            "embeddings": [
+              {
+                "data": "PHByZSBzdHlsZT0nYmFja2dyb3VuZC1jb2xvcjojQ0NDO3BhZGRpbmc6MTBweDsnPjxiPkRhdGE6PC9iPiA8YnIvPjxici8+ewogICIkbW9kdWxlLmZhbWlseURhdGEubWVtYmVyTm9tIjogIkhpZnJ1cmwiLAogICIkbW9kdWxlLmZhbWlseURhdGEubWVtYmVyUHJlbm9tIjogIkdlbGRlbGMiLAogICIkdGVzdC50bXBWYWx1ZSI6ICIxIOls6W1lbnQiCn08L3ByZT4=",
+                "mime_type": "text/html"
+              }
+            ],
+            "keyword": "and"
+          },
+          {
+            "line": 7,
+            "result": {
+              "duration": 30305000000,
+              "status": "passed"
+            },
+            "name": "The spouse is no longer part of the personal account family members list",
+            "match": {
+              "location": "5e60f3e3deb43b53367fb106/master/m68/t3/8/"
+            },
+            "embeddings": [
+              {
+                "data": "PHByZSBzdHlsZT0nYmFja2dyb3VuZC1jb2xvcjojQ0NDO3BhZGRpbmc6MTBweDsnPjxiPkRhdGE6PC9iPiA8YnIvPjxici8+ewogICIkbW9kdWxlLmZhbWlseURhdGEubWVtYmVyTm9tIjogIkhpZnJ1cmwiLAogICIkbW9kdWxlLmZhbWlseURhdGEubWVtYmVyUHJlbm9tIjogIkdlbGRlbGMiCn08L3ByZT4=",
+                "mime_type": "text/html"
+              }
+            ],
+            "keyword": "Then"
+          }
+        ],
+        "extraData": {
+          "id": "m68.t3",
+          "name": "Add and remove spouse",
+          "worker": "Jenkins CI - 13",
+          "start": "02:40:55",
+          "end": "02:43:57"
+        }
+      }
+    ]
+  }
+]

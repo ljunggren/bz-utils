@@ -1,0 +1,161 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "[m148] Incoming invoices",
+    "line": 1,
+    "tags": [
+      {
+        "name": "@NISTA-2060",
+        "type": "tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ],
+    "id": "m148",
+    "uri": "jira-features/2_NISTA-2060.feature",
+    "elements": [
+      {
+        "before": [],
+        "after": [],
+        "line": 2,
+        "name": "[m148.t1(0)] Finance data - acquisition (Jenkins CI - 18)",
+        "description": "Finance data - acquisition",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "tags": [
+          {
+            "name": "@NISTA-2060"
+          },
+          {
+            "name": "@NISTA-1843"
+          }
+        ],
+        "steps": [
+          {
+            "line": 3,
+            "result": {
+              "duration": 12152000000,
+              "status": "passed"
+            },
+            "name": "A contact is created with the API",
+            "match": {
+              "location": "5e60f3e3deb43b53367fb106/master/m148/t1/2/"
+            },
+            "embeddings": [
+              {
+                "data": "PHByZSBzdHlsZT0nYmFja2dyb3VuZC1jb2xvcjojQ0NDO3BhZGRpbmc6MTBweDsnPjxiPkRhdGE6PC9iPiA8YnIvPjxici8+ewogICIkcHJvamVjdC5wZXJzb25hbERhdGEuZXh0ZXJuYWxJRCI6ICI4MjU3OTg4NjUiLAogICIkcHJvamVjdC5wZXJzb25hbERhdGEuaWRlbnRpZmllciI6IDEwMjMwMCwKICAiJHRlc3QuYXBpRGF0YSI6IHsKICAgICJwcm9mZXNzaW9uIjogewogICAgICAiaWQiOiA0LAogICAgICAiZGVzYyI6ICJGYXJtZXIiCiAgICB9LAogICAgImFkZHJlc3NlcyI6IFsKICAgICAgewogICAgICAgICJAdHlwZSI6ICJpbnRlcmZhY2VzOkFkZHJlc3NJQk8iLAogICAgICAgICJ6aXBDb2RlIjogIjEyMTQiLAogICAgICAgICJjb3VudHJ5IjogewogICAgICAgICAgImV4dENvZGUiOiAiQ0giCiAgICAgICAgfSwKICAgICAgICAiYWRkcmVzc1R5cGUiOiB7CiAgICAgICAgICAiaWQiOiAxCiAgICAgICAgfSwKICAgICAgICAic3RyZWV0TmFtZSI6ICJDaGVtaW4gZGUgQmxhbmRvbm5ldCIsCiAgICAgICAgImNpdHlOYW1lIjogIlZlcm5pZXIiLAogICAgICAgICJob3VzZU5yIjogIjQiCiAgICAgIH0KICAgIF0sCiAgICAic3Vic2NyaXB0aW9ucyI6IFtdLAogICAgImdlbmRlciI6IHsKICAgICAgImlkIjogMiwKICAgICAgImRlc2MiOiAiTWFsZSIKICAgIH0sCiAgICAiZW50aXR5VHlwZSI6IHsKICAgICAgImlkIjogMQogICAgfSwKICAgICJpZGVudGlmaWVycyI6IFtdLAogICAgImNhbXBTZWN0aW9uVk8iOiB7CiAgICAgICJleHRDb2RlIjogIjIxMiIKICAgIH0sCiAgICAiY29udGFjdEFmZmluaXR5TWVtYmVyc2hpcHMiOiBbCiAgICAgIHsKICAgICAgICAiYWZmaW5pdHlWTyI6IHsKICAgICAgICAgICJpZCI6IDIsCiAgICAgICAgICAiZGVzYyI6ICJQaHlzaWNhbCBQZXJzb25zIgogICAgICAgIH0sCiAgICAgICAgIm1lbWJlcnNoaXBJZCI6IDI4ODkxCiAgICAgIH0sCiAgICAgIHsKICAgICAgICAiYWZmaW5pdHlWTyI6IHsKICAgICAgICAgICJpZCI6IDEsCiAgICAgICAgICAiZGVzYyI6ICJMZWdhbCBFbnRpdHkiCiAgICAgICAgfSwKICAgICAgICAibWVtYmVyc2hpcElkIjogMjg4OTIKICAgICAgfQogICAgXSwKICAgICJ0ZWxlcGhvbmVzIjogWwogICAgICB7CiAgICAgICAgIkB0eXBlIjogImludGVyZmFjZXM6VGVsZXBob25lSUJPIiwKICAgICAgICAidGVsZXBob25lTnVtYmVyIjogIjEyMzQ1NjY3OSIsCiAgICAgICAgInRlbGVwaG9uZVR5cGUiOiB7CiAgICAgICAgICAiaWQiOiAyLAogICAgICAgICAgImRlc2MiOiAiV29yayB0ZWxlcGhvbmUiCiAgICAgICAgfSwKICAgICAgICAidGVsZXBob25lUHJlZml4IjogIjAxMCIsCiAgICAgICAgImNvdW50cnlEaWFsQ29kZSI6IHsKICAgICAgICAgICJpZCI6IDEsCiAgICAgICAgICAiZGVzYyI6ICIzMiIKICAgICAgICB9CiAgICAgIH0KICAgIF0sCiAgICAiZGF0ZU9mQmlydGgiOiAiMTk4MS0wNy0wOVQwMDowMDowMCIsCiAgICAic2VjdGlvblRDU1ZPIjogewogICAgICAiZXh0Q29kZSI6ICJTRyIKICAgIH0sCiAgICAic3ViU2VjdGlvblRDU1ZPIjogewogICAgICAiZXh0Q29kZSI6ICJTRzEiCiAgICB9LAogICAgImxhbmd1YWdlIjogewogICAgICAiaWQiOiAxMDAwMDAxCiAgICB9LAogICAgInRpdGxlIjogewogICAgICAiaWQiOiAxMDAwMDAyLAogICAgICAiZGVzYyI6ICJEb24iCiAgICB9LAogICAgInByZWZlcnJlZFBheW1lbnRNZXRob2QiOiB7CiAgICAgICJleHRDb2RlIjogIlFSLUJpbGwiCiAgICB9LAogICAgImV4dGVybmFsQ29udGFjdE51bWJlciI6ICI4MjU3OTg4NjUiLAogICAgImNvbnRhY3RTdWJUeXBlVENTVk8iOiB7CiAgICAgICJleHRDb2RlIjogIjE1IgogICAgfSwKICAgICJlbWFpbHMiOiBbCiAgICAgIHsKICAgICAgICAiQHR5cGUiOiAiaW50ZXJmYWNlczpFbWFpbElCTyIsCiAgICAgICAgImVtYWlsVHlwZSI6IHsKICAgICAgICAgICJpZCI6IDEKICAgICAgICB9LAogICAgICAgICJlbWFpbCI6ICJtYWluX21haWwxQHRjc3Rlc3QuY2giCiAgICAgIH0sCiAgICAgIHsKICAgICAgICAiQHR5cGUiOiAiaW50ZXJmYWNlczpFbWFpbElCTyIsCiAgICAgICAgImVtYWlsVHlwZSI6IHsKICAgICAgICAgICJpZCI6IDIKICAgICAgICB9LAogICAgICAgICJlbWFpbCI6ICJtYWluX21haWwyQHRjc3Rlc3QuY2giCiAgICAgIH0KICAgIF0sCiAgICAibmFtZSI6ICJRdWRxdWllIiwKICAgICJmaXJzdE5hbWUiOiAiQWlsYXVmaCIsCiAgICAibmF0aW9uYWxpdHkiOiB7CiAgICAgICJleHRDb2RlIjogIkNIIgogICAgfSwKICAgICJjb25zZW50cyI6IFtdLAogICAgImZhbWlseVN0YXR1cyI6IHsKICAgICAgImlkIjogMiwKICAgICAgImRlc2MiOiAiTWFycmllZCIKICAgIH0KICB9Cn08L3ByZT4=",
+                "mime_type": "text/html"
+              }
+            ],
+            "keyword": "Given"
+          },
+          {
+            "line": 4,
+            "result": {
+              "duration": 89734000000,
+              "status": "passed"
+            },
+            "name": "Create a policy: TCS Sociétariat product with paymentMethod: QR-Bill options",
+            "match": {
+              "location": "5e60f3e3deb43b53367fb106/master/m148/t1/3/"
+            },
+            "embeddings": [
+              {
+                "data": "PHByZSBzdHlsZT0nYmFja2dyb3VuZC1jb2xvcjojQ0NDO3BhZGRpbmc6MTBweDsnPjxiPkRhdGE6PC9iPiA8YnIvPjxici8+ewogICIkcGFyYW1ldGVyLmFwaUNhbGwiOiB0cnVlLAogICIkcGFyYW1ldGVyLmJyZWFrZG93bkFzc2lzdGFuY2UiOiAiIiwKICAiJHBhcmFtZXRlci5jb250YWN0RW1haWwiOiAiIiwKICAiJHBhcmFtZXRlci5jb250YWN0RXh0ZXJuYWxJRCI6ICI4MjU3OTg4NjUiLAogICIkcGFyYW1ldGVyLmNvdmVyQXJlYSI6ICIiLAogICIkcGFyYW1ldGVyLmNvdmVyVHlwZSI6ICIiLAogICIkcGFyYW1ldGVyLmNyZWF0ZU1lbWJlcnNoaXAiOiB0cnVlLAogICIkcGFyYW1ldGVyLmNyZWF0ZU9mZmVyIjogdHJ1ZSwKICAiJHBhcmFtZXRlci5kZXBhbm5hZ2UiOiAiIiwKICAiJHBhcmFtZXRlci5kb3duZ3JhZGUiOiAiIiwKICAiJHBhcmFtZXRlci5lbmRQb2xpY3lOdW1iZXIiOiAiIiwKICAiJHBhcmFtZXRlci5lbnRpdHlUeXBlIjogIiIsCiAgIiRwYXJhbWV0ZXIuZmluYWxEZWNpc2lvbiI6ICIiLAogICIkcGFyYW1ldGVyLmZvcmNlTG9naW4iOiBmYWxzZSwKICAiJHBhcmFtZXRlci5mb3JlaWduTGljZW5zZVBsYXRlIjogZmFsc2UsCiAgIiRwYXJhbWV0ZXIuaGFzSW5zdXJhbmNlIjogZmFsc2UsCiAgIiRwYXJhbWV0ZXIuaGFzTFBEIjogZmFsc2UsCiAgIiRwYXJhbWV0ZXIuaW5kX2ZhbSI6ICIiLAogICIkcGFyYW1ldGVyLmludGVyY2hhbmdlYWJsZUxpY2Vuc2VQbGF0ZSI6IGZhbHNlLAogICIkcGFyYW1ldGVyLmlzRW5kb3JzZW1lbnQiOiAiIiwKICAiJHBhcmFtZXRlci5pc1RlY2huaWNhbENoYW5nZSI6ICIiLAogICIkcGFyYW1ldGVyLmlzVmFsaWRhdGlvbkF0dHJpYnV0ZXMiOiBmYWxzZSwKICAiJHBhcmFtZXRlci5sZWdhbFByb3RlY3Rpb25Ecml2ZXIiOiAiIiwKICAiJHBhcmFtZXRlci5sb2dpblByb2ZpbGUiOiAiYWRtaW4iLAogICIkcGFyYW1ldGVyLm1lbWJlcnNoaXBQYXltZW50TWV0aG9kIjogImNhc2giLAogICIkcGFyYW1ldGVyLm1vdG9yaXNlIjogIiIsCiAgIiRwYXJhbWV0ZXIub2ZmZXIiOiAiUG9saWN5IiwKICAiJHBhcmFtZXRlci5wYXJ0bmVyQ2FyZCI6ICIiLAogICIkcGFyYW1ldGVyLnBheW1lbnRNZXRob2QiOiAiUVItQmlsbCIsCiAgIiRwYXJhbWV0ZXIucHJvZHVjdCI6ICJUQ1MgU29jael0YXJpYXQiLAogICIkcGFyYW1ldGVyLnN0YXJ0RGF0ZSI6ICJ0b2RheSIsCiAgIiRwYXJhbWV0ZXIudG90YWxDb3ZlcmFnZUV1cm9wZSI6ICIiLAogICIkcGFyYW1ldGVyLnRvdGFsQ292ZXJhZ2VTd2l0emVybGFuZCI6ICIiLAogICIkcGFyYW1ldGVyLnRvdGFsV2VpZ2h0RXhjZWVkTGltaXQiOiBmYWxzZQp9PC9wcmU+",
+                "mime_type": "text/html"
+              }
+            ],
+            "keyword": "and"
+          },
+          {
+            "line": 5,
+            "result": {
+              "duration": 60050000000,
+              "status": "passed"
+            },
+            "name": "The bill is paied using the API incoming payment for paymentMethod: QR-Bill",
+            "match": {
+              "location": "5e60f3e3deb43b53367fb106/master/m148/t1/5/"
+            },
+            "embeddings": [
+              {
+                "data": "PHByZSBzdHlsZT0nYmFja2dyb3VuZC1jb2xvcjojQ0NDO3BhZGRpbmc6MTBweDsnPjxiPkRhdGE6PC9iPiA8YnIvPjxici8+ewogICIkbW9kdWxlLmJpbGxpbmdEYXRhLmJ2ck51bWJlciI6ICI3MTgyNTc5ODg2NTEwMDA1MDAwMDA4MzAzMTgiLAogICIkbW9kdWxlLmJpbGxpbmdEYXRhLmNvbnNvbGlkYXRpb25OdW1iZXIiOiAiNTAwMDAwODMwMzEiLAogICIkbW9kdWxlLmJpbGxpbmdEYXRhLnBheW1lbnRBbW91bnQiOiAiMTM5IiwKICAiJHBhcmFtZXRlci52YWx1ZURhdGUiOiAiMjAyMS0wNy0wOVQwOToxMzozMi45OTZaIiwKICAiJHByb2plY3QucGVyc29uYWxEYXRhLmV4dGVybmFsSUQiOiAiODI1Nzk4ODY1Igp9PC9wcmU+",
+                "mime_type": "text/html"
+              }
+            ],
+            "keyword": "When"
+          },
+          {
+            "line": 6,
+            "result": {
+              "duration": 110797000000,
+              "status": "passed"
+            },
+            "name": "The transactions created are transactionsBatch: Batch Billing;Paiement batchBillingEntriesType: Protection juridique accident et casco;Cotisation Section;Protection mobilité;Cotisation Siège central batchBillingSystemDebit: 139,00 <batchBillingSystemCredit> incomingPaymentEntriesType: Cotisation Siège central;Protection juridique accident et casco;Protection mobilité;Cotisation Section <incomingPaymentSystemDebit> incomingPaymentSystemCredit: 139,00",
+            "match": {
+              "location": "5e60f3e3deb43b53367fb106/master/m148/t1/7/"
+            },
+            "embeddings": [
+              {
+                "data": "PHByZSBzdHlsZT0nYmFja2dyb3VuZC1jb2xvcjojQ0NDO3BhZGRpbmc6MTBweDsnPjxiPkRhdGE6PC9iPiA8YnIvPjxici8+ewogICIkcGFyYW1ldGVyLmJhdGNoQmlsbGluZ0VudHJpZXNUeXBlIjogIlByb3RlY3Rpb24ganVyaWRpcXVlIGFjY2lkZW50IGV0IGNhc2NvO0NvdGlzYXRpb24gU2VjdGlvbjtQcm90ZWN0aW9uIG1vYmlsaXTpO0NvdGlzYXRpb24gU2noZ2UgY2VudHJhbCIsCiAgIiRwYXJhbWV0ZXIuYmF0Y2hCaWxsaW5nU3lzdGVtRGViaXQiOiAiMTM5LDAwIiwKICAiJHBhcmFtZXRlci5jdXJyZW50SW5kZXgiOiA5LAogICIkcGFyYW1ldGVyLmluY29taW5nUGF5bWVudEVudHJpZXNUeXBlIjogIkNvdGlzYXRpb24gU2noZ2UgY2VudHJhbDtQcm90ZWN0aW9uIGp1cmlkaXF1ZSBhY2NpZGVudCBldCBjYXNjbztQcm90ZWN0aW9uIG1vYmlsaXTpO0NvdGlzYXRpb24gU2VjdGlvbiIsCiAgIiRwYXJhbWV0ZXIuaW5jb21pbmdQYXltZW50U3lzdGVtQ3JlZGl0IjogIjEzOSwwMCIsCiAgIiRwYXJhbWV0ZXIuaW5kZXhCYXRjaEJpbGxpbmciOiAwLAogICIkcGFyYW1ldGVyLmluZGV4SW5jb21pbmdJbnZvaWNlIjogMCwKICAiJHBhcmFtZXRlci5vZmZlck51bWJlciI6ICJQTzgyNTc5ODg2NS0xMDEwMC8wMCIKfTwvcHJlPg==",
+                "mime_type": "text/html"
+              }
+            ],
+            "keyword": "Then"
+          },
+          {
+            "line": 7,
+            "result": {
+              "duration": 52872000000,
+              "status": "passed"
+            },
+            "name": "Run the job GL Export",
+            "match": {
+              "location": "5e60f3e3deb43b53367fb106/master/m148/t1/9/"
+            },
+            "keyword": "When"
+          },
+          {
+            "line": 8,
+            "result": {
+              "duration": 18291000000,
+              "status": "passed"
+            },
+            "name": "Check the transactions <batchBillingInquireGLShareFile> has been transfer on table GL Export",
+            "match": {
+              "location": "5e60f3e3deb43b53367fb106/master/m148/t1/11/"
+            },
+            "embeddings": [
+              {
+                "data": "PHByZSBzdHlsZT0nYmFja2dyb3VuZC1jb2xvcjojQ0NDO3BhZGRpbmc6MTBweDsnPjxiPkRhdGE6PC9iPiA8YnIvPjxici8+ewogICIkcGFyYW1ldGVyLnBvbGljeU51bWJlciI6ICJQTzgyNTc5ODg2NS0xMDEwMC8wMCIKfTwvcHJlPg==",
+                "mime_type": "text/html"
+              }
+            ],
+            "keyword": "Then"
+          },
+          {
+            "line": 9,
+            "result": {
+              "duration": 17154000000,
+              "status": "passed"
+            },
+            "name": "Check entries logEntries: logs in view interface audit logs",
+            "match": {
+              "location": "5e60f3e3deb43b53367fb106/master/m148/t1/12/"
+            },
+            "keyword": "and"
+          }
+        ],
+        "extraData": {
+          "id": "m148.t1(0)",
+          "name": "Finance data - acquisition",
+          "worker": "Jenkins CI - 18",
+          "start": "04:47:39",
+          "end": "04:53:47"
+        }
+      }
+    ]
+  }
+]

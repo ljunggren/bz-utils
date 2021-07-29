@@ -1,0 +1,113 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "[m68] SFDC Family links",
+    "line": 1,
+    "tags": [
+      {
+        "name": "@NISTA-32",
+        "type": "tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ],
+    "id": "m68",
+    "uri": "jira-features/2_NISTA-32.feature",
+    "elements": [
+      {
+        "before": [],
+        "after": [],
+        "line": 2,
+        "name": "[m68.t1] Add spouse (Jenkins CI - 12)",
+        "description": "Add spouse",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "tags": [
+          {
+            "name": "@NISTA-32"
+          },
+          {
+            "name": "@NISTA-31"
+          }
+        ],
+        "steps": [
+          {
+            "line": 3,
+            "result": {
+              "duration": 30000000000,
+              "status": "passed"
+            },
+            "name": "I am logged as a CC user",
+            "match": {
+              "location": "5e60f3e3deb43b53367fb106/master/m68/t1/2/"
+            },
+            "keyword": "Given"
+          },
+          {
+            "line": 4,
+            "result": {
+              "duration": 38591000000,
+              "status": "passed"
+            },
+            "name": "I create a personal account page",
+            "match": {
+              "location": "5e60f3e3deb43b53367fb106/master/m68/t1/3/"
+            },
+            "embeddings": [
+              {
+                "data": "PHByZSBzdHlsZT0nYmFja2dyb3VuZC1jb2xvcjojQ0NDO3BhZGRpbmc6MTBweDsnPjxiPkRhdGE6PC9iPiA8YnIvPjxici8+ewogICIkcGFyYW1ldGVyLmVtYWlsIjogIm1haW5fbWFpbEB0Y3N0ZXN0LmNoIiwKICAiJHByb2plY3QucGVyc29uYWxEYXRhLkRhdGVfZGVfbmFpc3NhbmNlIjogIjEzLjA1LjE5NzUiLAogICIkcHJvamVjdC5wZXJzb25hbERhdGEuTm9tIjogIktpdHhvam0iLAogICIkcHJvamVjdC5wZXJzb25hbERhdGEuUHJlbm9tIjogIlRleHRhamUiCn08L3ByZT4=",
+                "mime_type": "text/html"
+              }
+            ],
+            "keyword": "and"
+          },
+          {
+            "line": 5,
+            "result": {
+              "duration": 46339000000,
+              "status": "passed"
+            },
+            "name": "I add a spouse on the personal account",
+            "match": {
+              "location": "5e60f3e3deb43b53367fb106/master/m68/t1/5/"
+            },
+            "embeddings": [
+              {
+                "data": "PHByZSBzdHlsZT0nYmFja2dyb3VuZC1jb2xvcjojQ0NDO3BhZGRpbmc6MTBweDsnPjxiPkRhdGE6PC9iPiA8YnIvPjxici8+ewogICIkbW9kdWxlLnNwb3VzZURhdGEuRGF0ZV9kZV9uYWlzc2FuY2UiOiAiMDYuMTAuMTk3OCIsCiAgIiRtb2R1bGUuc3BvdXNlRGF0YS5Ob20iOiAiSmlnb29meCIsCiAgIiRtb2R1bGUuc3BvdXNlRGF0YS5QcmVub20iOiAiU3V6dm9odCIKfTwvcHJlPg==",
+                "mime_type": "text/html"
+              }
+            ],
+            "keyword": "When"
+          },
+          {
+            "line": 6,
+            "result": {
+              "duration": 21550000000,
+              "status": "passed"
+            },
+            "name": "The spouse is part of the family members of the personal account",
+            "match": {
+              "location": "5e60f3e3deb43b53367fb106/master/m68/t1/7/"
+            },
+            "embeddings": [
+              {
+                "data": "PHByZSBzdHlsZT0nYmFja2dyb3VuZC1jb2xvcjojQ0NDO3BhZGRpbmc6MTBweDsnPjxiPkRhdGE6PC9iPiA8YnIvPjxici8+ewogICIkbW9kdWxlLnNwb3VzZURhdGEuTm9tIjogIkppZ29vZngiLAogICIkbW9kdWxlLnNwb3VzZURhdGEuUHJlbm9tIjogIlN1enZvaHQiCn08L3ByZT4=",
+                "mime_type": "text/html"
+              }
+            ],
+            "keyword": "Then"
+          }
+        ],
+        "extraData": {
+          "id": "m68.t1",
+          "name": "Add spouse",
+          "worker": "Jenkins CI - 12",
+          "start": "02:28:35",
+          "end": "02:30:56"
+        }
+      }
+    ]
+  }
+]
