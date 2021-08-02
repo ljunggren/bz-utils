@@ -199,13 +199,13 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
                 <div class="three columns">
                     <article class="table_area">
                         <header class="table_header test">
-                            <h6>Test Scenarios</h6>
+                            <h6>Summary</h6>
                         </header>
                         <table>
                             <thead></thead>
                             <tbody>
                                 <tr>
-                                <th>Total</th>
+                                <th>Total Scenarios</th>
 
 
 EOF
@@ -213,27 +213,15 @@ printf "<td>%s</td>" $total_scenarios >> $file
 cat >> $file <<'EOF'
                           </tr>
                           <tr>
-                            <th scope="row">Failed</th>
+                            <th scope="row">Failed Scenarios</th>
 EOF
 printf "<td>%s</td>" $failed_scenarios >> $file
 cat >> $file <<'EOF'
                          </tr>
                          <tr>
-                            <th scope="row">Application fails</th>
+                            <th scope="row">Total Workers</th>
 EOF
-printf "<td>%s (%s%%)</td>" $application_impact $application_impact_percent >> $file
-cat >> $file <<'EOF'
-                         </tr>
-                        <tr>
-                            <th scope="row">Automation fails</th>
-EOF
-printf "<td>%s (%s%%)</td>" $automation_impact $automation_impact_percent >> $file
-cat >> $file <<'EOF'
-                         </tr>
-                        <tr>
-                            <th scope="row">Unknown fails</th>
-EOF
-printf "<td>%s (%s%%)</td>" $unknown_impact $unknown_impact_percent >> $file
+printf "<td>%s</td>" $number_of_workers >> $file
 cat >> $file <<'EOF'
                          </tr>
                             </tbody>
@@ -280,18 +268,11 @@ cat >> $file <<'EOF'
                 <div class="three columns">
                     <article class="table_area">
                         <header class="table_header issues">
-                            <h6>Issues</h6>
+                            <h6>Total Issues</h6>
                         </header>
                         <table>
                             <thead></thead>
                             <tbody>
-                                <tr>
-                      <th scope="row">To be defined</th>
-EOF
-printf "<td>%s</td>" $tbd_issues >> $file
-cat >> $file <<'EOF'
-
-                    </tr>
                     <tr>
                       <th scope="row">Application</th>
 EOF
@@ -313,22 +294,47 @@ printf "<td>%s</td>" $unknown_issues >> $file
 cat >> $file <<'EOF'
 
                         </tr>
-                            </tbody>
+                        <tr>
+                            <th scope="row">To be defined</th>
+EOF
+printf "<td>%s</td>" $tbd_issues >> $file
+cat >> $file <<'EOF'
+
+                        </tr>
+                        </tbody>
                         </table>
                     </article>
                 </div>
                 <div class="three columns">
                     <article class="table_area">
                         <header class="table_header workers">
-                            <h6>Workers</h6>
+                            <h6>Total Impacted Scenarios</h6>
                         </header>
                         <table>
                             <thead></thead>
                             <tbody>
                                 <tr>
-                                    <th>Total</th>
+                                    <th>Application fails</th>
 EOF
-printf "<td>%s</td>" $number_of_workers >> $file
+printf "<td>%s (%s%%)</td>" $application_impact $application_impact_percent >> $file
+cat >> $file <<'EOF'
+                         </tr>
+                        <tr>
+                            <th scope="row">Automation fails</th>
+EOF
+printf "<td>%s (%s%%)</td>" $automation_impact $automation_impact_percent >> $file
+cat >> $file <<'EOF'
+                         </tr>
+                        <tr>
+                            <th scope="row">Unknown fails</th>
+EOF
+printf "<td>%s (%s%%)</td>" $unknown_impact $unknown_impact_percent >> $file
+cat >> $file <<'EOF'
+                                </tr>
+                                <tr>
+                            <th scope="row">TBD fails</th>
+EOF
+printf "<td>%s (%s%%)</td>" $tbd_impact $tbd_impact_percent >> $file
 cat >> $file <<'EOF'
                                 </tr>
                             </tbody>
