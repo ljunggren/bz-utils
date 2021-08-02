@@ -308,7 +308,7 @@ cat >> $file <<'EOF'
                 <div class="three columns">
                     <article class="table_area">
                         <header class="table_header workers">
-                            <h6>Total Impacted Scenarios</h6>
+                            <h6>Failed Scenario Breakdown</h6>
                         </header>
                         <table>
                             <thead></thead>
