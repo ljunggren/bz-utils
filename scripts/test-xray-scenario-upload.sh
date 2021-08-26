@@ -1,3 +1,5 @@
+#/bin/bash
+
 # This scripts test integration with Xray and assumes you have defined the following scenario in Jira
 # https://raw.githubusercontent.com/ljunggren/bz-utils/main/test/cucumber-sample-scenario.txt
 
@@ -11,7 +13,7 @@ curl https://raw.githubusercontent.com/ljunggren/bz-utils/main/test/cucumber-sam
 echo Checking: ${CLIENT_ID} ${CLIENT_SECRET}
 echo Checking: curl -H "Content-Type: application/json" -X POST --data '{ "client_id": "'${CLIENT_ID}'","client_secret": "'${CLIENT_SECRET}'"}' 
 
-TOKEN=$(curl -H "Content-Type: application/json" -X POST --data '{ "client_id": "'${CLIENT_ID}'","client_secret": "'${CLIENT_SECRET}'"}'  https://xray.cloud.xpand-it.com/api/v1/authenticate | jq -r)
+TOKEN=$(curl -H "Content-Type: application/json" -X POST --data '{ "client_id": "'${CLIENT_ID}'","client_secret": "'${CLIENT_SECRET}'"}'  https://xray.cloud.xpand-it.com/api/v1/authenticate | sed 's/\"//g')
 
 echo $TOKEN
 
