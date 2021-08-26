@@ -1,0 +1,12 @@
+Given I am a <retailer>
+When I set the default payment method
+and I place an order
+and I switch to <brewer>
+and I accept the order
+and I invoice the order
+Then the invoice payment should have the default payment method selected
+
+Examples:
+
+|key    |brewer           |retailer           |distributor|
+|payment|boozang-brewer-ar|boozang-retailer-ap|-          |
