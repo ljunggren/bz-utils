@@ -1,4 +1,4 @@
-# This scripts test integration with Xray and assumes you have defined the fo9llowing sceanrio in Jira
+# This scripts test integration with Xray and assumes you have defined the following scenario in Jira
 # https://raw.githubusercontent.com/ljunggren/bz-utils/main/test/cucumber-sample-scenario.txt
 
 # Make sure you export your client id and client secret as environment variables
