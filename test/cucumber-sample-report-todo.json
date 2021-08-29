@@ -1,0 +1,155 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "[m130] Accounts Payable Payments",
+    "line": 1,
+    "tags": [
+      {
+        "name": "@REQ_PIVO-8",
+        "type": "tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ],
+    "id": "m130",
+    "uri": "jira-features/2_REQ_PIVO-8.feature",
+    "elements": [
+      {
+        "before": [],
+        "after": [],
+        "line": 2,
+        "name": "[m130.t1(0)] Set default payment method (Mats Ljunggren - 107484187345913690)",
+        "description": "Set default payment method",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "tags": [
+          {
+            "name": "@REQ_PIVO-8"
+          },
+          {
+            "name": "@TEST_PIVO-7"
+          }
+        ],
+        "steps": [
+          {
+            "line": 3,
+            "result": {
+              "duration": 21110000000,
+              "status": "passed"
+            },
+            "name": "I am a retailer: boozang-retailer-ap",
+            "match": {
+              "location": "5e3f275e64f84941a326d4d8/jira61/m130/t1/2/"
+            },
+            "embeddings": [
+              {
+                "data": "PHByZSBzdHlsZT0nYmFja2dyb3VuZC1jb2xvcjojQ0NDO3BhZGRpbmc6MTBweDsnPjxiPkRhdGE6PC9iPiA8YnIvPjxici8+ewogICIkcGFyYW1ldGVyLnJvbGUiOiAiYm9vemFuZy1yZXRhaWxlci1hcCIKfTwvcHJlPg==",
+                "mime_type": "text/html"
+              }
+            ],
+            "keyword": "Given"
+          },
+          {
+            "line": 4,
+            "result": {
+              "duration": 4616000000,
+              "status": "passed"
+            },
+            "name": "I set the default payment method",
+            "match": {
+              "location": "5e3f275e64f84941a326d4d8/jira61/m130/t1/4/"
+            },
+            "keyword": "When"
+          },
+          {
+            "line": 5,
+            "result": {
+              "duration": 22818000000,
+              "status": "passed"
+            },
+            "name": "I place an order",
+            "match": {
+              "location": "5e3f275e64f84941a326d4d8/jira61/m130/t1/5/"
+            },
+            "keyword": "and"
+          },
+          {
+            "line": 6,
+            "result": {
+              "duration": 4078000000,
+              "status": "passed"
+            },
+            "name": "I switch to brewer: boozang-brewer-ar",
+            "match": {
+              "location": "5e3f275e64f84941a326d4d8/jira61/m130/t1/6/"
+            },
+            "embeddings": [
+              {
+                "data": "PHByZSBzdHlsZT0nYmFja2dyb3VuZC1jb2xvcjojQ0NDO3BhZGRpbmc6MTBweDsnPjxiPkRhdGE6PC9iPiA8YnIvPjxici8+ewogICIkcGFyYW1ldGVyLnJvbGUiOiAiYm9vemFuZy1icmV3ZXItYXIiCn08L3ByZT4=",
+                "mime_type": "text/html"
+              }
+            ],
+            "keyword": "and"
+          },
+          {
+            "line": 7,
+            "result": {
+              "duration": 8620000000,
+              "status": "passed"
+            },
+            "name": "I accept the order",
+            "match": {
+              "location": "5e3f275e64f84941a326d4d8/jira61/m130/t1/7/"
+            },
+            "embeddings": [
+              {
+                "data": "PHByZSBzdHlsZT0nYmFja2dyb3VuZC1jb2xvcjojQ0NDO3BhZGRpbmc6MTBweDsnPjxiPkRhdGE6PC9iPiA8YnIvPjxici8+ewogICIkcGFyYW1ldGVyLm9yZGVyX2lkIjogIjMzMCIKfTwvcHJlPg==",
+                "mime_type": "text/html"
+              }
+            ],
+            "keyword": "and"
+          },
+          {
+            "line": 8,
+            "result": {
+              "duration": 13564000000,
+              "status": "passed"
+            },
+            "name": "I invoice the order",
+            "match": {
+              "location": "5e3f275e64f84941a326d4d8/jira61/m130/t1/8/"
+            },
+            "embeddings": [
+              {
+                "data": "PHByZSBzdHlsZT0nYmFja2dyb3VuZC1jb2xvcjojQ0NDO3BhZGRpbmc6MTBweDsnPjxiPkRhdGE6PC9iPiA8YnIvPjxici8+ewogICIkcGFyYW1ldGVyLm9yZGVyX2lkIjogIjMzMCIsCiAgIiRwcm9qZWN0Lm9yZGVyLm9yZGVyX2lkIjogIjMzMCIKfTwvcHJlPg==",
+                "mime_type": "text/html"
+              }
+            ],
+            "keyword": "and"
+          },
+          {
+            "line": 9,
+            "result": {
+              "duration": 4541000000,
+              "status": "todo"
+            },
+            "name": "The invoice payment should have the default payment method selected",
+            "match": {
+              "location": "5e3f275e64f84941a326d4d8/jira61/m130/t1/10/"
+            },
+            "keyword": "Then"
+          }
+        ],
+        "extraData": {
+          "id": "m130.t1(0)",
+          "name": "Set default payment method",
+          "worker": "Mats Ljunggren - 107484187345913690",
+          "start": "14:58:25",
+          "end": "14:59:50"
+        }
+      }
+    ]
+  }
+]
