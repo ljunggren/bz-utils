@@ -4,7 +4,7 @@
 
 Open Source utility scripts to help testers  
 
-![Screenshot](/img/rootcause.jpg?raw=true "Screenshot")
+![Screenshot](/img/root-cause.png "Root-cause analysis report")
 
 ##### Url: http://thelab.boozang.com/
 
