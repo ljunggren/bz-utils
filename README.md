@@ -6,7 +6,6 @@ Open Source utility scripts to help testers
 
 ![Screenshot](/img/root-cause.png "Root-cause analysis report")
 
-##### Url: http://thelab.boozang.com/
 
 ## Installation
 
@@ -16,7 +15,7 @@ To fetch root-casue ananlysis script
 
 To run
 
-`./generate_summary.sh *.json > root_cause.log
+`./generate_summary.sh *.json > root_cause.log`
 
 
 ## Built With
