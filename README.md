@@ -4,6 +4,8 @@
 
 Open Source utility scripts to help testers  
 
+### Root-cause analysis script to find underlying causes in Cucumber reports
+
 ![Screenshot](/img/root-cause.png "Root-cause analysis report")
 
 
