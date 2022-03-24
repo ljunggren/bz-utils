@@ -60,7 +60,7 @@ else
 fi
 
 all_issues="$(cat $FILE_PATTERN | jq -c '.[] |.elements'[0].extraData |jq -c 'select(.rootCase != null)' |jq -c '"\(.rootCase.errHash)#\(.rootCase.desc)#\(.rootCase.type)#\(.rootCase.scope)#\(.id) "' | sed 's/^.//;s/.$//')"
-unique_issues="$(cat $FILE_PATTERN | jq -c '.[] |.elements'[0].extraData |jq -c 'select(.rootCase != null)' |jq -c '"\(.rootCase.errHash)_#\(.rootCase.errDesc)_#\(.rootCase.type)_#\(.rootCase.scope)_##@\(.rootCase.url)@##-\(.rootCase.key)-#_^\(.rootCase.desc)"' | sed 's/^.//;s/.$//'| sort | uniq -c | sort -r | sed 's/^ *//g' | sed 's/[[:space:]]/\_#/')"
+unique_issues="$(cat $FILE_PATTERN | jq -c '.[] |.elements'[0].extraData |jq -c 'select(.rootCase != null)' |jq -c '"\(.rootCase.errHash)_#\(.rootCase.errDesc)_#\(.rootCase.type)_#\(.rootCase.scope)_##@\(.rootCase.url)@##-Go \(.rootCase.key)-#_^\(.rootCase.desc)"' | sed 's/^.//;s/.$//'| sort | uniq -c | sort -r | sed 's/^ *//g' | sed 's/[[:space:]]/\_#/')"
 
 printf "\n"
 echo $unique_issues
